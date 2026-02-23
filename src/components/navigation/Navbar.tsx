@@ -1,19 +1,27 @@
+import { Footer } from "./Footer"
 import { Link, Outlet } from "react-router-dom"
-import Footer from "./Footer"
-
-
+import { Button } from "../ui/Button"
 const Navbar = ({bgColor}: {bgColor: string}) =>{
     return(
         <>
+        <nav className={`${bgColor}`}>
+            {/* our logo section */}
+            <div className="">
+                <img src="#" alt="#"/>
 
-        <div  className={`${bgColor} flex md:flex-row justify-center gap-6 items-center p-3`} >
-            <li>
-                <Link to={"/"}>Home</Link>
-            </li>
-            <li>
-                <Link to={"/services"}>Services</Link>
-            </li>
-        </div>
+            </div>
+
+            <ul>
+                <li><Link to="/">Acceuil</Link></li>
+                <li><Link to="/services">Services</Link></li>
+            </ul>
+
+            <div>
+                <Button text="test Button" variant="ligth" to="/services"/>
+            </div>
+
+            
+        </nav>
 
         <Outlet/>
 

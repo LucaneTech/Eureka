@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+:root { 
+  --main-color :#05AFF2;
+  --main-color-opacity :#05aff217;
+  --secondary-color :#3BBF5C;
+  --secondary-color-opacity : #05a02c23;
+  --ligth-color: #F6F3F3;
+   --ligth-color-opacity: #bbbbbb;
+  
+}
+
+@layer itilities {
+    /* primary section colors */
+    .mainColor {
+        color: var(--main-color);
+    }
+    
+    .bgMainColor {
+        background-color: var(--main-color);
+        transition: all 0.5s ease-in-out;
+        
+    }
+    .bgMainColor:hover{
+        background-color: var(--main-color-opacity);
+    }
+
+    .bgMainColorOpacity {
+        background: var(--main-color-opacity);
+    }    
+
+   
+
+    /* secondary section colors */
+    .secondaryColor{
+        color: var(--secondary-color);
+    }
+    .bgSecondaryColor {
+        background-color: var(--secondary-color);
+        transition: all 0.5s ease-in-out;
+    }
+    .bgSecondaryColor:hover{
+        background-color: var(--secondary-color-opacity);
+    }
+    .bgSecondaryColorOpacity{
+        background-color: var(--secondary-color-opacity);
+    }
+
+    /* ligth section colors */
+    .bgLigthColor {
+        background-color: var(--ligth-color);
+        color: rgb(68, 66, 66);
+        border: 1px solid rgb(199, 182, 182);
+        transition: all 0.5s ease-in-out;
+    }
+    .bgLigthColor:hover{
+        background-color: var(--ligth-color-opacity);
+        color: white;
+    }
+
+}

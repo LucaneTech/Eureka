@@ -1,0 +1,49 @@
+import type { HeadCardVariants } from "../../types/ui";
+
+interface ServicesCardProps {
+    title: string;
+    titleColor?: "primary" | "secondary";
+    paragraph: string; 
+    description: string;
+    image: string;
+    reverse?: boolean; 
+    variant: HeadCardVariants;
+}
+
+export const ServiceCard = ({
+    title,
+    titleColor = "primary",
+    paragraph,
+    description,
+    image,
+    reverse = false,
+    variant,
+}: ServicesCardProps) => {
+    // Styles dynamiques
+    const bgClass = variant === 'primary' ? "bgMainColorOpacity" : "bgSecondaryColorOpacity";
+    const textColorClass = titleColor === 'primary' ? "mainColor" : "secondaryColor";
+
+    return (
+        <div
+            className={`relative flex flex-col md:flex-row w-full max-w-5xl my-6 mx-auto p-2 md:p-4 rounded-md overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 scale-95  ${bgClass}`}
+        >
+            {/* Image - conditionnellement à gauche ou à droite */}
+            <div className={`w-full md:w-2/5 shrink-0 ${reverse ? 'md:order-last' : ''}`}>
+                <img
+                    src={image}
+                    alt={title}
+                    className="h-64 md:h-full w-full object-cover rounded-md"
+                />
+            </div>
+
+            {/* Contenu textuel */}
+            <div className="p-6 flex flex-col space-y-2 w-full md:w-3/5">
+                <h3 className={`${textColorClass} text-2xl font-semibold`}>{title}</h3>
+                <p className="text-gray-700 mb-2 font-semibold">{paragraph}</p>
+                <p className="text-slate-600 dark:third-color text-base leading-relaxed">
+                    {description}
+                </p>
+            </div>
+        </div>
+    );
+};
