@@ -1,10 +1,10 @@
 
 import React from "react";
-import type { variantButton } from "../../types/ui";
+import type { variants } from "../../types/ui";
 
 interface ButtonProps {
     text: string;
-    variant?: variantButton;
+    variant?: variants;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     className?: string;
     to: string

@@ -1,0 +1,61 @@
+import React from "react";
+
+interface TrustCardProps {
+    icon: React.ReactNode;
+    iconStyle?: 'primary' | 'secondary';
+    title: string;
+    titleColor: 'primary' | 'secondary' ;
+    description: string;
+    cardStyle?: 'primary' | 'secondary';
+}
+
+const TrustCard: React.FC<TrustCardProps> = ({
+    icon,
+    title,
+    titleColor,
+    description,
+    cardStyle = "primary",
+    iconStyle = 'primary'
+}) => {
+    // Classes d'icône simplifiées
+    const iconClasses = {
+        primary: "mainColor bgMainColorOpacity",
+        secondary: "secondaryColor bgSecondaryColorOpacity"
+    }[iconStyle];
+
+    const textColor = {
+        primary: "mainColor ",
+        secondary: "secondaryColor "
+    }[titleColor];
+
+    const cStyle = {
+        primary: "borderMainColor ",
+        secondary: "borderSecondaryColor "
+    }[titleColor];
+
+    return (
+        <div className={`bg-white rounded-md  max-w-lg shadow-lg border p-6 transition-shadow ${cStyle}`}>
+            <div className="flex items-start gap-4">
+                {/* Icône - positionnée à gauche */}
+                <div className={`${iconClasses} p-3 rounded-full border shrink-0`}>
+                    {icon}
+                </div>
+
+                {/* Contenu textuel - à droite */}
+                <div className="flex-1">
+                    <h3 className={`text-xl font-semibold mb-2 ${textColor || ''}`}>
+                        {title}
+                    </h3>
+                    
+                    {description && (
+                        <p className="text-gray-600 leading-relaxed">
+                            {description}
+                        </p>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default TrustCard;

@@ -27,7 +27,11 @@
 
     .bgMainColorOpacity {
         background: var(--main-color-opacity);
-    }    
+    }   
+    
+    .borderMainColor {
+        border: 1px solid var(--main-color-opacity);
+    }
 
    
 
@@ -44,6 +48,9 @@
     }
     .bgSecondaryColorOpacity{
         background-color: var(--secondary-color-opacity);
+    }
+    .borderSecondaryColor{
+        border: 1px solid var(--secondary-color-opacity);
     }
 
     /* ligth section colors */
