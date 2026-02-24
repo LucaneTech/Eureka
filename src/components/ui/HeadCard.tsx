@@ -1,8 +1,7 @@
 import React from "react";
 
-interface HeadCardProps {
+export interface HeadCardProps {
     icon: React.ReactNode;
-    iconStyle: string;
     title: string;
     titleColor?: string;
     description: string;
@@ -14,44 +13,45 @@ interface HeadCardProps {
 const HeadCard: React.FC<HeadCardProps> = ({ 
     icon, 
     title, 
-    titleColor,
     description, 
     link, 
     linkText = "En savoir plus",
     className = "" ,
-    iconStyle
+   
 }) => {
     return (
-        <div className={`bg-white rounded-md shadow-md p-6 border  ${className}`}>
+        <div className={`bg-white rounded-md shadow-md p-4 sm:p-5 md:p-6 border max-w-xl ${className}`}>
            
-            <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
+            <div className="flex items-center justify-between mb-3 sm:mb-4">
+                <div className="flex items-center space-x-2 sm:space-x-3">
                  
-                    <div className = {`${iconStyle} p-3 rounded-full border `}>
+                    <div className={`bgMainColorOpacity p-2 sm:p-2.5 md:p-3 rounded-full border mainColor`}>
                         {icon}
                     </div>
-                    <h3 className={`text-xl font-semibold ${titleColor}`}>
+                    <h3 className={`text-lg sm:text-xl md:text-xl font-semibold mainColor leading-tight sm:leading-normal`}>
                         {title}
                     </h3>
                 </div>
             </div>
 
             {/* Description */}
-            {description && (
-                <p className="text-gray-600 mb-4">
+           <div className="max-w-[500px]">
+             {description && (
+                <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">
                     {description}
                 </p>
             )}
+           </div>
 
           
             {link && (
                 <a 
                     href={link} 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm sm:text-base"
                 >
                     {linkText}
                     <svg 
-                        className="w-4 h-4 ml-2" 
+                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-1 sm:ml-2" 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
@@ -69,4 +69,4 @@ const HeadCard: React.FC<HeadCardProps> = ({
     );
 };
 
-export default HeadCard
+export default HeadCard;

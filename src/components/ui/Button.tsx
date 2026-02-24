@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({ text, variant = "primary", onCli
         <button
             type="button"
             onClick={onClick}
-            className={`px-4 py-2 rounded-md text-white shadow-lg duration-300 transition-all ${variantClasses} ${className}`.trim()}
+            className={`px-3 md:px-7 py-2 md:py-3 font-semibold  rounded-md text-white shadow-lg duration-300 transition-all text-xs md:text-md ${variantClasses} ${className}`.trim()}
         >
             <a href={to}>{text}</a>
         </button>

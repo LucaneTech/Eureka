@@ -10,13 +10,14 @@ export const Services: React.FC = () => {
                 slogan="Services de qualité"
                 title="Nettoyage Professionnel Rapide, Sécurisé & Fiable"
                 description="Découvrez notre nouvelle gamme de produits design, conçus pour simplifier votre vie tout en ajoutant une touche d'élégance."
-                textBtn="Découvrir"
+                textBtn="Contez-nous !"
                 variantBtn="primary"
                 underImage="under.jpg"
                 rightImage="hero.png"
                 link="/nouvelle-collection"
-                 overlayColor="#05AFF2"
-    overlayOpacity={40}
+                overlayColor="#05AFF2"
+    overlayOpacity={20}
+    sloganVariant="secondary"
             />
         </>
     )

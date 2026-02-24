@@ -18,11 +18,7 @@
     
     .bgMainColor {
         background-color: var(--main-color);
-        transition: all 0.5s ease-in-out;
         
-    }
-    .bgMainColor:hover{
-        background-color: var(--main-color-opacity);
     }
 
     .bgMainColorOpacity {
@@ -43,9 +39,7 @@
         background-color: var(--secondary-color);
         transition: all 0.5s ease-in-out;
     }
-    .bgSecondaryColor:hover{
-        background-color: var(--secondary-color-opacity);
-    }
+
     .bgSecondaryColorOpacity{
         background-color: var(--secondary-color-opacity);
     }
@@ -60,9 +54,6 @@
         border: 1px solid rgb(199, 182, 182);
         transition: all 0.5s ease-in-out;
     }
-    .bgLigthColor:hover{
-        background-color: var(--ligth-color-opacity);
-        color: white;
-    }
+   
 
 }
