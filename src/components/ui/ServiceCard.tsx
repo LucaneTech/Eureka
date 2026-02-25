@@ -1,6 +1,6 @@
 import type { HeadCardVariants } from "../../types/ui";
 
-interface ServicesCardProps {
+export interface ServicesCardProps {
     title: string;
     titleColor?: "primary" | "secondary";
     paragraph: string; 

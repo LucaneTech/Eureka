@@ -14,15 +14,15 @@ export const Title:React.FC <TitleProps> = ({text, variants, className}) => {
     let variant = ''
     
     if (variants === 'medium') {
-        variant = 'text-lg md:text-xl'
+        variant = 'text-lg md:text-xl font-semibold'
     } else if (variants === 'large') {
-        variant = 'text-xl md:text-3xl'
+        variant = 'text-2xl md:text-3xl font-bold'
     } else if (variants === 'extra') {
-        variant = 'text-2xl md:text-5xl'
+        variant = 'text-3xl md:text-5xl font-bold'
     }
     return(
         <>
-        <div className={`font-bold text-black  ${variant}`}>
+        <div className={` text-slate-700 ${variant}`}>
             <h1 className={className}>{text}</h1>
         </div>
         </>

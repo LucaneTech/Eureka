@@ -1,4 +1,5 @@
 import { DescriptionText } from "../font/DescriptionText";
+import { Title } from "../font/Title";
 import { Button } from "../ui/Button";
 import { Slogan } from "../ui/Slogan";
 
@@ -7,13 +8,14 @@ interface FirstBannerProps {
     slogan?: string;
     sloganVariant?: 'primary' | 'secondary'
     title: string;
+    subtitle: string;
     description: string;
     textBtn: string;
     variantBtn?: 'primary' | 'secondary' | 'outline';
     textBtn2?: string;
     variantBtn2?: 'primary' | 'secondary' | 'outline';
     underImage?: string;
-    rightImage?: string;
+
     link: string;
     link2?: string;
     className?: string;
@@ -22,11 +24,12 @@ interface FirstBannerProps {
     secondButton?: boolean
 }
 
-export const FirstBanner: React.FC<FirstBannerProps> = ({
+export const SecondBanner: React.FC<FirstBannerProps> = ({
     sloganIcon,
     slogan,
     sloganVariant = "primary",
     title = "",
+    subtitle = "",
     description = "",
     textBtn = " ",
     link = '#',
@@ -35,7 +38,6 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
     link2 = "#",
     variantBtn2,
     underImage,
-    rightImage,
     className = "",
     overlayColor = '#000000',
     overlayOpacity = 60,
@@ -67,25 +69,34 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
 
             {/* Contenu principal */}
             <div className="relative z-10 container mx-auto px-4 py-8 md:py-20 min-h-[300px] md:min-h-[550px] flex items-center md:items-center">
-                <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-8">
+                <div className="flex flex-col md:flex-row items-center justify-center w-full gap-6 md:gap-8">
 
                     {/* Partie texte - Centrée sur mobile */}
-                    <div className="w-full md:w-1/2 space-y-3 md:space-y-4 text-white text-center md:text-left">
-                        {slogan && (
-
-                            <Slogan icon={sloganIcon} text={slogan} variant={sloganVariant} />
-
-                        )}
-
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                            {title}
-                        </h1>
+                    <div className="w-full  space-y-3 md:space-y-4 text-white text-center">
 
 
-                        <DescriptionText text={description} className="text-white"/>
+                       <div className="flex flex-col md:gap-3 justify-center items-center">
+                     <Title text={title} variants={"extra"} className="secondaryColor mb-2" />
+                        <Title text={subtitle} variants={"large"} className="mb-4 md:mb-5 text-white" />
 
+                        <DescriptionText text={description} className="text-center text-white "/>
+                       </div>
+                        <div className="flex inline-flex md:flex-row gap-1 md:gap-3 justify-center items-center">
+                            {slogan && (
 
-                        <div className="flex flex-col md:flex-row gap-3 items-center mt-4 md:mt-8">
+                                <Slogan icon={sloganIcon} text={slogan} variant={sloganVariant} />
+                              
+
+                            )}
+
+                            <div className="flex flex-row items-center gap-1 md:gap-3">
+                                <span className="border-1 border-white  bgSecondaryColorOpacity w-4 h-4 md:w-8 md:h-8 rounded-full"></span>
+                                <span className="border-1 border-white  bgSecondaryColorOpacity w-4 h-4 md:w-8 md:h-8 rounded-full "></span>
+                                 <span className="border-1 border-white  bgSecondaryColorOpacity w-4 h-4 md:w-8 md:h-8 rounded-full "></span>
+                            </div>
+
+                        </div>
+                        <div className="flex flex-row gap-2 md:gap-10 justify-center items-center mt-4 md:mt-8">
                             <Button
                                 text={textBtn}
                                 to={link}
@@ -107,20 +118,6 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                         </div>
                     </div>
 
-                    {/* Image droite - Collée en bas sur mobile, centrée verticalement sur desktop */}
-                    {rightImage && (
-
-                        <div className="hidden md:block md:absolute bottom-0 right-0 w-full max-w-sm md:max-w-md lg:max-w-lg">
-                            <img
-                                src={rightImage}
-                                alt={`${title} - ${slogan || 'banner'}`}
-                                className="w-full h-[400px] object-cover drop-shadow-2xl"
-                                loading="lazy"
-
-                            />
-                        </div>
-
-                    )}
                 </div>
             </div>
 

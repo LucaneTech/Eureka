@@ -44,10 +44,10 @@ export const Footer = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={containerVariants}
-      className="w-full text-sm text-slate-600 pt-12 bg-gradient-to-b from-slate-50 to-white"
+      className="w-full text-sm text-slate-600 pt-12 bg-gradient-to-b from-slate-50 to-white "
     >
       {/* GRID MAIN - Optimisé pour tous les écrans */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-12 px-6 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 max-w-7xl mx-auto">
         
         {/* LOGO & DESCRIPTION - Colonne plus large sur mobile */}
         <motion.div 
@@ -134,10 +134,9 @@ export const Footer = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
             />
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
+          <div className="flex flex-col gap-x-4 gap-y-3">
             {[
               { hash: "bureaux", label: "Nettoyage bureaux" },
-              { hash: "communes", label: "Parties communes" },
               { hash: "chantiers", label: "Nettoyage chantiers" },
               { hash: "espacesverts", label: "Espaces verts" },
               { hash: "desinfection", label: "Désinfection" }
@@ -146,7 +145,7 @@ export const Footer = () => {
                 key={service.hash}
                 variants={linkHoverVariants}
                 whileHover="hover"
-                href={`/services#${service.hash}`}
+                href={`#`} 
                 className="hover:text-mainColor transition-colors duration-200 text-slate-600 text-sm"
               >
                 {service.label}
