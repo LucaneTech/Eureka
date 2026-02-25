@@ -9,7 +9,7 @@ function App() {
     <>
       <Layout>
         <Routes>
-           <Route path="/" element={<Navbar bgColor="bg-white shadow-xl"/>}>
+           <Route path="/" element={<Navbar />}>
                   
               <Route index element={<Home />} />
               <Route path="/services" element={<Services />} />

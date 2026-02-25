@@ -1,6 +1,6 @@
 import React from "react";
 
-interface TrustCardProps {
+export interface TrustCardProps {
     icon: React.ReactNode;
     iconStyle?: 'primary' | 'secondary';
     title: string;
@@ -14,7 +14,6 @@ const TrustCard: React.FC<TrustCardProps> = ({
     title,
     titleColor,
     description,
-    cardStyle = "primary",
     iconStyle = 'primary'
 }) => {
     // Classes d'icône simplifiées
