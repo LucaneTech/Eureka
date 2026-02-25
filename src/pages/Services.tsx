@@ -29,8 +29,7 @@ const itemVariants = {
         y: 0,
         opacity: 1,
         transition: {
-            duration: 0.7,
-            ease: "easeInOut"
+            duration: 0.7
         }
     }
 };
@@ -41,8 +40,7 @@ const fadeInScale = {
         scale: 1,
         opacity: 1,
         transition: {
-            duration: 0.6,
-            ease: "easeInOut"
+            duration: 0.6
         }
     }
 };
@@ -53,8 +51,7 @@ const slideInLeft = {
         x: 0,
         opacity: 1,
         transition: {
-            duration: 0.7,
-            ease: "easeInOut"
+            duration: 0.7
         }
     }
 };
@@ -65,8 +62,7 @@ const slideInRight = {
         x: 0,
         opacity: 1,
         transition: {
-            duration: 0.7,
-            ease: "easeInOut"
+            duration: 0.7
         }
     }
 };
@@ -78,8 +74,7 @@ const rotateIn = {
         scale: 1,
         opacity: 1,
         transition: {
-            duration: 0.5,
-            ease: "easeInOut"
+            duration: 0.5
         }
     }
 };
