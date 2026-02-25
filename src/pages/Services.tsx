@@ -2,6 +2,7 @@ import { ArrowUpRight, CircleQuestionMark, Wrench } from "lucide-react";
 import type React from "react";
 import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { SecondBanner } from "../components/banners/Secondbanner";
 import { ServiceCard, type ServicesCardProps } from "../components/ui/ServiceCard";
 import { Slogan } from "../components/ui/Slogan";
@@ -12,7 +13,7 @@ import FAQCard from "../components/ui/FAQCard";
 import { Button } from "../components/ui/Button";
 
 // Animation variants sophistiqués
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
@@ -23,7 +24,7 @@ const containerVariants = {
     }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { y: 40, opacity: 0 },
     visible: {
         y: 0,
@@ -34,7 +35,7 @@ const itemVariants = {
     }
 };
 
-const fadeInScale = {
+const fadeInScale: Variants = {
     hidden: { scale: 0.9, opacity: 0 },
     visible: {
         scale: 1,
@@ -45,7 +46,7 @@ const fadeInScale = {
     }
 };
 
-const slideInLeft = {
+const slideInLeft: Variants = {
     hidden: { x: -80, opacity: 0 },
     visible: {
         x: 0,
@@ -56,7 +57,7 @@ const slideInLeft = {
     }
 };
 
-const slideInRight = {
+const slideInRight: Variants = {
     hidden: { x: 80, opacity: 0 },
     visible: {
         x: 0,
@@ -67,7 +68,7 @@ const slideInRight = {
     }
 };
 
-const rotateIn = {
+const rotateIn: Variants = {
     hidden: { rotate: -10, scale: 0.8, opacity: 0 },
     visible: {
         rotate: 0,
@@ -79,7 +80,7 @@ const rotateIn = {
     }
 };
 
-const staggerList = {
+const staggerList: Variants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
@@ -327,10 +328,8 @@ export const Services: React.FC = () => {
                     variantBtn="primary"
                     underImage="under.jpg"
                     link="#"
-                    overlayColor="#000000"
-                    overlayOpacity={100}
-                    sloganVariant="secondary"
-                />
+                    overlayColor="black"
+                    sloganVariant="secondary" titleColor="secondaryColor"               />
             </motion.div>
 
             <ServiceSection />

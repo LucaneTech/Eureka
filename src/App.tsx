@@ -3,6 +3,7 @@ import { Layout } from "./components/navigation/Layout"
 import { Home } from "./pages/Home"
 import { Services } from "./pages/Services"
 import Navbar from "./components/navigation/Navbar"
+import About from "./pages/About"
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
                   
               <Route index element={<Home />} />
               <Route path="/solutions" element={<Services />} />
+               <Route path="/apropos" element={<About />} />
            </Route>
         </Routes>
       </Layout>

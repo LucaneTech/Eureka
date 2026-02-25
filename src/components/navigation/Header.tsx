@@ -90,7 +90,7 @@ const Header: React.FC = () => {
         <ul className="hidden md:flex items-center space-x-8 md:pl-28 text-md">
           <Link to={'/'}>Acceuil</Link>
           <Link to={'/solutions'}>Nos solutions</Link>
-          <Link to={'/about'}>A propos</Link>
+          <Link to={'/apropos'}>A propos</Link>
           <Link to={'/blog'}>Blog</Link>
           <Link to={'/contact'}>Contact</Link>
         </ul>
@@ -168,7 +168,7 @@ const Header: React.FC = () => {
             </li>
             <li>
               <Link 
-                to="/about" 
+                to="/apropos" 
                 className="text-gray-900 hover:text-primary transition-colors text-base"
                 onClick={closeMobileMenu}
               >

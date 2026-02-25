@@ -3,8 +3,10 @@
 :root { 
   --main-color :#05AFF2;
   --main-color-opacity :#05aff217;
+  --main-color-border :#05aff260;
   --secondary-color :#3BBF5C;
-  --secondary-color-opacity : #05a02c23;
+  --secondary-color-opacity : #05a02c1e;
+  --secondary-color-border :#05a02c70;
   --ligth-color: #F6F3F3;
    --ligth-color-opacity: #bbbbbb;
   
@@ -26,7 +28,7 @@
     }   
     
     .borderMainColor {
-        border: 1px solid var(--main-color-opacity);
+        border: 1px solid var(--main-color-border);
     }
 
    
@@ -44,7 +46,7 @@
         background-color: var(--secondary-color-opacity);
     }
     .borderSecondaryColor{
-        border: 1px solid var(--secondary-color-opacity);
+        border: 1px solid var(--secondary-color-border );
     }
 
     /* ligth section colors */
