@@ -147,7 +147,7 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          <ul className="flex flex-col space-y-6 text-lg">
+          <ul className="flex flex-col space-y-6 text-lg font-bold">
             <li>
               <Link 
                 to="/" 

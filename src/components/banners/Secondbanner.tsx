@@ -12,9 +12,9 @@ interface SecondBannerProps {
     slogan?: string;
     sloganVariant?: 'primary' | 'secondary'
     title: string;
-    titleColor: string;
-    subtitle: string;
-    description: string;
+    titleColor?: string;
+    subtitle?: string;
+    description?: string;
     textBtn: string;
     variantBtn?: 'primary' | 'secondary' | 'outline';
     textBtn2?: string;
@@ -88,7 +88,9 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
 
                         <div className="flex flex-col md:gap-3 justify-center items-center">
                             <Title text={title} variants={"extra"} className={`mb-2 ${titleColor}`} />
-                            <Title text={subtitle} variants={"large"} className="mb-4 md:mb-5 text-white" />
+                            {
+                                subtitle && <Title text={subtitle} variants={"large"} className="mb-4 md:mb-5 text-white" />
+                            }
 
                             <DescriptionText text={description} className="text-center text-white " />
                         </div>

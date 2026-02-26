@@ -7,6 +7,8 @@ interface FirstBannerProps {
     slogan?: string;
     sloganVariant?: 'primary' | 'secondary'
     title: string;
+    addTitle?: string;
+    addTitleStyle?: string;
     description: string;
     textBtn: string;
     variantBtn?: 'primary' | 'secondary' | 'outline';
@@ -17,7 +19,7 @@ interface FirstBannerProps {
     link: string;
     link2?: string;
     className?: string;
-    overlayColor?: string; // Nouvelle prop pour personnaliser l'overlay
+    overlayColor?: string;
     overlayOpacity?: number;
     secondButton?: boolean
 }
@@ -39,7 +41,9 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
     className = "",
     overlayColor = '#000000',
     overlayOpacity = 60,
-    secondButton = false
+    secondButton = false,
+    addTitle = "",
+    addTitleStyle = "mainColor"
 }) => {
 
     const opacityDecimal = overlayOpacity / 100;
@@ -58,7 +62,7 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
             >
                 {/* Overlay personnalisable avec dégradé */}
                 <div
-                    className="absolute inset-0 backdrop-blur-xs"
+                    className="absolute inset-0 "
                     style={{
                         background: ` linear-gradient(90deg, ${overlayColor}${Math.round(opacityDecimal * 255).toString(16).padStart(2, '0')} 0%, ${overlayColor}${Math.round((opacityDecimal * 0.7) * 255).toString(16).padStart(2, '0')} 50%, transparent 100%)`
                     }}
@@ -78,7 +82,12 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                         )}
 
                         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                            {title}
+                            {title} 
+                            {addTitle && (
+                                <span className={addTitleStyle}>
+                                    {addTitle}
+                                </span> 
+                            )}
                         </h1>
 
 

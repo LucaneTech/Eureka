@@ -315,7 +315,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
 };
 
 // Composant principal
-const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
+export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   title = "Ce que nos clients disent de nous",
   subtitle = "Real stories from designers, developers, and product teams using PrebuiltUI to ship faster and with confidence.",
   testimonials = defaultTestimonials,
@@ -481,15 +481,17 @@ export const Home: React.FC = () => {
       <FirstBanner
         sloganIcon={<SparklesIcon className="w-4 h-4" />}
         slogan="Services de qualité"
-        title="Nettoyage Professionnel Rapide, Sécurisé & Fiable"
+        title="Nettoyage Professionnel Rapide,"
+        addTitle="Sécurisé & Fiable"
+        addTitleStyle="mainColor"
         description="Découvrez notre nouvelle gamme de produits design, conçus pour simplifier votre vie tout en ajoutant une touche d'élégance."
         textBtn="Contactez-nous !"
         variantBtn="primary"
         underImage="under.jpg"
         rightImage="/images/home/hero.png"
         link="/nouvelle-collection"
-        overlayColor="#05AFF2"
-        overlayOpacity={60}
+        overlayColor="#000000"
+        overlayOpacity={90}
         sloganVariant="primary"
         link2={"#"}
         secondButton
