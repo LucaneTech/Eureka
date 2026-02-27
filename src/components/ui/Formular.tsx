@@ -248,7 +248,7 @@ const ContactSection: React.FC = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="relative bg-gradient-to-b from-white to-gray-50 py-16 md:py-24 overflow-hidden"
+            className="relative py-16 md:py-24 overflow-hidden"
         >
             {/* Éléments décoratifs */}
             <motion.div

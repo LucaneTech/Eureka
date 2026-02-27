@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root { 
-  --main-color :#05AFF2;
-  --main-color-opacity :#05aff217;
-  --main-color-border :#05aff260;
+  --main-color :#0039aa;
+  --main-color-opacity :#0039aa1f;
+  --main-color-border :#0039aa79;
   --secondary-color :#3BBF5C;
   --secondary-color-opacity : #05a02c1e;
   --secondary-color-border :#05a02c70;
