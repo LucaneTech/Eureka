@@ -255,7 +255,7 @@ const Blog = () => {
                     addTitleStyle="secondaryColor" 
                     description={"Découvrez nos astuces expertes de nettoyage pour des espaces impeccables, sans effort et durables au quotidien."} 
                     textBtn={"Devis Gratuit 24h"} 
-                    link={"#"} 
+                    link={"/contact"} 
                     variantBtn="secondary" 
                     overlayColor="#000000" 
                     overlayOpacity={100} 
@@ -350,7 +350,7 @@ const Blog = () => {
                     <Button 
                         text={"Contactez-nous"} 
                         variant={"secondary"} 
-                        to={"#"} 
+                        to={"/contact"} 
                     />
                 </motion.div>
             </motion.section>

@@ -489,11 +489,11 @@ export const Home: React.FC = () => {
         variantBtn="primary"
         underImage="under.jpg"
         rightImage="/images/home/hero.png"
-        link="/nouvelle-collection"
+        link="/contact"
         overlayColor="#000000"
         overlayOpacity={90}
         sloganVariant="primary"
-        link2={"#"}
+        link2={"/solutions"}
         secondButton
         textBtn2="Découvrez nos solutions"
         variantBtn2="secondary"
@@ -629,7 +629,7 @@ export const Home: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Button text={"Lire notre histoire"} to={"/a-propos"} variant="primary" className="text-white" />
+            <Button text={"Lire notre histoire"} to={"/apropos"} variant="primary" className="text-white" />
           </motion.div>
         </motion.div>
       </motion.section>

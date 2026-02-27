@@ -496,10 +496,10 @@ const About = () => {
                     subtitle={"Eureka & Co"} 
                     description={"Maîtrise Impeccable du Nettoyage Professionnel"} 
                     textBtn={"Découvrez nos services"} 
-                    link={"#"} 
+                    link={"/solutions"} 
                     secondButton 
                     textBtn2="Contactez nous" 
-                    link2="#" 
+                    link2={"/contact"} 
                     variantBtn2="secondary" 
                     titleColor="text-white" 
                     underImage="/images/services/team.jpg" 
@@ -543,7 +543,7 @@ const About = () => {
                     >
                         <Button
                             text={"Découvrir Nos Services"}
-                            to={"/contact"}
+                            to={"/solutions"}
                             variant="secondary"
                         />
                     </motion.div>

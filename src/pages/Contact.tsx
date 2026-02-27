@@ -8,7 +8,7 @@ import { Blend } from "lucide-react";
 const Contact: React.FC = () => {
     return (
         <>
-            <SecondBanner title={"Besoin d’un devis?"} titleColor="secondaryColor" description={"Maîtrise Impeccable du Nettoyage Professionnel"} textBtn={"Nos services"} link={"/solutions"}  slogan="Lancez-vous dès maintenant" sloganIcon = {<Blend />} sloganVariant ="secondary"  underImage = '/images/contact/contact.jpg'  secondButton={true} link2 = "#" textBtn2 = "Découvrez Eureka & Co"  variantBtn2 = "secondary"/>
+            <SecondBanner title={"Besoin d’un devis?"} titleColor="secondaryColor" description={"Maîtrise Impeccable du Nettoyage Professionnel"} textBtn={"Nos services"} link={"/solutions"}  slogan="Lancez-vous dès maintenant" sloganIcon = {<Blend />} sloganVariant ="secondary"  underImage = '/images/contact/contact.jpg'  secondButton={true} link2 = "/apropos" textBtn2 = "Découvrez Eureka & Co"  variantBtn2 = "secondary"/>
             <ContactSection />
            
         </>

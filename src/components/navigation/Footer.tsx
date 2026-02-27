@@ -98,7 +98,7 @@ export const Footer = () => {
           <div className="flex flex-col space-y-3">
             {[
               { to: "/", label: "Accueil" },
-              { to: "/services", label: "Services" },
+              { to: "/solutions", label: "Services" },
               { to: "/apropos", label: "À propos" },
               { to: "/contact", label: "Contact" }
             ].map((link) => (

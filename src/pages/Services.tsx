@@ -320,14 +320,14 @@ export const Services: React.FC = () => {
                     title="Le Nettoyage ? "
                     description="Avec plus de 10 années d'expérience et une équipe formée aux dernières techniques, nous garantissons un résultat irréprochable sur l'ensemble de nos quatre services."
                     subtitle={"On s'en charge."}
-                    textBtn="Devis express"
+                    textBtn="Decouvrez Eureka & Co"
                     textBtn2="Nous contacter"
                     secondButton
                     variantBtn2="secondary"
-                    link2="#"
+                    link2="/contact"
                     variantBtn="primary"
                     underImage="under.jpg"
-                    link="#"
+                    link="/apropos"
                     overlayColor="black"
                     sloganVariant="secondary" titleColor="secondaryColor"               />
             </motion.div>

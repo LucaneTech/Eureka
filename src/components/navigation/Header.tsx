@@ -87,12 +87,12 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Menu desktop */}
-        <ul className="hidden md:flex items-center space-x-8 md:pl-28 text-md">
-          <Link to={'/'}>Acceuil</Link>
-          <Link to={'/solutions'}>Nos solutions</Link>
-          <Link to={'/apropos'}>A propos</Link>
-          <Link to={'/blog'}>Blog</Link>
-          <Link to={'/contact'}>Contact</Link>
+        <ul className="hidden lg:flex items-center space-x-8 md:pl-28 text-[0.9rem] font-semibold">
+          <Link to={'/'} className='textMainColorHover'>Acceuil</Link>
+          <Link to={'/solutions'}  className='textMainColorHover cursor-pointer'>Nos solutions</Link>
+          <Link to={'/apropos'} className='textMainColorHover cursor-pointer'>A propos</Link>
+          <Link to={'/blog'} className='textMainColorHover cursor-pointer'>Blog</Link>
+          <Link to={'/contact'} className='textMainColorHover cursor-pointer'>Contact</Link>
         </ul>
 
         {/* Bouton desktop */}
@@ -147,7 +147,14 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          <ul className="flex flex-col space-y-6 text-lg font-bold">
+          <ul className="flex flex-col space-y-6 text-lg font-semibold">
+             <Link to="/">
+          <img
+            src="eureka.png"
+            alt="Logo eureka"
+            className="w-20 sm:w-28 md:w-32 h-auto object-contain"
+          />
+        </Link>
             <li>
               <Link 
                 to="/" 

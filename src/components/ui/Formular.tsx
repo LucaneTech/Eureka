@@ -1,10 +1,16 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import type { Variants } from "framer-motion";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Title } from "../font/Title";
 
-// (CheckIcon removed as it was unused)
+// Types pour le formulaire
+interface FormData {
+    name: string;
+    email: string;
+    phone?: string;
+    message: string;
+}
 
 // Animation variants
 const containerVariants: Variants = {
@@ -43,6 +49,14 @@ const fadeInScale: Variants = {
     }
 };
 
+// Configuration WhatsApp
+const WHATSAPP_CONFIG = {
+    // Numéro du propriétaire au format international (sans espaces ni +)
+    ownerNumber: "212781343642", // Remplacez par le vrai numéro
+    // Message par défaut si jamais
+    defaultMessage: "Bonjour, je vous contacte depuis votre site web."
+};
+
 // Composant Google Maps
 const GoogleMap: React.FC = () => {
     return (
@@ -65,23 +79,167 @@ const GoogleMap: React.FC = () => {
 const ContactSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-    const [formData, setFormData] = useState({
+    
+    // État du formulaire
+    const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
+        phone: "",
         message: ""
     });
+
+    // État pour gérer le statut d'envoi
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<{
+        type: 'success' | 'error' | null;
+        message: string;
+    }>({ type: null, message: '' });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
         });
+        
+        // Réinitialiser le statut quand l'utilisateur modifie le formulaire
+        if (submitStatus.type) {
+            setSubmitStatus({ type: null, message: '' });
+        }
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    // Fonction pour formater le message WhatsApp
+    const formatWhatsAppMessage = (data: FormData): string => {
+        const currentDate = new Date().toLocaleString('fr-FR', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+
+        // Construction du message formaté
+        const messageParts = [
+            "*NOUVEAU CONTACT DEPUIS LE SITE WEB*",
+            `${currentDate}`,
+            "━━━━━━━━━━━━━━━━━━━",
+            `Nom: ${data.name || "Non spécifié"}`,
+            `Email: ${data.email || "Non spécifié"}`,
+            `Téléphone: ${data.phone || "Non spécifié"}`,
+            "━━━━━━━━━━━━━━━━━━━",
+            `===Message===`,
+            data.message || "Pas de message",
+            "━━━━━━━━━━━━━━━━━━━",
+            "Envoyé via eureka-co.ma"
+        ];
+
+        return encodeURIComponent(messageParts.join('\n'));
+    };
+
+    // Validation du formulaire
+    const validateForm = (): boolean => {
+        if (!formData.name.trim()) {
+            setSubmitStatus({
+                type: 'error',
+                message: 'Veuillez entrer votre nom'
+            });
+            return false;
+        }
+        if (!formData.email.trim()) {
+            setSubmitStatus({
+                type: 'error',
+                message: 'Veuillez entrer votre email'
+            });
+            return false;
+        }
+        if (!formData.message.trim()) {
+            setSubmitStatus({
+                type: 'error',
+                message: 'Veuillez entrer votre message'
+            });
+            return false;
+        }
+        
+        // Validation email simple
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            setSubmitStatus({
+                type: 'error',
+                message: 'Veuillez entrer un email valide'
+            });
+            return false;
+        }
+
+        return true;
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Logique d'envoi du formulaire
-        console.log("Formulaire soumis:", formData);
+        
+        // Validation
+        if (!validateForm()) {
+            return;
+        }
+
+        setIsSubmitting(true);
+        setSubmitStatus({ type: null, message: '' });
+
+        try {
+            // Formater le message pour WhatsApp
+            const encodedMessage = formatWhatsAppMessage(formData);
+            
+            // Nettoyer le numéro (garder seulement les chiffres)
+            const cleanNumber = WHATSAPP_CONFIG.ownerNumber.replace(/\D/g, '');
+            
+            // Créer l'URL WhatsApp
+            const whatsappUrl = `https://wa.me/${cleanNumber}?text=${encodedMessage}`;
+            
+            // Ouvrir WhatsApp dans un nouvel onglet
+            window.open(whatsappUrl, '_blank');
+            
+            // Succès
+            setSubmitStatus({
+                type: 'success',
+                message: 'Message préparé ! WhatsApp va s\'ouvrir.'
+            });
+
+            // Réinitialiser le formulaire après 3 secondes
+            setTimeout(() => {
+                setFormData({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    message: ""
+                });
+                setSubmitStatus({ type: null, message: '' });
+            }, 3000);
+
+            // Optionnel: Envoyer aussi une copie par email ou sauvegarder en base
+            // await sendToBackupService(formData);
+
+        } catch (error) {
+            console.error("Erreur lors de l'envoi:", error);
+            setSubmitStatus({
+                type: 'error',
+                message: 'Une erreur est survenue. Veuillez réessayer.'
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    // Fonction optionnelle pour backup (à implémenter si besoin)
+    const sendToBackupService = async (data: FormData) => {
+        try {
+            // Exemple d'envoi vers une API
+            await fetch('/api/contact-backup', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+        } catch (error) {
+            console.error('Backup error:', error);
+            // Ne pas bloquer l'utilisateur
+        }
     };
 
     return (
@@ -125,8 +283,7 @@ const ContactSection: React.FC = () => {
                     variants={itemVariants}
                     className="text-center mb-12 lg:mb-16"
                 >
-                   <Title text={"Contactez-nous"} variants={"extra"} className="mb-4 "/>
-                    
+                    <Title text="Contactez-nous" variants="extra" className="mb-4"/>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         Nous sommes là pour répondre à toutes vos questions et vous accompagner dans vos projets de nettoyage professionnel.
                     </p>
@@ -169,12 +326,27 @@ const ContactSection: React.FC = () => {
                             variants={fadeInScale}
                             className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100"
                         >
-                            <Title text={"Parlons de votre projet"} variants={"large"} className = "mb-4"/>
+                            <Title text="Parlons de votre projet" variants="large" className="mb-4"/>
+
+                            {/* Message de statut */}
+                            {submitStatus.type && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    className={`mb-4 p-3 rounded-lg ${
+                                        submitStatus.type === 'success' 
+                                            ? 'bg-green-50 text-green-700 border border-green-200' 
+                                            : 'bg-red-50 text-red-700 border border-red-200'
+                                    }`}
+                                >
+                                    {submitStatus.message}
+                                </motion.div>
+                            )}
 
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                                        Nom complet
+                                        Nom complet <span className="text-red-500">*</span>
                                     </label>
                                     <input
                                         type="text"
@@ -184,12 +356,13 @@ const ContactSection: React.FC = () => {
                                         className="w-full px-4 py-3 rounded-lg borderMainColor focus:border-mainColor focus:ring-2 focus:ring-mainColor/20 transition-all outline-none"
                                         placeholder="Votre nom"
                                         required
+                                        disabled={isSubmitting}
                                     />
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                                        Email
+                                        Email <span className="text-red-500">*</span>
                                     </label>
                                     <input
                                         type="email"
@@ -199,12 +372,28 @@ const ContactSection: React.FC = () => {
                                         className="w-full px-4 py-3 rounded-lg borderMainColor focus:border-mainColor focus:ring-2 focus:ring-mainColor/20 transition-all outline-none"
                                         placeholder="votre@email.com"
                                         required
+                                        disabled={isSubmitting}
                                     />
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                                        Message
+                                        Téléphone (optionnel)
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 rounded-lg borderMainColor focus:border-mainColor focus:ring-2 focus:ring-mainColor/20 transition-all outline-none"
+                                        placeholder="Votre numéro de téléphone"
+                                        disabled={isSubmitting}
+                                    />
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                                        Message <span className="text-red-500">*</span>
                                     </label>
                                     <textarea
                                         name="message"
@@ -214,6 +403,7 @@ const ContactSection: React.FC = () => {
                                         className="w-full px-4 py-3 rounded-lg borderMainColor focus:border-mainColor focus:ring-2 focus:ring-mainColor/20 transition-all outline-none resize-none"
                                         placeholder="Décrivez votre besoin..."
                                         required
+                                        disabled={isSubmitting}
                                     />
                                 </div>
 
@@ -221,10 +411,29 @@ const ContactSection: React.FC = () => {
                                     type="submit"
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
-                                    className="w-full  bgMainColorOpacity mainColor py-3.5 rounded-lg borderMainColor font-semibold hover:shadow-lg transition-all duration-300"
+                                    disabled={isSubmitting}
+                                    className={`w-full py-3.5 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
+                                        isSubmitting 
+                                            ? 'bg-gray-400 cursor-not-allowed' 
+                                            : 'bgMainColor text-white hover:bg-mainColor/90 hover:shadow-lg'
+                                    }`}
                                 >
-                                    Envoyer le message
+                                    {isSubmitting ? (
+                                        <>
+                                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                            <span>Préparation...</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Send size={18} />
+                                            <span>Envoyer via WhatsApp</span>
+                                        </>
+                                    )}
                                 </motion.button>
+
+                                <p className="text-xs text-gray-500 text-center mt-2">
+                                    En cliquant sur envoyer, WhatsApp s'ouvrira avec votre message pré-rempli.
+                                </p>
                             </form>
                         </motion.div>
 
@@ -234,23 +443,24 @@ const ContactSection: React.FC = () => {
                             className="grid grid-cols-1 sm:grid-cols-3 gap-4"
                         >
                             {[
-                                { icon: Phone, text: "+212 781 34 36 42", label: "Appelez-nous" },
-                                { icon: Mail, text: "contact@eureka-co.ma", label: "Email" },
-                                { icon: Clock, text: "Lun-Ven 9h-18h", label: "Horaires" }
+                                { icon: Phone, text: "+212 781 34 36 42", label: "Appelez-nous", href: "tel:+212781343642" },
+                                { icon: Mail, text: "contact@eureka-co.ma", label: "Email", href: "mailto:contact@eureka-co.ma" },
+                                { icon: Clock, text: "Lun-Ven 9h-18h", label: "Horaires", href: "#" }
                             ].map((item, index) => (
-                                <motion.div
+                                <motion.a
                                     key={index}
+                                    href={item.href}
                                     whileHover={{ y: -5 }}
-                                    className="bg-white rounded-xl p-4 shadow-md border borderMainColor text-center group cursor-pointer"
+                                    className="bg-white rounded-xl p-4 shadow-md border borderMainColor text-center group cursor-pointer block"
                                 >
                                     <div className="flex justify-center mb-2">
-                                        <div className="p-2 mainColor bgMainColorOpacity borderMainColor  rounded-full  transition-colors">
-                                            <item.icon className="text-mainColor" size={20} />
+                                        <div className="p-2 bgMainColorOpacity rounded-full  transition-colors borderMainColor">
+                                            <item.icon className="mainColor" size={20} />
                                         </div>
                                     </div>
                                     <p className="text-xs text-gray-500 mb-1">{item.label}</p>
                                     <p className="text-sm font-semibold text-gray-800">{item.text}</p>
-                                </motion.div>
+                                </motion.a>
                             ))}
                         </motion.div>
                     </motion.div>
