@@ -228,19 +228,19 @@ const ContactSection: React.FC = () => {
     };
 
     // Fonction optionnelle pour backup (à implémenter si besoin)
-    const sendToBackupService = async (data: FormData) => {
-        try {
-            // Exemple d'envoi vers une API
-            await fetch('/api/contact-backup', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            });
-        } catch (error) {
-            console.error('Backup error:', error);
-            // Ne pas bloquer l'utilisateur
-        }
-    };
+    // const sendToBackupService = async (data: FormData) => {
+    //     try {
+    //         // Exemple d'envoi vers une API
+    //         await fetch('/api/contact-backup', {
+    //             method: 'POST',
+    //             headers: { 'Content-Type': 'application/json' },
+    //             body: JSON.stringify(data)
+    //         });
+    //     } catch (error) {
+    //         console.error('Backup error:', error);
+    //         // Ne pas bloquer l'utilisateur
+    //     }
+    // };
 
     return (
         <motion.section
