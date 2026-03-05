@@ -250,7 +250,7 @@ const ContactSection: React.FC = () => {
             variants={containerVariants}
             className="relative py-16 md:py-24 overflow-hidden"
         >
-            {/* Éléments décoratifs */}
+          
             <motion.div
                 className="absolute -top-40 -right-40 w-80 h-80 bg-mainColor/5 rounded-full blur-3xl"
                 animate={{
