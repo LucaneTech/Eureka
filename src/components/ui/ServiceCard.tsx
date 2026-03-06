@@ -1,3 +1,4 @@
+import { CircleArrowRight } from "lucide-react";
 import type { HeadCardVariants } from "../../types/ui";
 
 export interface ServicesCardProps {
@@ -8,6 +9,7 @@ export interface ServicesCardProps {
     image: string;
     reverse?: boolean; 
     variant: HeadCardVariants;
+    options: [string, ...string[]];
 }
 
 export const ServiceCard = ({
@@ -18,6 +20,7 @@ export const ServiceCard = ({
     image,
     reverse = false,
     variant,
+    options ,
 }: ServicesCardProps) => {
     // Styles dynamiques
     const bgClass = variant === 'primary' ? "bgMainColorOpacity" : "bgSecondaryColorOpacity";
@@ -32,7 +35,7 @@ export const ServiceCard = ({
                 <img
                     src={image}
                     alt={title}
-                    className="h-64 md:h-72 w-full object-cover rounded-md"
+                    className="h-64 md:max-h-96 md:h-full w-full object-cover rounded-md"
                 />
             </div>
 
@@ -43,6 +46,13 @@ export const ServiceCard = ({
                 <p className="text-slate-600 dark:third-color text-base leading-relaxed">
                     {description}
                 </p>
+                <div className="flex flex-col gap-2">
+                    {options.map((option, index) => (
+                        <span key={index} className={`text-sm font-semibold  py-1 rounded-full ${textColorClass}  cursor-pointer transition duration-200 inline-flex items-center`}>
+                          <CircleArrowRight className="inline-block mr-2 w-4" />{option} 
+                        </span>
+                    ))}
+                </div>
             </div>
         </div>
     );

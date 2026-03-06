@@ -104,13 +104,14 @@ const ServiceSection: React.FC = () => {
 
     const servicesData: ServicesCardProps[] = [
         {
-            title: "Nettoyage & Entretien",
+            title: "Nettoyage & Propreté",
             titleColor: "primary",
             paragraph: "Un environnement de travail propre pour une productivité optimale.",
             description: "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
             image: "/images/services/entretient.jpeg",
             variant: "primary",
-            reverse: false
+            reverse: false,
+            options: ["Nettoyage de bureaux", "Nettoyage industriel", "Nettoyage de fin de chantier", "Entretien des espaces verts"]
         },
         {
             title: "Espaces Verts",
@@ -119,25 +120,38 @@ const ServiceSection: React.FC = () => {
             description: "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
             image: "/images/services/espaces-verts.jpeg",
             variant: "secondary",
-            reverse: true
+            reverse: true,
+            options: ["Entretien de jardins", "Taille de haies", "Désherbage", "Arrosage automatique"]
         },
         {
-            title: "Nettoyage de bureaux",
+            title: "Hygiene 4D",
             titleColor: "primary",
-            paragraph: "Un environnement de travail propre pour une productivité optimale.",
-            description: "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
+            paragraph: "",
+            description: "",
             image: "/images/services/service.jpg",
             variant: "primary",
-            reverse: false
+            reverse: false,
+            options: ["Entretien de jardins", "Taille de haies", "Désherbage", "Arrosage automatique"]
         },
         {
-            title: "Nettoyage de bureaux",
+            title: "Froid et Climatisation",
             titleColor: "secondary",
-            paragraph: "Un environnement de travail propre pour une productivité optimale.",
-            description: "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
+            paragraph: "",
+             description: "",
             image: "/images/services/service.jpg",
             variant: "secondary",
-            reverse: true
+            reverse: true,
+            options: ["Entretien de jardins", "Taille de haies", "Désherbage", "Arrosage automatique"]
+        },
+        {
+            title: "Fourniture de services",
+            titleColor: "secondary",
+            paragraph: "",
+            description: "",
+            image: "/images/services/service.jpg",
+            variant: "secondary",
+            reverse: true,
+            options: ["Entretien de jardins", "Taille de haies", "Désherbage", "Arrosage automatique"]
         },
     ];
 
@@ -158,19 +172,19 @@ const ServiceSection: React.FC = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                 >
-                    <Slogan icon={<Wrench />} text={"Nos Services"} variant={"primary"} className="mainColor" />
+                    <Slogan icon={<Wrench />} text={"Solutions"} variant={"primary"} className="mainColor" />
                 </motion.div>
 
                 <motion.div
                     variants={rotateIn}
                 >
-                    <Title text={"Nos Services"} variants={"large"} />
+                    <Title text={"Nos Solutions"} variants={"large"} />
                 </motion.div>
 
                 <motion.div
                     variants={fadeInScale}
                 >
-                    <DescriptionText text={"Découvrez nos services de nettoyage de bureaux, adaptés à vos besoins spécifiques. Nous offrons des solutions personnalisées pour garantir un environnement de travail propre et sain."} />
+                    <DescriptionText text={""} />
                 </motion.div>
             </motion.div>
 
@@ -195,6 +209,7 @@ const ServiceSection: React.FC = () => {
                             image={service.image}
                             variant={service.variant}
                             reverse={service.reverse}
+                            options={service.options}
                         />
                     </motion.div>
                 ))}

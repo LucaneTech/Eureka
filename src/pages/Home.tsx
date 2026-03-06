@@ -460,7 +460,7 @@ export const Home: React.FC = () => {
   const firstServices: HeadCardProps[] = [
     {
       icon: <BrushCleaning />,
-      title: "Nettoyage Professionnel",
+      title: "Nettoyage & Propreté" ,
       description: 'Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous assurent une propreté irréprochable et pérenne. ',
       link: "#",
     },
