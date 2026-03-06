@@ -77,7 +77,7 @@ export const Footer = () => {
             className="flex items-center gap-2 text-slate-500"
           >
             <MapPin size={16} className="text-mainColor" />
-            <span className="text-xs sm:text-sm">Casablanca, Maroc</span>
+            <span className="text-xs sm:text-sm">Pointe-Noir / Congo</span>
           </motion.div>
         </motion.div>
 
@@ -185,18 +185,18 @@ export const Footer = () => {
                 <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
                   <Phone size={16} className="text-mainColor" />
                 </span>
-                <span>(+212) 781 34 36 42</span>
+                <span>+242 05 564 80 80 / 06 755 40 40</span>
               </motion.a>
               
               <motion.a
                 whileHover={{ x: 5, color: "#05AFF2" }}
-                href="mailto:contact@eureka-co.ma"
+                href="mailto:contact@eureka-co.net"
                 className="flex items-center gap-3 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
               >
                 <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
                   <Mail size={16} className="text-mainColor" />
                 </span>
-                <span className="text-sm break-all">contact@eureka-co.ma</span>
+                <span className="text-sm break-all">contact@eureka-co.net</span>
               </motion.a>
             </motion.div>
           </div>

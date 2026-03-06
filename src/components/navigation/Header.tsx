@@ -55,11 +55,11 @@ const Header: React.FC = () => {
         <div className='flex flex-col text-md'>
           <span className='inline-flex gap-2 '>
             <MapPin className='w-5 h-5'/>
-            <p>Imm D4 Quartier Al Mansour, Maroc</p>
+            <p>325 avenue du Général Alfred RAÜL(Pointe-Noire / Congo)</p>
           </span>
           <span className='inline-flex gap-2'>
             <Send  className='w-5 h-5' />
-            <p>email@gmail.com</p>
+            <p>contact@eureka-co.net</p>
           </span>
         </div>
 

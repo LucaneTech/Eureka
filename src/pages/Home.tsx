@@ -199,70 +199,69 @@ const styles = `
 }
 `;
 
-// Données par défaut
 const defaultTestimonials: Testimonial[] = [
   {
     id: 1,
-    description: "PrebuiltUI helped us reduce build time drastically. The components feel production ready and consistent across the product.",
-    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
-    name: "Alex Turner",
-    company: "Vercel"
+    description: "Nous faisons appel à Eureka pour l’entretien régulier de nos bureaux. L’équipe est ponctuelle, efficace et les locaux sont toujours impeccables.",
+    image: "https://images.pexels.com/photos/30065817/pexels-photo-30065817.jpeg",
+    name: "Patrick M.",
+    company: "Cabinet de conseil"
   },
   {
     id: 2,
-    description: "We shipped our MVP weeks earlier than planned. PrebuiltUI removed a huge amount of repetitive UI work.",
-    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
-    name: "Harry Peter",
-    company: "Amazon"
+    description: "J’ai demandé un grand nettoyage après un déménagement. Intervention rapide et très professionnelle. Appartement impeccable.",
+    image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
+    name: "Sandrine K.",
+    company: "Cliente particulière"
   },
   {
     id: 3,
-    description: "PrebuiltUI strikes the right balance between flexibility and consistency. It feels like a system built by real product teams.",
-    image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60",
-    name: "Jason Kim",
-    company: "Flipkart"
+    description: "Nous utilisons leurs services pour le nettoyage des parties communes de notre immeuble. Travail sérieux et suivi régulier.",
+    image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg",
+    name: "Jean-Claude L.",
+    company: "Syndic de copropriété"
   },
   {
     id: 4,
-    description: "The component structure and tokens system make scaling design incredibly easy. Highly recommended.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&auto=format&fit=crop",
-    name: "Sofia Martinez",
-    company: "Linear"
+    description: "Service très pratique pour le ménage hebdomadaire à domicile. L’équipe s’adapte parfaitement à nos besoins.",
+    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
+    name: "Nadine B.",
+    company: "Particulier"
   },
   {
     id: 5,
-    description: "PrebuiltUI allows me to focus on building features instead of fighting CSS. Everything looks premium right out of the box.",
-    image: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60",
-    name: "Alex Johnson",
-    company: "Microsoft"
+    description: "Nous avions besoin d’un nettoyage complet avant l’ouverture de notre boutique. Résultat impeccable et délais respectés.",
+    image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
+    name: "Michel T.",
+    company: "Commerce local"
   },
   {
     id: 6,
-    description: "If you're using Tailwind CSS, PrebuiltUI is a must have. It dramatically speeds up development while keeping the UI clean.",
-    image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200",
-    name: "Emily Karter",
-    company: "Stripe"
+    description: "Très bonne expérience pour un nettoyage après travaux. L’équipe a laissé les lieux parfaitement propres.",
+    image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg",
+    name: "Arlette S.",
+    company: "Entreprise de rénovation"
   },
   {
     id: 7,
-    description: "PrebuiltUI strikes the right balance between flexibility and consistency. It feels like a system built by real product teams.",
-    image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/userImage/userImage1.png",
-    name: "Christofer Levin",
-    company: "Deloitte"
+    description: "Nous avons fait appel à Eureka lors de notre déménagement d’entreprise. Organisation fluide et équipe professionnelle.",
+    image: "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg",
+    name: "Didier K.",
+    company: "PME locale"
   },
   {
     id: 8,
-    description: "PrebuiltUI helped us reduce build time drastically. The components feel production ready and consistent across the product.",
-    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
-    name: "Alex Turner",
-    company: "Vercel"
+    description: "Très bon rapport qualité-prix pour l’entretien régulier de notre appartement. Service fiable et sérieux.",
+    image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg",
+    name: "Brigitte N.",
+    company: "Cliente résidentielle"
   },
   {
     id: 9,
-    description: "We shipped our MVP weeks earlier than planned. PrebuiltUI removed a huge amount of repetitive UI work.",
-    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
-    name: "Harry Peter",
-    company: "Amazon"
+    description: "Entreprise très réactive. Ils ont pu intervenir rapidement pour un nettoyage de bureaux avant une réunion importante.",
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
+    name: "Samuel D.",
+    company: "Startup locale"
   }
 ];
 
@@ -487,8 +486,8 @@ export const Home: React.FC = () => {
         description="Découvrez notre nouvelle gamme de produits design, conçus pour simplifier votre vie tout en ajoutant une touche d'élégance."
         textBtn="Contactez-nous !"
         variantBtn="primary"
-        underImage="under.jpg"
-        rightImage="/images/home/hero.png"
+        underImage="/images/home/banner.jpeg"
+        // rightImage="/images/home/hero.png"
         link="/contact"
         overlayColor="#000000"
         overlayOpacity={90}
@@ -543,22 +542,25 @@ export const Home: React.FC = () => {
             ))}
           </motion.div>
 
-          {/* Zone centrale avec image */}
-          <motion.div
-            variants={scaleIn}
+          
+          
+            
+              <motion.div
+                variants={scaleIn}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full max-w-md max-h-[550px] mx-auto aspect-[4/5] lg:aspect-[3/4] bgMainColor rounded-md shadow-lg overflow-hidden"
-          >
-            <motion.img
-              initial={{ y: 100, opacity: 0 }}
-              animate={isServicesInView ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              src="/images/home/employee.png"
-              alt="image d'un employer de nettoyage eureka & co"
-              className="absolute bottom-0 left-0 w-auto h-full max-h-[400px] object-cover drop-shadow-2xl"
-            />
-          </motion.div>
+            className="w-full max-w-md mx-auto "
+              >
+                <HeadCard
+                  icon={<BriefcaseBusiness />}
+                  title={"Fourniture de Services"}
+                  description={"Des espaces de travail impeccables, pour le bien-être de vos équipes et une image positive auprès de vos clients."}
+                  className="borderMainColor"
+                />
+              </motion.div>
+        
+       
+
 
           {/* Colonne droite - Cartes */}
           <motion.div

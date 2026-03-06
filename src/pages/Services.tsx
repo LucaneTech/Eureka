@@ -108,16 +108,16 @@ const ServiceSection: React.FC = () => {
             titleColor: "primary",
             paragraph: "Un environnement de travail propre pour une productivité optimale.",
             description: "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
-            image: "/images/services/service.jpg",
+            image: "/images/services/entretient.jpeg",
             variant: "primary",
             reverse: false
         },
         {
-            title: "Nettoyage de bureaux",
+            title: "Espaces Verts",
             titleColor: "secondary",
             paragraph: "Un environnement de travail propre pour une productivité optimale.",
             description: "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
-            image: "/images/services/service.jpg",
+            image: "/images/services/espaces-verts.jpeg",
             variant: "secondary",
             reverse: true
         },
@@ -326,7 +326,7 @@ export const Services: React.FC = () => {
                     variantBtn2="secondary"
                     link2="/contact"
                     variantBtn="primary"
-                    underImage="under.jpg"
+                    underImage="images/services/banner.jpeg"
                     link="/apropos"
                     overlayColor="black"
                     sloganVariant="secondary" titleColor="secondaryColor"               />

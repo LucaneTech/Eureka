@@ -285,7 +285,7 @@ const ContactSection: React.FC = () => {
                 >
                     <Title text="Contactez-nous" variants="extra" className="mb-4"/>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Nous sommes là pour répondre à toutes vos questions et vous accompagner dans vos projets de nettoyage professionnel.
+                        Nous sommes là pour répondre à toutes vos questions et vous accompagner dans vos projets de nettoyage professionnel, hygiène 4D, espaces verts, froid et climatisation.
                     </p>
                 </motion.div>
 

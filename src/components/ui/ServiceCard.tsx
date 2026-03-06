@@ -32,7 +32,7 @@ export const ServiceCard = ({
                 <img
                     src={image}
                     alt={title}
-                    className="h-64 md:h-full w-full object-cover rounded-md"
+                    className="h-64 md:h-72 w-full object-cover rounded-md"
                 />
             </div>
 

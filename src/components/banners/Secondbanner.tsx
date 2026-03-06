@@ -65,7 +65,7 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
         >
             {/* Background avec overlay personnalisable */}
             <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none "
                 style={underImage ? { backgroundImage: `url(${underImage})` } : undefined}
                 aria-hidden="true"
             >
@@ -144,7 +144,7 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
                 <div className={`absolute bottom-0 left-0 w-full h-175 bg-linear-to-t from-black to-transparent pointer-events-none`} />
             )}
             {overlayColor === 'primary' && (
-                <div className={`absolute bottom-0 left-0 w-full h-100 bg-linear-to-t from-[#05aff2b6] to-transparent pointer-events-none`} />
+                <div className={`absolute bottom-0 left-0 w-full h-100 bg-linear-to-t from-[#2f66d4] to-transparent pointer-events-none`} />
             )}
             {overlayColor === 'secondary' && (
                 <div className={`absolute bottom-0 left-0 w-full h-100 bg-linear-to-t from-[#3BBF5C] to-transparent pointer-events-none`} />
