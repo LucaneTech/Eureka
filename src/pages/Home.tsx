@@ -11,6 +11,7 @@ import { Button } from "../components/ui/Button";
 import type { TrustCardProps } from "../components/ui/TrustCard";
 import TrustCard from "../components/ui/TrustCard";
 import { DescriptionText } from "../components/font/DescriptionText";
+import TrustedCompanies from "../components/sections/TrustedCompany";
 
 // Animation variants
 const fadeInUp = {
@@ -100,9 +101,9 @@ const ClientChoice = () => {
     {
       icon: <Book />,
       iconStyle: "secondary",
-      title: "Savoir-faire et expertise",
+      title: "Engagement écologique",
       titleColor: 'secondary',
-      description: "Formation continue, personnel expérimenté et maîtrise des techniques 4D pour un service professionnel.",
+      description: "Utilisation de produits éco-responsables et pratiques durables pour un impact environnemental réduit.",
       cardStyle: "secondary"
     }
   ];
@@ -198,6 +199,18 @@ const styles = `
   animation-play-state: paused;
 }
 `;
+
+const logos = [
+  
+  { src: "/images/home/partenaires/casino.png", alt: "logo-casino" },
+  { src: "/images/home/partenaires/regal.png", alt: "logo-regal" },
+  { src: "/images/home/partenaires/ifd.png", alt: "logo-ifd" },
+  { src: "/images/home/partenaires/ead.png", alt: "logo-ead" },
+  { src: "/images/home/partenaires/isd.png", alt: "logo-isd" },
+   { src: "/images/home/partenaires/guenin.png", alt: "logo-guenin" },
+   { src: "/images/home/partenaires/green-service.png", alt: "logo-green-service" },
+  
+];
 
 const defaultTestimonials: Testimonial[] = [
   {
@@ -447,14 +460,14 @@ export const Home: React.FC = () => {
   const firstServices: HeadCardProps[] = [
     {
       icon: <BrushCleaning />,
-      title: "Nettoyage & Entretien",
-      description: 'Des espaces de travail impeccables, pour le bien-être de vos équipes et une image positive auprès de vos clients.',
+      title: "Nettoyage Professionnel",
+      description: 'Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous assurent une propreté irréprochable et pérenne. ',
       link: "#",
     },
     {
       icon: <Box />,
-      title: "Service 4D",
-      description: 'Protégez vos locaux avec notre expertise en Désinfection, Dératisation,  et Déreptilisation.',
+      title: "Hygiène 4D",
+      description: 'Désinfection, dératisation, désinsectisation et dépigeonnisation : une approche complète pour un environnement sain et sécurisé.',
       link: "#",
     }
   ];
@@ -462,14 +475,14 @@ export const Home: React.FC = () => {
   const secondServices: HeadCardProps[] = [
     {
       icon: <Flower />,
-      title: "Espaces Verts & Biodiversité",
-      description: 'Sublimez votre cadre de vie ou de travail avec un entretien expert qui transforme et valorise vos espaces extérieurs.',
+      title: "Espaces Verts",
+      description: 'Entretien de vos espaces verts, pour un cadre de travail agréable et une image positive auprès de vos clients.',
       link: "#",
     },
     {
       icon: <Birdhouse />,
-      title: "Fourniture de Services",
-      description: 'Des espaces de travail impeccables, pour le bien-être de vos équipes et une image positive auprès de vos clients.',
+      title: "Froid et Climatisation",
+      description: "EUREKA & CO, société spécialisée dans le froid et la climatisation, se charge de l'installation, de l'entretien et de la réparation de vos systèmes de climatisation.",
       link: "#",
     }
   ];
@@ -480,10 +493,10 @@ export const Home: React.FC = () => {
       <FirstBanner
         sloganIcon={<SparklesIcon className="w-4 h-4" />}
         slogan="Services de qualité"
-        title="Nettoyage Professionnel Rapide,"
-        addTitle="Sécurisé & Fiable"
+        title="Eureka & Co, votre partenaire de confiance "
+        addTitle="pour un environnement impeccable."
         addTitleStyle="mainColor"
-        description="Découvrez notre nouvelle gamme de produits design, conçus pour simplifier votre vie tout en ajoutant une touche d'élégance."
+        description="Experts en nettoyage et propreté, hygiène 4D (désinsectisation, désinfection, dératisation, déreptilisation), aménagement et gestion des espaces verts ainsi que la maintenance des systèmes de climatisation."
         textBtn="Contactez-nous !"
         variantBtn="primary"
         underImage="/images/home/banner.jpeg"
@@ -554,7 +567,7 @@ export const Home: React.FC = () => {
                 <HeadCard
                   icon={<BriefcaseBusiness />}
                   title={"Fourniture de Services"}
-                  description={"Des espaces de travail impeccables, pour le bien-être de vos équipes et une image positive auprès de vos clients."}
+                  description={"Nous proposons une gamme complète de services de nettoyage et d'entretien pour répondre à tous vos besoins, que ce soit pour les entreprises ou les particuliers."}
                   className="borderMainColor"
                 />
               </motion.div>
@@ -593,7 +606,7 @@ export const Home: React.FC = () => {
         initial="hidden"
         animate={isWhyUsInView ? "visible" : "hidden"}
         variants={staggerContainer}
-        className="relative flex flex-col-reverse md:flex-row items-center bgMainColorOpacity w-full md:h-[450px] p-8 justify-between gap-65 sm:gap-55 md:gap-30 overflow-hidden"
+        className="flex flex-col md:flex-row items-center bgMainColorOpacity w-full md:h-[450px] p-8 justify-center gap-24 overflow-hidden  md:px-12 lg:px-16" 
       >
         <motion.div
           initial={{ x: -200, opacity: 0 }}
@@ -603,15 +616,15 @@ export const Home: React.FC = () => {
           <motion.img
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            src="/images/home/whyus.png"
+            src="/images/home/about.jpeg"
             alt=""
-            className="absolute bottom-0 left-0 w-auto z-0"
+            className="rounded-lg object-cover w-full max-w-sm md:max-w-md lg:max-w-lg shadow-lg border border-slate-300"
           />
         </motion.div>
 
         <motion.div
           variants={fadeInRight}
-          className="max-w-[400px] text-center md:text-start relative z-10"
+          className="max-w-2xl text-center md:text-start relative z-10"
         >
           <motion.div variants={fadeInUp}>
             <Title text={"Qui"} variants={"extra"} className="mainColor mb-2" />
@@ -623,7 +636,7 @@ export const Home: React.FC = () => {
             variants={fadeInUp}
             className="mb-5 text-slate-700"
           >
-            Expert en nettoyage, espaces verts et services 4D, Eureka & Co s'engage pour votre bien-être et la propreté de vos espaces depuis [année de création]. Plus qu'une entreprise de services, nous sommes votre partenaire confiance.
+            EUREKA & CO est une entreprise de nettoyage et d'entretien dédiée à fournir des services de qualité supérieure pour les entreprises et les particuliers. Nous sommes spécialisés dans le nettoyage professionnel, l'hygiène 4D (désinsectisation, désinfection, dératisation, déreptilisation), l'aménagement et la gestion des espaces verts ainsi que la maintenance des systèmes de climatisation. Notre équipe expérimentée s'engage à offrir un service fiable, efficace et respectueux de l'environnement pour garantir la satisfaction de nos clients.
           </motion.p>
 
           <motion.div
@@ -638,10 +651,16 @@ export const Home: React.FC = () => {
 
       {/* why do ours clients choice us */}
       <ClientChoice />
+            
+      <div className= "py-4 md:p-6 mt-8">
+        <TrustedCompanies logos={logos} />
+      </div>
 
       <div>
         <TestimonialsSection />
       </div>
+
+    
 
       <motion.section
         ref={ctaRef}
