@@ -14,18 +14,8 @@ const TrustCard: React.FC<TrustCardProps> = ({
     title,
     titleColor,
     description,
-    iconStyle = 'primary'
 }) => {
     // Classes d'icône simplifiées
-    const iconClasses = {
-        primary: "mainColor bgMainColorOpacity",
-        secondary: "secondaryColor bgSecondaryColorOpacity"
-    }[iconStyle];
-
-    const textColor = {
-        primary: "mainColor ",
-        secondary: "secondaryColor "
-    }[titleColor];
 
     const cStyle = {
         primary: "borderMainColor ",

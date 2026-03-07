@@ -1,5 +1,4 @@
 import { CircleArrowRight } from "lucide-react";
-import type { HeadCardVariants } from "../../types/ui";
 
 export interface ServicesCardProps {
     title: string;
@@ -13,7 +12,6 @@ export interface ServicesCardProps {
 
 export const ServiceCard = ({
     title,
-    titleColor = "primary",
     paragraph,
     description,
     image,
@@ -22,7 +20,6 @@ export const ServiceCard = ({
 }: ServicesCardProps) => {
     // Styles dynamiques
     const bgClass ="bgMainColor";
-    const textColorClass = titleColor === 'primary' ? "mainColor" : "secondaryColor";
 
     return (
         <div

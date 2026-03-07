@@ -1,5 +1,6 @@
 import { DescriptionText } from "../font/DescriptionText";
 import { Button } from "../ui/Button";
+import { Slogan } from "../ui/Slogan";
 
 interface FirstBannerProps {
     title?: string;
@@ -15,7 +16,12 @@ interface FirstBannerProps {
     link: string;
     link2?: string;
     className?: string;
-    secondButton?: boolean
+    secondButton?: boolean;
+    overlayColor?: string;
+    overlayOpacity?: number;
+    slogan?: string;
+    sloganIcon?: React.ReactNode;
+    sloganVariant?: string;
 }
 
 export const FirstBanner: React.FC<FirstBannerProps> = ({
@@ -33,7 +39,12 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
     className = "",
     secondButton = false,
     addTitle = "",
-    addTitleStyle = "mainColor"
+    addTitleStyle = "mainColor",
+    overlayColor = "#000000",
+    overlayOpacity = 50,
+    slogan,
+    sloganIcon,
+    sloganVariant = "primary"
 }) => {
 
     
@@ -50,7 +61,11 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                 style={underImage ? { backgroundImage: `url(${underImage})` } : undefined}
                 aria-hidden="true"
             >
-               
+                {/* Overlay */}
+                <div
+                    className="absolute inset-0"
+                    style={{ backgroundColor: overlayColor, opacity: overlayOpacity / 100 }}
+                ></div>
             </div>
 
             {/* Contenu principal */}
@@ -60,6 +75,13 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                     {/* Partie texte - Centrée sur mobile */}
                     <div className="w-full md:w-1/2 space-y-3 md:space-y-4 text-white text-center md:text-left">
                        
+                        {slogan && sloganIcon && (
+                            <Slogan 
+                                text={slogan} 
+                                icon={sloganIcon} 
+                                variant={sloganVariant as 'primary' | 'secondary'} 
+                            />
+                        )}
 
                         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                             {title} 
