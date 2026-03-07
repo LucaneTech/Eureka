@@ -20,15 +20,15 @@ const HeadCard: React.FC<HeadCardProps> = ({
    
 }) => {
     return (
-        <div className={`bg-white rounded-md shadow-md p-4 sm:p-5 md:p-6 border max-w-xl ${className}`}>
+        <div className={`bgMainColor rounded-md shadow-md p-4 sm:p-5 md:p-6 border max-w-xl ${className}`}>
            
             <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div className="flex items-center space-x-2 sm:space-x-3">
                  
-                    <div className={`bgMainColorOpacity p-2 sm:p-2.5 md:p-3 rounded-full border mainColor`}>
+                    <div className={`bgMainColorOpacity p-2 sm:p-2.5 md:p-3 rounded-full border text-white border-white`}>
                         {icon}
                     </div>
-                    <h3 className={`text-lg sm:text-xl md:text-xl font-semibold mainColor leading-tight sm:leading-normal`}>
+                    <h3 className={`text-lg sm:text-xl md:text-xl font-semibold text-white leading-tight sm:leading-normal`}>
                         {title}
                     </h3>
                 </div>
@@ -37,7 +37,7 @@ const HeadCard: React.FC<HeadCardProps> = ({
             {/* Description */}
            <div className="max-w-[500px]">
              {description && (
-                <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-white text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">
                     {description}
                 </p>
             )}

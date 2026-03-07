@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion} from "framer-motion";
-import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
+import { Phone, Mail, MapPin, ChevronRight, Globe } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -66,9 +66,7 @@ export const Footer = () => {
           </Link>
 
           <p className="text-sm leading-6 md:leading-7 text-slate-600 max-w-md">
-            Eureka & Co offre des services professionnels de nettoyage et d'entretien pour vos bureaux, 
-            parties communes, chantiers et espaces verts. Votre partenaire propreté au Maroc pour des 
-            locaux impeccables.
+           Eureka & Co est une entreprise de droit congolais spécialisée dans les services de nettoyage et entretien professionnel, hygiène 4D (désinsectisation, désinfection, dératisation, déreptilisation), aménagement et entretien des espaces verts ainsi que la maintenance des systèmes de climatisation.
           </p>
 
           {/* Badge de localisation - Ajouté pour plus de crédibilité */}
@@ -98,8 +96,9 @@ export const Footer = () => {
           <div className="flex flex-col space-y-3">
             {[
               { to: "/", label: "Accueil" },
-              { to: "/solutions", label: "Services" },
+              { to: "/solutions", label: "Nos solutions" },
               { to: "/apropos", label: "À propos" },
+               { to: "/blog", label: "Blog" },
               { to: "/contact", label: "Contact" }
             ].map((link) => (
               <motion.div
@@ -126,7 +125,7 @@ export const Footer = () => {
           className="lg:col-span-3 flex flex-col"
         >
           <h2 className="font-bold text-mainColor text-base sm:text-lg mb-4 md:mb-6 relative inline-block">
-            Nos services
+            Nos solutions
             <motion.span 
               className="absolute -bottom-1 left-0 w-12 h-0.5 bg-mainColor"
               initial={{ width: 0 }}
@@ -136,10 +135,11 @@ export const Footer = () => {
           </h2>
           <div className="flex flex-col gap-x-4 gap-y-3">
             {[
-              { hash: "bureaux", label: "Nettoyage bureaux" },
-              { hash: "chantiers", label: "Nettoyage chantiers" },
-              { hash: "espacesverts", label: "Espaces verts" },
-              { hash: "desinfection", label: "Désinfection" }
+              { hash: "bureaux", label: "Nettoyage & Propreté" },
+              { hash: "chantiers", label: "Hygiène 4D" },
+              { hash: "desinfection", label: "Espaces Verts" },
+              { hash: "desinfection", label: "Froid et Climatisation" },
+              { hash: "espacesverts", label: "Centrales d'achats" },
             ].map((service) => (
               <motion.a
                 key={service.hash}
@@ -170,7 +170,7 @@ export const Footer = () => {
           </h2>
           <div className="space-y-4">
             <p className="text-slate-600 text-sm leading-relaxed">
-              Obtenez un devis gratuit ou planifiez votre intervention de nettoyage.
+              Obtenez un devis gratuit ou planifiez votre intervention.
             </p>
             
             <motion.div 
@@ -180,23 +180,34 @@ export const Footer = () => {
               <motion.a
                 whileHover={{ x: 5, color: "#05AFF2" }}
                 href="tel:+212781343642"
-                className="flex items-center gap-3 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
+                className="flex items-center gap-2 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
               >
                 <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
                   <Phone size={16} className="text-mainColor" />
                 </span>
-                <span>+242 05 564 80 80 / 06 755 40 40</span>
+                <span>+242 05 564 80 80/06 755 40 40</span>
               </motion.a>
               
               <motion.a
                 whileHover={{ x: 5, color: "#05AFF2" }}
                 href="mailto:contact@eureka-co.net"
-                className="flex items-center gap-3 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
+                className="flex items-center gap-2 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
               >
                 <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
                   <Mail size={16} className="text-mainColor" />
                 </span>
                 <span className="text-sm break-all">contact@eureka-co.net</span>
+              </motion.a>
+
+               <motion.a
+                whileHover={{ x: 5, color: "#05AFF2" }}
+                href="mailto:contact@eureka-co.net"
+                className="flex items-center gap-2 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
+              >
+                <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
+                  <Globe  size={16} className="text-mainColor"/>
+                </span>
+                <span className="text-sm break-all">https://www.eureka-co.net</span>
               </motion.a>
             </motion.div>
           </div>
@@ -232,11 +243,11 @@ export const Footer = () => {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="hidden md:flex items-center gap-4 text-xs"
             >
-              <Link to="/mentions-legales" className="hover:text-mainColor transition-colors">
+              <Link to="#" className="hover:text-mainColor transition-colors">
                 Mentions légales
               </Link>
               <span className="text-slate-300">|</span>
-              <Link to="/politique-confidentialite" className="hover:text-mainColor transition-colors">
+              <Link to="#" className="hover:text-mainColor transition-colors">
                 Confidentialité
               </Link>
             </motion.div>

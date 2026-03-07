@@ -1,15 +1,11 @@
 import { DescriptionText } from "../font/DescriptionText";
 import { Button } from "../ui/Button";
-import { Slogan } from "../ui/Slogan";
 
 interface FirstBannerProps {
-    sloganIcon?: React.ReactNode;
-    slogan?: string;
-    sloganVariant?: 'primary' | 'secondary'
-    title: string;
+    title?: string;
     addTitle?: string;
     addTitleStyle?: string;
-    description: string;
+    description?: string;
     textBtn: string;
     variantBtn?: 'primary' | 'secondary' | 'outline';
     textBtn2?: string;
@@ -19,15 +15,11 @@ interface FirstBannerProps {
     link: string;
     link2?: string;
     className?: string;
-    overlayColor?: string;
-    overlayOpacity?: number;
     secondButton?: boolean
 }
 
 export const FirstBanner: React.FC<FirstBannerProps> = ({
-    sloganIcon,
-    slogan,
-    sloganVariant = "primary",
+
     title = "",
     description = "",
     textBtn = " ",
@@ -39,14 +31,12 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
     underImage,
     rightImage,
     className = "",
-    overlayColor = '#000000',
-    overlayOpacity = 60,
     secondButton = false,
     addTitle = "",
     addTitleStyle = "mainColor"
 }) => {
 
-    const opacityDecimal = overlayOpacity / 100;
+    
 
     return (
         <section
@@ -60,13 +50,7 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                 style={underImage ? { backgroundImage: `url(${underImage})` } : undefined}
                 aria-hidden="true"
             >
-                {/* Overlay personnalisable avec dégradé */}
-                <div
-                    className="absolute inset-0 "
-                    style={{
-                        background: ` linear-gradient(90deg, ${overlayColor}${Math.round(opacityDecimal * 255).toString(16).padStart(2, '0')} 0%, ${overlayColor}${Math.round((opacityDecimal * 0.7) * 255).toString(16).padStart(2, '0')} 50%, transparent 100%)`
-                    }}
-                />
+               
             </div>
 
             {/* Contenu principal */}
@@ -75,11 +59,7 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
 
                     {/* Partie texte - Centrée sur mobile */}
                     <div className="w-full md:w-1/2 space-y-3 md:space-y-4 text-white text-center md:text-left">
-                        {slogan && (
-
-                            <Slogan icon={sloganIcon} text={slogan} variant={sloganVariant} />
-
-                        )}
+                       
 
                         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                             {title} 
@@ -122,7 +102,7 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                         <div className="hidden md:block md:absolute bottom-0 right-0 w-full max-w-sm md:max-w-md lg:max-w-lg">
                             <img
                                 src={rightImage}
-                                alt={`${title} - ${slogan || 'banner'}`}
+                                alt={`${title}`}
                                 className="w-full h-[400px] object-cover drop-shadow-2xl"
                                 loading="lazy"
 
@@ -134,7 +114,7 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
             </div>
 
             {/* Éléments de design optionnels */}
-            <div className="absolute bottom-0 left-0 w-full h-16 md:h-24 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-full h-16 md:h-96 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
         </section>
     );
 };

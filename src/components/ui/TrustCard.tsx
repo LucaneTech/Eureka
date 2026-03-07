@@ -33,21 +33,21 @@ const TrustCard: React.FC<TrustCardProps> = ({
     }[titleColor];
 
     return (
-        <div className={`bg-white rounded-md  max-w-lg shadow-lg border p-6 transition-shadow ${cStyle}`}>
+        <div className={`bgMainColor rounded-md  max-w-lg shadow-lg border p-6 transition-shadow ${cStyle}`}>
             <div className="flex items-start gap-4">
                 {/* Icône - positionnée à gauche */}
-                <div className={`${iconClasses} p-3 rounded-full border shrink-0`}>
+                <div className={`text-white p-3 rounded-full border shrink-0`}>
                     {icon}
                 </div>
 
                 {/* Contenu textuel - à droite */}
                 <div className="flex-1">
-                    <h3 className={`text-xl font-semibold mb-2 ${textColor || ''}`}>
+                    <h3 className={`text-xl font-semibold mb-2 text-white`}>
                         {title}
                     </h3>
                     
                     {description && (
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-white leading-relaxed">
                             {description}
                         </p>
                     )}

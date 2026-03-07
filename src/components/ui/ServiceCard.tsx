@@ -8,7 +8,6 @@ export interface ServicesCardProps {
     description: string;
     image: string;
     reverse?: boolean; 
-    variant: HeadCardVariants;
     options: [string, ...string[]];
 }
 
@@ -19,11 +18,10 @@ export const ServiceCard = ({
     description,
     image,
     reverse = false,
-    variant,
     options ,
 }: ServicesCardProps) => {
     // Styles dynamiques
-    const bgClass = variant === 'primary' ? "bgMainColorOpacity" : "bgSecondaryColorOpacity";
+    const bgClass ="bgMainColor";
     const textColorClass = titleColor === 'primary' ? "mainColor" : "secondaryColor";
 
     return (
@@ -41,14 +39,14 @@ export const ServiceCard = ({
 
             {/* Contenu textuel */}
             <div className="p-6 flex flex-col space-y-2 w-full md:w-3/5">
-                <h3 className={`${textColorClass} text-2xl font-semibold`}>{title}</h3>
-                <p className="text-gray-700 mb-2 font-semibold">{paragraph}</p>
-                <p className="text-slate-600 dark:third-color text-base leading-relaxed">
+                <h3 className={`text-white text-2xl font-semibold`}>{title}</h3>
+                <p className="text-gray-200 mb-2 font-semibold">{paragraph}</p>
+                <p className="text-white dark:third-color text-base leading-relaxed">
                     {description}
                 </p>
                 <div className="flex flex-col gap-2">
                     {options.map((option, index) => (
-                        <span key={index} className={`text-sm font-semibold  py-1 rounded-full ${textColorClass}  cursor-pointer transition duration-200 inline-flex items-center`}>
+                        <span key={index} className={`text-sm font-semibold  py-1 rounded-full text-white cursor-pointer transition duration-200 inline-flex items-center`}>
                           <CircleArrowRight className="inline-block mr-2 w-4" />{option} 
                         </span>
                     ))}

@@ -1,7 +1,7 @@
 import type React from "react";
 import { useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { Birdhouse, Book, BookOpenCheck, Box, Brain, BriefcaseBusiness, BrushCleaning, Flower, Handshake, SparklesIcon, Twitch, Zap } from "lucide-react";
+import { Birdhouse, Book, BookOpenCheck, Box, Brain, BriefcaseBusiness, BrushCleaning, Flower, Handshake, Twitch, Zap } from "lucide-react";
 import { FirstBanner } from "../components/banners/Firstbanner";
 import { Slogan } from "../components/ui/Slogan";
 import { Title } from "../components/font/Title";
@@ -76,9 +76,9 @@ const ClientChoice = () => {
   const clientChoice: TrustCardProps[] = [
     {
       icon: <Brain />,
-      iconStyle: "secondary",
+      iconStyle: "primary",
       title: "Savoir-faire et expertise",
-      titleColor: 'secondary',
+      titleColor: 'primary',
       description: "Formation continue, personnel expérimenté et maîtrise des techniques 4D pour un service professionnel.",
       cardStyle: "secondary"
     },
@@ -117,7 +117,7 @@ const ClientChoice = () => {
       className="p-8 flex flex-col justify-center items-center"
     >
       <motion.div variants={fadeInUp} className="flex flex-col justify-center items-center text-center">
-        <Slogan icon={<Handshake />} text={"Choix de nos clients"} variant={"secondary"} className="secondaryColor mb-6" />
+        <Slogan icon={<Handshake />} text={"Choix de nos clients"} variant={"primary"} className="mainColor mb-6" />
         <Title text={"Pourquoi nos clients nous font confiance ?"} variants={"large"} />
       </motion.div>
 
@@ -209,6 +209,14 @@ const logos = [
   { src: "/images/home/partenaires/isd.png", alt: "logo-isd" },
    { src: "/images/home/partenaires/guenin.png", alt: "logo-guenin" },
    { src: "/images/home/partenaires/green-service.png", alt: "logo-green-service" },
+    { src: "/images/home/partenaires/sci-ndt.png", alt: "logo-sci-ndt" },
+
+     { src: "/images/home/partenaires/cubana.png", alt: "logo-cubana" },
+     { src: "/images/home/partenaires/ex.png", alt: "logo-ex" },
+     { src: "/images/home/partenaires/btp.png", alt: "logo-btp" },
+     { src: "/images/home/partenaires/guot.png", alt: "logo-guot" },
+     { src: "/images/home/partenaires/olivier.png", alt: "logo-olivier" },
+     { src: "/images/home/partenaires/super.png", alt: "logo-super" },
   
 ];
 
@@ -329,7 +337,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
 // Composant principal
 export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   title = "Ce que nos clients disent de nous",
-  subtitle = "Real stories from designers, developers, and product teams using PrebuiltUI to ship faster and with confidence.",
+  subtitle = "Des témoignages authentiques de clients satisfaits qui ont fait confiance à Eureka & Co pour leurs besoins de nettoyage et d'entretien.",
   testimonials = defaultTestimonials,
   className = "",
   gradientOverlay = true,
@@ -491,8 +499,6 @@ export const Home: React.FC = () => {
     <>
       {/* Hero section - déjà animée via FirstBanner */}
       <FirstBanner
-        sloganIcon={<SparklesIcon className="w-4 h-4" />}
-        slogan="Services de qualité"
         title="Eureka & Co, votre partenaire de confiance "
         addTitle="pour un environnement impeccable."
         addTitleStyle="mainColor"
@@ -502,9 +508,7 @@ export const Home: React.FC = () => {
         underImage="/images/home/banner.jpeg"
         // rightImage="/images/home/hero.png"
         link="/contact"
-        overlayColor="#000000"
-        overlayOpacity={90}
-        sloganVariant="primary"
+
         link2={"/solutions"}
         secondButton
         textBtn2="Découvrez nos solutions"
@@ -520,11 +524,11 @@ export const Home: React.FC = () => {
         className="relative flex flex-col justify-center items-center px-4 py-12 md:px-8 lg:px-12 overflow-hidden"
       >
         <motion.div variants={fadeInUp} className="mainColor mb-2 md:mb-4">
-          <Slogan icon={<BriefcaseBusiness />} text={"Nos services"} variant={"primary"} />
+          <Slogan icon={<BriefcaseBusiness />} text={"Nos solutions"} variant={"primary"} />
         </motion.div>
 
         <motion.div variants={fadeInUp}>
-          <Title text={"Nos Services de Nettoyage Experts"} variants={"large"} className="mb-4 md:mb-8 py-2 text-center" />
+          <Title text={"Découvrez nos solutions"} variants={"large"} className="mb-4 md:mb-8 py-2 text-center" />
         </motion.div>
 
         {/* Conteneur principal flex avec gestion responsive */}
@@ -566,7 +570,7 @@ export const Home: React.FC = () => {
               >
                 <HeadCard
                   icon={<BriefcaseBusiness />}
-                  title={"Fourniture de Services"}
+                  title={"Centrales d'achats"}
                   description={"Nous proposons une gamme complète de services de nettoyage et d'entretien pour répondre à tous vos besoins, que ce soit pour les entreprises ou les particuliers."}
                   className="borderMainColor"
                 />
@@ -676,7 +680,7 @@ export const Home: React.FC = () => {
           variants={fadeInUp}
           className="text-slate-600 text-center max-w-xl mx-auto"
         >
-        <DescriptionText text={"Contactez-nous dès aujourd'hui pour un devis gratuit et découvrez comment nous pouvons transformer vos espaces avec notre expertise en nettoyage et entretien."} className="max-w-xl mx-auto" />
+        <DescriptionText text={"Contactez-nous dès aujourd'hui pour un devis gratuit et découvrez comment nous pouvons transformer vos espaces avec notre expertise."} className="max-w-xl mx-auto" />
         </motion.div>
 
         <motion.div

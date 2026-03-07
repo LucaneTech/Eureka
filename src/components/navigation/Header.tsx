@@ -1,4 +1,4 @@
-import { Facebook, Instagram, MapPin, Send, Twitter, X } from 'lucide-react';
+import { Facebook, Instagram, MapPin, MessageCircle, Send , X } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
 
   const socialIcons = [
     {
-      Icon: <Twitter className='w-5 h-5' />,
+      Icon: <MessageCircle className='w-5 h-5'/>,
       link: "#"
     },
     {
@@ -55,7 +55,7 @@ const Header: React.FC = () => {
         <div className='flex flex-col text-md'>
           <span className='inline-flex gap-2 '>
             <MapPin className='w-5 h-5'/>
-            <p>325 avenue du Général Alfred RAÜL(Pointe-Noire / Congo)</p>
+            <p>325 avenue du Général Alfred RAÜL, Pointe-Noire / Congo</p>
           </span>
           <span className='inline-flex gap-2'>
             <Send  className='w-5 h-5' />

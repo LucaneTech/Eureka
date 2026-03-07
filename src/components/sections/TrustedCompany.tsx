@@ -12,7 +12,7 @@ type TrustedCompaniesProps = {
 };
 
 const TrustedCompanies: React.FC<TrustedCompaniesProps> = ({
-  title = "Ils nous font confiance",
+  title = "Ils font appel à Eureka & Co",
   logos,
 }) => {
   return (

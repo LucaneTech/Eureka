@@ -109,7 +109,7 @@ const ServiceSection: React.FC = () => {
             paragraph: "Un environnement de travail propre pour une productivité optimale.",
             description: "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
             image: "/images/services/entretient.jpeg",
-            variant: "primary",
+            
             reverse: false,
             options: ["Nettoyage Classique", "Nettoyage des sols", "Nettoyage de vitres et panneaux solaires", "Remise en état après travaux", "Shampooing de moquette"]
         },
@@ -119,7 +119,7 @@ const ServiceSection: React.FC = () => {
             paragraph: "Des espaces verts bien entretenus pour un cadre de travail agréable et inspirant.",
             description: "Notre service d'entretien des espaces verts comprend la tonte de pelouse, la taille de haies, le désherbage et l'arrosage automatique. Nous veillons à ce que vos jardins et espaces extérieurs soient toujours impeccables et accueillants.",
             image: "/images/services/espaces-verts.jpeg",
-            variant: "secondary",
+            
             reverse: true,
             options: ["Entretien de jardins", "Taille de haies", "Désherbage", "Arrosage automatique"]
         },
@@ -129,7 +129,7 @@ const ServiceSection: React.FC = () => {
             paragraph: "Une hygiène rigoureuse pour un environnement de travail sain.",
             description: " Notre service d'hygiène 4D offre une solution complète pour maintenir un environnement de travail sain. Nous utilisons des techniques avancées de désinfection, de décontamination, de désodorisation et de dératisation pour garantir la propreté et la sécurité de vos locaux.",
             image: "/images/services/hygiene.jpeg",
-            variant: "primary",
+          
             reverse: false,
             options: ["Nettoyage et désinfection", "Dératisation et désinsectisation", "Gestion des déchets", "Contrôle des odeurs"]
         },
@@ -139,19 +139,19 @@ const ServiceSection: React.FC = () => {
             paragraph: "Assurez un environnement de travail confortable toute l'année grâce à nos services de froid et climatisation.",
             description: " Notre service de froid et climatisation assure l'installation, la maintenance et le dépannage de vos systèmes de climatisation pour garantir un environnement de travail confortable toute l'année.",
             image: "/images/services/froid.jpeg",
-            variant: "secondary",
+            
             reverse: true,
             options: ["Installation", "Maintenance", "Dépannage"]
         },
         {
-            title: "Fourniture de services",
+            title: "Centrales d'achats",
             titleColor: "primary",
             paragraph: "Des services complémentaires pour répondre à tous vos besoins.",
             description: "Nous proposons une gamme complète de services de fourniture pour votre entreprise, y compris la location de matériel de nettoyage, la formation du personnel et la gestion des stocks.",
             image: "/images/services/service.jpg",
-            variant: "primary",
+           
             reverse: true,
-            options: ["Fourniture de produits de nettoyage", "Location de matériel de nettoyage", "Formation du personnel de nettoyage", "Gestion des stocks et approvisionnement"]
+            options: ["Fourniture de produits de nettoyage", "Location de matériel de nettoyage", "Formation du personnel de nettoyage"]
         },
     ];
 
@@ -207,7 +207,6 @@ const ServiceSection: React.FC = () => {
                             paragraph={service.paragraph}
                             description={service.description}
                             image={service.image}
-                            variant={service.variant}
                             reverse={service.reverse}
                             options={service.options}
                         />
