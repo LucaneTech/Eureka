@@ -188,28 +188,28 @@ const ServiceSection: React.FC = () => {
     reverse: false,
     options: [
       {
-        label: "Nettoyage et désinfection",
-        description: "Désinfection professionnelle des locaux.",
+        label: "Desinsectisation",
+        description: "Lutte contre les insectes nuisibles.",
         details:
-          "Utilisation de produits certifiés pour éliminer bactéries, virus et agents contaminants."
+          "blattes, cafards, fourmis, termites, punaises de lit, puces, guêpes, frelons, abeilles, moustiques, mouches, perces-bois, charançons etc. "
       },
       {
-        label: "Dératisation et désinsectisation",
-        description: "Lutte contre les nuisibles.",
+        label: "Dératisation",
+        description: "Lutte contre les rongeurs.",
         details:
-          "Interventions ciblées pour éliminer rats, souris, cafards et autres nuisibles tout en respectant les normes sanitaires."
+          "Souris, rats, mulots, campagnols, musaraignes, loirs, chauves-souris etc."
       },
       {
-        label: "Gestion des déchets",
-        description: "Organisation et traitement des déchets.",
+        label: "Desinfection",
+        description: "Désinfection des surfaces et équipements.",
         details:
-          "Mise en place de solutions de tri et de gestion efficace des déchets dans vos locaux."
+          "Bactéries, micro-organismes, spores bactériennes, virus etc."
       },
       {
-        label: "Contrôle des odeurs",
-        description: "Traitement des mauvaises odeurs.",
+        label: "Dereptilisation",
+        description: "Lutte contre les reptiles indésirables.",
         details:
-          "Utilisation de technologies spécifiques pour neutraliser durablement les odeurs."
+          "Serpents, lézards, geckos, caméléons, iguanes, tortues etc."
       }
     ]
   },

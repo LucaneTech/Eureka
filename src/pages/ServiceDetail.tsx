@@ -53,7 +53,7 @@ const ServiceDetail = () => {
             className="inline-flex items-center mainColor hover:text-blue-800 transition-colors duration-200"
         >
             <CircleArrowLeft className="w-4 h-4 mr-2" />
-            Retour aux services
+            Retour aux solutions
         </Link>
     </div>
 </div>
