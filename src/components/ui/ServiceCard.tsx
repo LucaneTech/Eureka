@@ -11,6 +11,7 @@ export interface ServiceOption {
 
 export interface ServicesCardProps {
     title: string;
+
     paragraph: string;
     description: string;
     image: string;

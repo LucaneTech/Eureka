@@ -180,12 +180,14 @@ const ServiceSection: React.FC = () => {
     ]
   },
   {
-    title: "Hygiene 4D",
+    title: "Hygiène 4D",
     paragraph: "Une hygiène rigoureuse pour un environnement de travail sain.",
     description:
       "Notre service d'hygiène 4D offre une solution complète pour maintenir un environnement de travail sain.",
     image: "/images/services/hygiene.jpeg",
     reverse: false,
+    
+
     options: [
       {
         label: "Desinsectisation",
@@ -320,7 +322,6 @@ const ServiceSection: React.FC = () => {
                     >
                         <ServiceCard
                             title={service.title}
-
                             paragraph={service.paragraph}
                             description={service.description}
                             image={service.image}

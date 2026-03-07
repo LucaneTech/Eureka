@@ -5,6 +5,7 @@ import { CircleArrowLeft } from "lucide-react";
 const ServiceDetail = () => {
   const location = useLocation();
   const option = location.state?.option;
+ 
 
   if (!option) {
     return <p className="text-center mt-10">Aucun service sélectionné.</p>;
