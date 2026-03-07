@@ -46,7 +46,7 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
     variantBtn2,
     underImage,
     className = "",
-    overlayColor = 'black',
+    // overlayColor = 'black',
     secondButton = false,
     // images = []
 
@@ -140,7 +140,7 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
             </div>
 
             {/* Éléments de design optionnels */}
-            {overlayColor === 'black' && (
+            {/* {overlayColor === 'black' && (
                 <div className={`absolute bottom-0 left-0 w-full h-175 bg-linear-to-t from-black to-transparent pointer-events-none`} />
             )}
             {overlayColor === 'primary' && (
@@ -148,7 +148,7 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
             )}
             {overlayColor === 'secondary' && (
                 <div className={`absolute bottom-0 left-0 w-full h-100 bg-linear-to-t from-[#3BBF5C] to-transparent pointer-events-none`} />
-            )}
+            )} */}
 
 
             {/* {

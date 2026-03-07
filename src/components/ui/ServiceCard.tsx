@@ -1,13 +1,21 @@
-import { CircleArrowRight } from "lucide-react";
+import { CircleArrowRight} from "lucide-react";
+import { Link } from "react-router-dom";
+
+export interface ServiceOption {
+    label: string;
+    description?: string;
+    image?: string;
+    details: string;
+}
+
 
 export interface ServicesCardProps {
     title: string;
-    titleColor?: "primary" | "secondary";
-    paragraph: string; 
+    paragraph: string;
     description: string;
     image: string;
-    reverse?: boolean; 
-    options: [string, ...string[]];
+    reverse?: boolean;
+    options?: ServiceOption[];
 }
 
 export const ServiceCard = ({
@@ -16,10 +24,10 @@ export const ServiceCard = ({
     description,
     image,
     reverse = false,
-    options ,
+    options,
 }: ServicesCardProps) => {
     // Styles dynamiques
-    const bgClass ="bgMainColor";
+    const bgClass = "bgMainColor";
 
     return (
         <div
@@ -41,13 +49,23 @@ export const ServiceCard = ({
                 <p className="text-white dark:third-color text-base leading-relaxed">
                     {description}
                 </p>
-                <div className="flex flex-col gap-2">
-                    {options.map((option, index) => (
-                        <span key={index} className={`text-sm font-semibold  py-1 rounded-full text-white cursor-pointer transition duration-200 inline-flex items-center`}>
-                          <CircleArrowRight className="inline-block mr-2 w-4" />{option} 
-                        </span>
+                {
+                    options && (
+                        <div className="flex flex-col gap-2">
+                    {options.map((option) => (
+                        <Link 
+                            to="/solution-detail"
+                            state={{ option }}
+                            key={option.label} 
+                            className="text-sm font-semibold py-1 rounded-full text-white cursor-pointer transition duration-200 inline-flex items-center hover:opacity-80 hover:underline" 
+                        >
+                                <CircleArrowRight className="w-4 h-4 mr-2" />
+                            {option.label}
+                        </Link>
                     ))}
                 </div>
+                    )
+                }
             </div>
         </div>
     );

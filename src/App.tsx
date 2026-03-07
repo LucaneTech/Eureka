@@ -6,6 +6,7 @@ import Navbar from "./components/navigation/Navbar"
 import About from "./pages/About"
 import Blog from "./pages/Blog"
 import Contact from "./pages/Contact"
+import ServiceDetail from "./pages/ServiceDetail"
 function App() {
 
   return (
@@ -19,8 +20,11 @@ function App() {
             <Route path="/apropos" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/solution-detail" element={<ServiceDetail />} />
           </Route>
         </Routes>
+
+
       </Layout>
 
 

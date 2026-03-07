@@ -103,57 +103,174 @@ const ServiceSection: React.FC = () => {
     const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.6, 1, 1, 0.6]);
 
     const servicesData: ServicesCardProps[] = [
-        {
-            title: "Nettoyage & Propreté",
-            titleColor: "primary",
-            paragraph: "Un environnement de travail propre pour une productivité optimale.",
-            description: "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
-            image: "/images/services/entretient.jpeg",
-            
-            reverse: false,
-            options: ["Nettoyage Classique", "Nettoyage des sols", "Nettoyage de vitres et panneaux solaires", "Remise en état après travaux", "Shampooing de moquette"]
-        },
-        {
-            title: "Espaces Verts",
-            titleColor: "secondary",
-            paragraph: "Des espaces verts bien entretenus pour un cadre de travail agréable et inspirant.",
-            description: "Notre service d'entretien des espaces verts comprend la tonte de pelouse, la taille de haies, le désherbage et l'arrosage automatique. Nous veillons à ce que vos jardins et espaces extérieurs soient toujours impeccables et accueillants.",
-            image: "/images/services/espaces-verts.jpeg",
-            
-            reverse: true,
-            options: ["Entretien de jardins", "Taille de haies", "Désherbage", "Arrosage automatique"]
-        },
-        {
-            title: "Hygiene 4D",
-            titleColor: "primary",
-            paragraph: "Une hygiène rigoureuse pour un environnement de travail sain.",
-            description: " Notre service d'hygiène 4D offre une solution complète pour maintenir un environnement de travail sain. Nous utilisons des techniques avancées de désinfection, de décontamination, de désodorisation et de dératisation pour garantir la propreté et la sécurité de vos locaux.",
-            image: "/images/services/hygiene.jpeg",
-          
-            reverse: false,
-            options: ["Nettoyage et désinfection", "Dératisation et désinsectisation", "Gestion des déchets", "Contrôle des odeurs"]
-        },
-        {
-            title: "Froid et Climatisation",
-            titleColor: "secondary",
-            paragraph: "Assurez un environnement de travail confortable toute l'année grâce à nos services de froid et climatisation.",
-            description: " Notre service de froid et climatisation assure l'installation, la maintenance et le dépannage de vos systèmes de climatisation pour garantir un environnement de travail confortable toute l'année.",
-            image: "/images/services/froid.jpeg",
-            
-            reverse: true,
-            options: ["Installation", "Maintenance", "Dépannage"]
-        },
-        {
-            title: "Centrales d'achats",
-            titleColor: "primary",
-            paragraph: "Des services complémentaires pour répondre à tous vos besoins.",
-            description: "Nous proposons une gamme complète de services de fourniture pour votre entreprise, y compris la location de matériel de nettoyage, la formation du personnel et la gestion des stocks.",
-            image: "/images/services/service.jpg",
-           
-            reverse: true,
-            options: ["Fourniture de produits de nettoyage", "Location de matériel de nettoyage", "Formation du personnel de nettoyage"]
-        },
-    ];
+  {
+    title: "Nettoyage & Propreté",
+    paragraph: "Un environnement de travail propre pour une productivité optimale.",
+    description:
+      "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
+    image: "/images/services/entretient.jpeg",
+    reverse: false,
+    options: [
+      {
+        label: "Nettoyage Classique",
+        description: "Nettoyage standard des bureaux et espaces professionnels.",
+        details:
+          "Actuellement, 98 % des employés estiment que la propreté et l'hygiène sont indispensables à leur bien-être professionnel, tandis que 85 % les considèrent comme des éléments contribuant à la performance.L'état de propreté de vos locaux professionnels va au-delà d'une simple question d'apparence : il témoigne également de votre rigueur et de votre sérieux vis-à-vis de vos employés et partenaires.Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous assurent une propreté irréprochable et pérenne. Nous garantissons la propreté des fenêtres et des sols de vos installations en employant des produits certifiés ECO LABEL, tout en respectant scrupuleusement diverses actions écologiques lors de nos prestations.",
+        image: "/images/services/entretient.jpeg"
+      },
+      {
+        label: "Nettoyage des sols",
+        description: "Entretien complet des différents types de sols.",
+        details:
+          "Nous assurons le lavage, le décapage et le traitement des sols selon leur nature : carrelage, parquet, marbre ou sols industriels."
+      },
+      {
+        label: "Nettoyage de vitres et panneaux solaires",
+        description: "Nettoyage professionnel des surfaces vitrées.",
+        details:
+          "EUREKA & CO prend en charge l'entretien de toutes les surfaces vitrées, qu'elles soient à la portée des hommes ou non. Nos équipes sont en mesure de nettoyer toutes les surfaces vitrées grâce à nos équipements spécialisés, tels que les perches télescopiques à eau pure."
+      },
+      {
+        label: "Remise en état après travaux",
+        description: "Nettoyage complet après chantier.",
+        details:
+          "Vous avez effectué des travaux d'aménagement afin d'améliorer les conditions de travail de vos employés et l'accueil de vos clients. Pour rendre vos locaux impeccablement propres, faites appel à EUREKA & CO !"
+      },
+      {
+        label: "Shampooing de moquette",
+        description: "Nettoyage en profondeur des moquettes.",
+        details:
+          "En raison de son contact avec les tâches, la moquette requiert un nettoyage en profondeur. Notre technique de nettoyage de moquette écologique, employant des produits qui protègent les fibres et l'environnement, supprime la saleté tout en préservant la longévité de votre moquette.En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engagement pour le bien-être au travail et la protection de l'environnement."
+      }
+    ]
+  },
+  {
+    title: "Espaces Verts",
+    paragraph:
+      "Des espaces verts bien entretenus pour un cadre de travail agréable et inspirant.",
+    description:
+      "Notre service d'entretien des espaces verts comprend la tonte de pelouse, la taille de haies, le désherbage et l'arrosage automatique.",
+    image: "/images/services/espaces-verts.jpeg",
+    reverse: true,
+    options: [
+      {
+        label: "Entretien de jardins",
+        description: "Maintenance complète des jardins.",
+        details:
+          "Tonte de pelouse, entretien des massifs floraux et nettoyage général pour garder vos espaces extérieurs propres et accueillants."
+      },
+      {
+        label: "Taille de haies",
+        description: "Taille et structuration des haies.",
+        details:
+          "Nous assurons une coupe précise pour maintenir la santé des plantes et l'esthétique des espaces verts."
+      },
+      {
+        label: "Désherbage",
+        description: "Élimination des mauvaises herbes.",
+        details:
+          "Techniques manuelles et écologiques pour supprimer les mauvaises herbes sans abîmer vos plantations."
+      },
+      {
+        label: "Arrosage automatique",
+        description: "Installation et maintenance de systèmes d'arrosage.",
+        details:
+          "Optimisation de l'irrigation pour garder vos espaces verts en parfaite santé toute l'année."
+      }
+    ]
+  },
+  {
+    title: "Hygiene 4D",
+    paragraph: "Une hygiène rigoureuse pour un environnement de travail sain.",
+    description:
+      "Notre service d'hygiène 4D offre une solution complète pour maintenir un environnement de travail sain.",
+    image: "/images/services/hygiene.jpeg",
+    reverse: false,
+    options: [
+      {
+        label: "Nettoyage et désinfection",
+        description: "Désinfection professionnelle des locaux.",
+        details:
+          "Utilisation de produits certifiés pour éliminer bactéries, virus et agents contaminants."
+      },
+      {
+        label: "Dératisation et désinsectisation",
+        description: "Lutte contre les nuisibles.",
+        details:
+          "Interventions ciblées pour éliminer rats, souris, cafards et autres nuisibles tout en respectant les normes sanitaires."
+      },
+      {
+        label: "Gestion des déchets",
+        description: "Organisation et traitement des déchets.",
+        details:
+          "Mise en place de solutions de tri et de gestion efficace des déchets dans vos locaux."
+      },
+      {
+        label: "Contrôle des odeurs",
+        description: "Traitement des mauvaises odeurs.",
+        details:
+          "Utilisation de technologies spécifiques pour neutraliser durablement les odeurs."
+      }
+    ]
+  },
+  {
+    title: "Froid et Climatisation",
+    paragraph:
+      "Assurez un environnement de travail confortable toute l'année grâce à nos services de froid et climatisation.",
+    description:
+      "Installation, maintenance et dépannage de vos systèmes de climatisation.",
+    image: "/images/services/froid.jpeg",
+    reverse: true,
+    options: [
+      {
+        label: "Installation",
+        description: "Installation de systèmes de climatisation.",
+        details:
+          "Nous vous proposons une gamme diversifiée de climatiseurs de marques reconnues, choisis sur la base de leur performance, de leur respect des normes environnementales et de leur faible consommation d'énergie. Nos solutions, qui se conforment parfaitement à l'ampleur de vos espaces résidentiels ou professionnels, sauront idéalement satisfaire vos exigences.Uniquement un expert chevronné peut vous assurer une mise en place efficace et conforme à toutes les normes de sécurité."
+      },
+      {
+        label: "Maintenance",
+        description: "Entretien régulier des équipements.",
+        details:
+          "Chaque système de climatisation exige une maintenance régulière minutieuse incluant la vérification de l'étanchéité des circuits, la surveillance des pressions, l'identification de possibles fuites, le nettoyage ou changement des filtres, ainsi que l'inspection de l'état des connexions électriques, entre autres.Ces actions sont essentielles pour garantir une efficacité optimale, une faible consommation d'énergie et un fonctionnement sans défaillances."
+      },
+      {
+        label: "Dépannage",
+        description: "Réparation rapide des systèmes.",
+        details:
+          "Des performances dégradées des systèmes de climatisation peuvent survenir avec une installation incorrecte, une mise en service non experte ou un entretien négligé au fil du temps.De plus, leur utilisation peut entraîner une augmentation significative de la consommation d'énergie. Dans ce contexte, une panne pourrait survenir à tout moment, avec parfois un danger de court-circuit manifeste. Il est donc nécessaire de faire appel à un professionnel aguerri pour restaurer un fonctionnement satisfaisant et sûr du système."
+      }
+    ]
+  },
+  {
+    title: "Centrales d'achats",
+    paragraph: "Des services complémentaires pour répondre à tous vos besoins.",
+    description:
+      "Nous proposons une gamme complète de services de fourniture pour votre entreprise.",
+    image: "/images/services/service.jpg",
+    reverse: true,
+    options: [
+      {
+        label: "Fourniture de produits de nettoyage",
+        description: "Distribution de produits professionnels.",
+        details:
+          "Large gamme de produits écologiques et efficaces pour l'entretien de vos locaux."
+      },
+      {
+        label: "Location de matériel de nettoyage",
+        description: "Location d'équipements spécialisés.",
+        details:
+          "Machines professionnelles disponibles pour des besoins ponctuels ou réguliers."
+      },
+      {
+        label: "Formation du personnel de nettoyage",
+        description: "Formation professionnelle.",
+        details:
+          "Sessions de formation pour améliorer les compétences et l'efficacité des équipes de nettoyage."
+      }
+    ]
+  }
+];
 
     return (
         <motion.section
@@ -203,7 +320,7 @@ const ServiceSection: React.FC = () => {
                     >
                         <ServiceCard
                             title={service.title}
-                            titleColor={service.titleColor}
+
                             paragraph={service.paragraph}
                             description={service.description}
                             image={service.image}
