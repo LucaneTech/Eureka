@@ -135,11 +135,11 @@ export const Footer = () => {
           </h2>
           <div className="flex flex-col gap-x-4 gap-y-3">
             {[
-              { hash: "bureaux", label: "Nettoyage & Propreté" },
-              { hash: "chantiers", label: "Hygiène 4D" },
-              { hash: "desinfection", label: "Espaces Verts" },
-              { hash: "desinfection", label: "Froid et Climatisation" },
-              { hash: "espacesverts", label: "Centrales d'achats" },
+              { hash: "Nettoyage", label: "Nettoyage & Propreté" },
+              { hash: "Hygiène", label: "Hygiène 4D" },
+              { hash: "Espaces", label: "Espaces Verts" },
+              { hash: "Froid", label: "Froid et Climatisation" },
+              { hash: "Centrale", label: "Centrale d'achat" },
             ].map((service) => (
               <motion.a
                 key={service.hash}

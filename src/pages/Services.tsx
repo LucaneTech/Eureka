@@ -248,29 +248,10 @@ const ServiceSection: React.FC = () => {
     title: "Centrales d'achats",
     paragraph: "Des services complémentaires pour répondre à tous vos besoins.",
     description:
-      "Nous proposons une gamme complète de services de fourniture pour votre entreprise.",
-    image: "/images/services/service.jpg",
+      "Vous aspirez à rationaliser vos procédures d'achat et à vous décharger de certaines démarches administratives ? EUREKA & CO vous offre des solutions personnalisées pour satisfaire l'ensemble des exigences de votre entreprise. Que vous ayez besoin d'aide pour vos achats de tous les jours, ou saisonniers, EUREKA & CO est à votre service.",
+    image: "/images/services/centrale-achat.png",
     reverse: true,
-    options: [
-      {
-        label: "Fourniture de produits de nettoyage",
-        description: "Distribution de produits professionnels.",
-        details:
-          "Large gamme de produits écologiques et efficaces pour l'entretien de vos locaux."
-      },
-      {
-        label: "Location de matériel de nettoyage",
-        description: "Location d'équipements spécialisés.",
-        details:
-          "Machines professionnelles disponibles pour des besoins ponctuels ou réguliers."
-      },
-      {
-        label: "Formation du personnel de nettoyage",
-        description: "Formation professionnelle.",
-        details:
-          "Sessions de formation pour améliorer les compétences et l'efficacité des équipes de nettoyage."
-      }
-    ]
+    options: []
   }
 ];
 

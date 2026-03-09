@@ -77,25 +77,25 @@ const ClientChoice = () => {
     {
       icon: <Brain />,
       iconStyle: "primary",
-      title: "Savoir-faire et expertise",
+      title: "Innovation",
       titleColor: 'primary',
-      description: "Formation continue, personnel expérimenté et maîtrise des techniques 4D pour un service professionnel.",
+      description: "Recherche et développement en continu des solutions innovantes." ,
       cardStyle: "secondary"
     },
     {
       icon: <Zap />,
       iconStyle: "secondary",
-      title: "Réactivité et disponibilité",
+      title: "Dynamisme et flexibilité",
       titleColor: 'secondary',
-      description: "Interventions rapides et flexibilité horaire pour s'adapter à vos besoins, y compris en urgence.",
+      description: "Réponse rapide et efficace aux besoins de nos parténaires.",
       cardStyle: "secondary"
     },
     {
       icon: <BookOpenCheck />,
       iconStyle: "secondary",
-      title: "Qualité et confiance",
+      title: "Ecoute et proximité",
       titleColor: 'secondary',
-      description: "Équipements performants et relation transparente avec nos clients, gagnée par notre efficacité.",
+      description: "Prise en compte des attentes et des besoins de nos partenaires.",
       cardStyle: "secondary"
     },
     {
@@ -103,7 +103,7 @@ const ClientChoice = () => {
       iconStyle: "secondary",
       title: "Engagement écologique",
       titleColor: 'secondary',
-      description: "Utilisation de produits éco-responsables et pratiques durables pour un impact environnemental réduit.",
+      description: "Recours à des produits respecteux de l'environnement et des méthodes durables pour minimiser notre empreinte écologique.",
       cardStyle: "secondary"
     }
   ];
@@ -117,8 +117,8 @@ const ClientChoice = () => {
       className="p-8 flex flex-col justify-center items-center"
     >
       <motion.div variants={fadeInUp} className="flex flex-col justify-center items-center text-center">
-        <Slogan icon={<Handshake />} text={"Choix de nos clients"} variant={"primary"} className="mainColor mb-6" />
-        <Title text={"Pourquoi nos clients nous font confiance ?"} variants={"large"} />
+        <Slogan icon={<Handshake />} text={"Choix de nos partenaires"} variant={"primary"} className="mainColor mb-6" />
+        <Title text={"Pourquoi nos partenaires nous font confiance ?"} variants={"large"} />
       </motion.div>
 
       <motion.div
@@ -217,6 +217,7 @@ const logos = [
      { src: "/images/home/partenaires/guot.png", alt: "logo-guot" },
      { src: "/images/home/partenaires/olivier.png", alt: "logo-olivier" },
      { src: "/images/home/partenaires/super.png", alt: "logo-super" },
+     { src: "/images/home/partenaires/prevent.jpeg", alt: "logo-prevent" },
   
 ];
 
@@ -475,7 +476,7 @@ export const Home: React.FC = () => {
     {
       icon: <Box />,
       title: "Hygiène 4D",
-      description: 'Désinfection, dératisation, désinsectisation et dépigeonnisation : une approche complète pour un environnement sain et sécurisé.',
+      description: 'Nous mettons notre savoir-faire et nos compétences pour répondre à vos besoins en matière de désinsectisation, désinfection, dératisation et déreptilisation. À votre écoute, nous analysons vos problèmes et nous vous apportons des solutions efficaces et durables.',
       link: "#",
     }
   ];
@@ -484,7 +485,7 @@ export const Home: React.FC = () => {
     {
       icon: <Flower />,
       title: "Espaces Verts",
-      description: 'Entretien de vos espaces verts, pour un cadre de travail agréable et une image positive auprès de vos clients.',
+      description: "Nous avons à cœur de vous fournir des services de paysagiste qui allient tradition et modernité. Que ce soit pour l'aménagement de jardins, la création de bassins ou l'entretien de vos espaces verts, notre équipe est à votre écoute pour réaliser vos projets.",
       link: "#",
     },
     {
@@ -570,8 +571,8 @@ export const Home: React.FC = () => {
               >
                 <HeadCard
                   icon={<BriefcaseBusiness />}
-                  title={"Centrales d'achats"}
-                  description={"Nous proposons une gamme complète de services de nettoyage et d'entretien pour répondre à tous vos besoins, que ce soit pour les entreprises ou les particuliers."}
+                  title={"Centrale d'achat"}
+                  description={"EUREKA & CO vous accompagne au quotidien pour vos achats récurrents (équipements de protection individuelle et collective, produits de nettoyage, équipements et consommables...), mais aussi dans tous vos projets d’entreprise."}
                   className="borderMainColor"
                 />
               </motion.div>
