@@ -10,127 +10,78 @@ import { Button } from "../components/ui/Button";
 
 // Animation variants sophistiqués
 const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2,
-      ease: [0.22, 1, 0.36, 1] as const
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.15,
+            delayChildren: 0.2,
+            ease: [0.22, 1, 0.36, 1] as const
+        }
     }
-  }
 };
 
 const itemVariants: Variants = {
-  hidden: { y: 40, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1] as const
+    hidden: { y: 40, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1] as const
+        }
     }
-  }
 };
 
 const fadeInScale: Variants = {
-  hidden: { scale: 0.9, opacity: 0 },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: [0.22, 1, 0.36, 1] as const
+    hidden: { scale: 0.9, opacity: 0 },
+    visible: {
+        scale: 1,
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1] as const
+        }
     }
-  }
 };
 
 // left slide variant removed – unused
 
 
-const slideInRight: Variants = {
-  hidden: { x: 60, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: [0.22, 1, 0.36, 1] as const
+const slideInLeft: Variants = {
+    hidden: { x: -60, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1] as const
+        }
     }
-  }
+};
+
+const slideInRight: Variants = {
+    hidden: { x: 60, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1] as const
+        }
+    }
 };
 
 const staggerList: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.3
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.3
+        }
     }
-  }
 };
-
-interface StoryCardProps {
-    title: string;
-    description: string;
-    index: number;
-}
-
-const StoryCard: React.FC<StoryCardProps> = ({ title, description, index }) => {
-    const cardRef = useRef<HTMLDivElement>(null);
-    const isInView = useInView(cardRef, { once: true, margin: "-50px" });
-
-    return (
-        <motion.div
-            ref={cardRef}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ 
-                duration: 0.5, 
-                delay: index * 0.15,
-                ease: [0.22, 1, 0.36, 1] as const
-            }}
-            whileHover={{ 
-                y: -5,
-                transition: { duration: 0.2 }
-            }}
-            className="p-4 transition-all duration-300 h-full text-center md:text-start hover:bg-white/50 rounded-xl"
-        >
-            <motion.div
-                initial={{ scale: 0.9 }}
-                animate={isInView ? { scale: 1 } : {}}
-                transition={{ delay: index * 0.15 + 0.2 }}
-            >
-                <Title text={title} variants="large" className="secondaryColor" />
-            </motion.div>
-            <DescriptionText text={description} className="mt-4 text-gray-600" />
-        </motion.div>
-    );
-};
-
-const storyData = [
-    {
-        title: "Notre Histoire",
-        description:
-            "Du Congo à vos espaces impeccables : notre passion pour la propreté professionnelle.",
-    },
-    {
-        title: "Notre Mission",
-        description:
-            "Du Congo à vos espaces impeccables : notre passion pour la propreté professionnelle.",
-    },
-    {
-        title: "Nos Valeurs",
-        description:
-            "Du Congo à vos espaces impeccables : notre passion pour la propreté professionnelle.",
-    },
-    {
-        title: "Notre Vision",
-        description:
-            "Du Congo à vos espaces impeccables : notre passion pour la propreté professionnelle.",
-    },
-];
 
 const StorySection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -153,7 +104,7 @@ const StorySection: React.FC = () => {
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={containerVariants}
-                className="flex flex-col items-center justify-center text-center space-y-3 py-6"
+                className="flex flex-col items-center justify-center text-center space-y-3 py-6 px-8 md:py-12 "
             >
                 <motion.div variants={fadeInScale}>
                     <Slogan icon={<GalleryVerticalEnd />} text={"Eureka & Co"} variant={"secondary"} className="secondaryColor" />
@@ -170,25 +121,35 @@ const StorySection: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="bgSecondaryColorOpacity overflow-hidden py-4 md:py-8 mx-auto px-4 relative z-10 mt-4 md:mt-8"
+                className="bgSecondaryColorOpacity overflow-hidden py-4 md:py-8 mx-auto px-8 relative z-10 mt-4 md:mt-8"
             >
                 <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    {/* Bloc Cards */}
+
+                    {/* Texte / Histoire */}
                     <motion.div
-                        variants={staggerList}
+                        variants={slideInLeft}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className="grid grid-cols-1 sm:grid-cols-2 gap-0 p-2"
+                        className="space-y-6"
                     >
-                        {storyData.map((item, index) => (
-                            <StoryCard
-                                key={index}
-                                index={index}
-                                title={item.title}
-                                description={item.description}
-                            />
-                        ))}
+                        <DescriptionText text="Acteur incontournable de l’hygiène, du nettoyage, de la propreté et du traitement anti nuisibles." />
+
+
+                        <p className="text-gray-600 leading-relaxed">
+                            Depuis plus de trois ans, EUREKA & CO se positionne comme un partenaire fiable dans la prévention des risques liés aux nuisibles et à la santé.
+                            Fondée en 2024, notre société offre son soutien aux résidences, établissements d'éducation, commerces, centres de santé, secteurs de l'hôtellerie et de la restauration, loisirs, banques, compagnies d'assurance, ambassades, industries, espaces publics et autres. Notre mission est d'assurer la propreté et de combattre les nuisibles pour préserver le cadre de vie et la santé des personnes.
+                        </p>
+
+                        <p className="text-gray-500 leading-relaxed">
+                            EUREKA & CO offre une solution intégrale, personnalisée et contractuellement engagée à des résultats.
+                        </p>
+                        <p className="text-gray-500 leading-relaxed">
+                            Avec une équipe multidisciplinaire qualifiée, nous assurons des actions rapides, traçables et respectueuses de l'environnement, à Pointe-Noire ainsi que dans tous les départements du Congo.
+                        </p>
+
+
                     </motion.div>
+
 
                     {/* Image */}
                     <motion.div
@@ -202,9 +163,10 @@ const StorySection: React.FC = () => {
                             transition={{ duration: 0.3 }}
                             src="/images/services/story.png"
                             alt="Notre équipe"
-                            className="w-[600px] lg:w-[800px] h-auto object-cover drop-shadow-2xl"
+                            className="w-[800px] lg:w-[900px] h-auto object-cover drop-shadow-2xl"
                         />
                     </motion.div>
+
                 </div>
             </motion.div>
         </motion.section>
@@ -250,7 +212,7 @@ const MissonValorsSection: React.FC = () => {
             variants={containerVariants}
             className="py-8 md:py-12 px-4 md:px-8"
         >
-            <motion.div 
+            <motion.div
                 variants={containerVariants}
                 className="flex flex-col items-center justify-center text-center space-y-4 px-4"
             >
@@ -270,11 +232,11 @@ const MissonValorsSection: React.FC = () => {
             </motion.div>
 
             {/* Wrapper scroll horizontal */}
-            <motion.div 
+            <motion.div
                 variants={fadeInScale}
                 className="mt-4 md:mt-10 overflow-x-auto px-4 py-4"
             >
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.3 }}
@@ -282,7 +244,7 @@ const MissonValorsSection: React.FC = () => {
                 >
                     <table className="w-full border-collapse rounded-md overflow-hidden shadow-lg">
                         <thead>
-                            <motion.tr 
+                            <motion.tr
                                 initial={{ x: -20, opacity: 0 }}
                                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -303,12 +265,12 @@ const MissonValorsSection: React.FC = () => {
                                     key={index}
                                     initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                                     animate={isInView ? { opacity: 1, x: 0 } : {}}
-                                    transition={{ 
-                                        duration: 0.4, 
+                                    transition={{
+                                        duration: 0.4,
                                         delay: 0.5 + index * 0.1,
                                         ease: [0.22, 1, 0.36, 1] as const
                                     }}
-                                    whileHover={{ 
+                                    whileHover={{
                                         scale: 1.01,
                                         backgroundColor: "rgba(5, 175, 242, 0.05)",
                                         transition: { duration: 0.2 }
@@ -382,7 +344,7 @@ const State = () => {
             />
 
             {/* Header */}
-            <motion.div 
+            <motion.div
                 variants={containerVariants}
                 className="flex flex-col items-center text-center space-y-4 px-4 relative z-10"
             >
@@ -410,7 +372,7 @@ const State = () => {
             </motion.div>
 
             {/* Stats Grid */}
-            <motion.div 
+            <motion.div
                 variants={staggerList}
                 className="mt-16 px-4 container mx-auto relative z-10"
             >
@@ -420,17 +382,17 @@ const State = () => {
                             key={index}
                             variants={{
                                 hidden: { opacity: 0, y: 30 },
-                                visible: { 
-                                    opacity: 1, 
+                                visible: {
+                                    opacity: 1,
                                     y: 0,
-                                    transition: { 
+                                    transition: {
                                         duration: 0.5,
                                         delay: index * 0.15,
                                         ease: [0.22, 1, 0.36, 1] as const
                                     }
                                 }
                             }}
-                            whileHover={{ 
+                            whileHover={{
                                 y: -10,
                                 scale: 1.05,
                                 boxShadow: "0 30px 35px -5px rgba(5, 175, 242, 0.2)",
@@ -491,19 +453,19 @@ const About = () => {
             variants={containerVariants}
         >
             <motion.div variants={fadeInScale}>
-                <SecondBanner 
-                    title={"Votre partenaire de confiance"} 
-                    subtitle={"Eureka & Co"} 
-                    description={"Maîtrise Impeccable du Nettoyage Professionnel"} 
-                    textBtn={"Découvrez nos services"} 
-                    link={"/solutions"} 
-                    secondButton 
-                    textBtn2="Contactez nous" 
-                    link2={"/contact"} 
-                    variantBtn2="secondary" 
-                    titleColor="text-white" 
-                    underImage="/images/services/team.jpg" 
-                    overlayColor="primary" 
+                <SecondBanner
+                    title={"Votre partenaire de confiance"}
+                    subtitle={"Eureka & Co"}
+                    description={"Maîtrise Impeccable du Nettoyage Professionnel"}
+                    textBtn={"Découvrez nos services"}
+                    link={"/solutions"}
+                    secondButton
+                    textBtn2="Contactez nous"
+                    link2={"/contact"}
+                    variantBtn2="secondary"
+                    titleColor="text-white"
+                    underImage="/images/services/team.jpg"
+                    overlayColor="primary"
                 />
             </motion.div>
 
@@ -522,7 +484,7 @@ const About = () => {
                     <Title text={"Notre Devis Nettoyage Gratuit en 24h"} variants={"large"} />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     variants={itemVariants}
                     className="text-slate-600 text-center max-w-xl mx-auto"
                 >
@@ -532,7 +494,7 @@ const About = () => {
                     />
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     variants={staggerList}
                     className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6"
                 >
@@ -547,7 +509,7 @@ const About = () => {
                             variant="secondary"
                         />
                     </motion.div>
-                    
+
                     <motion.div
                         variants={fadeInScale}
                         whileHover={{ scale: 1.05 }}
