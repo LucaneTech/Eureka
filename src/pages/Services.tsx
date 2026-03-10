@@ -1,4 +1,4 @@
-import { ArrowUpRight, CircleQuestionMark, Wrench } from "lucide-react";
+import {CircleQuestionMark, Wrench } from "lucide-react";
 import type React from "react";
 import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
@@ -103,157 +103,185 @@ const ServiceSection: React.FC = () => {
     const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.6, 1, 1, 0.6]);
 
     const servicesData: ServicesCardProps[] = [
-  {
-    title: "Nettoyage & Propreté",
-    paragraph: "Un environnement de travail propre pour une productivité optimale.",
-    description:
-      "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
-    image: "/images/services/entretient.jpeg",
-    reverse: false,
-    options: [
-      {
-        label: "Nettoyage Classique",
-        description: "Nettoyage standard des bureaux et espaces professionnels.",
-        details:
-          "Actuellement, 98 % des employés estiment que la propreté et l'hygiène sont indispensables à leur bien-être professionnel, tandis que 85 % les considèrent comme des éléments contribuant à la performance.L'état de propreté de vos locaux professionnels va au-delà d'une simple question d'apparence : il témoigne également de votre rigueur et de votre sérieux vis-à-vis de vos employés et partenaires.Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous assurent une propreté irréprochable et pérenne. Nous garantissons la propreté des fenêtres et des sols de vos installations en employant des produits certifiés ECO LABEL, tout en respectant scrupuleusement diverses actions écologiques lors de nos prestations.",
-        image: "/images/services/entretient.jpeg"
-      },
-      {
-        label: "Nettoyage des sols",
-        description: "Entretien complet des différents types de sols.",
-        details:
-          "Nous assurons le lavage, le décapage et le traitement des sols selon leur nature : carrelage, parquet, marbre ou sols industriels."
-      },
-      {
-        label: "Nettoyage de vitres et panneaux solaires",
-        description: "Nettoyage professionnel des surfaces vitrées.",
-        details:
-          "EUREKA & CO prend en charge l'entretien de toutes les surfaces vitrées, qu'elles soient à la portée des hommes ou non. Nos équipes sont en mesure de nettoyer toutes les surfaces vitrées grâce à nos équipements spécialisés, tels que les perches télescopiques à eau pure."
-      },
-      {
-        label: "Remise en état après travaux",
-        description: "Nettoyage complet après chantier.",
-        details:
-          "Vous avez effectué des travaux d'aménagement afin d'améliorer les conditions de travail de vos employés et l'accueil de vos clients. Pour rendre vos locaux impeccablement propres, faites appel à EUREKA & CO !"
-      },
-      {
-        label: "Shampooing de moquette",
-        description: "Nettoyage en profondeur des moquettes.",
-        details:
-          "En raison de son contact avec les tâches, la moquette requiert un nettoyage en profondeur. Notre technique de nettoyage de moquette écologique, employant des produits qui protègent les fibres et l'environnement, supprime la saleté tout en préservant la longévité de votre moquette.En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engagement pour le bien-être au travail et la protection de l'environnement."
-      }
-    ]
-  },
-  {
-    title: "Espaces Verts",
-    paragraph:
-      "Des espaces verts bien entretenus pour un cadre de travail agréable et inspirant.",
-    description:
-      "Notre service d'entretien des espaces verts comprend la tonte de pelouse, la taille de haies, le désherbage et l'arrosage automatique.",
-    image: "/images/services/espaces-verts.jpeg",
-    reverse: true,
-    options: [
-      {
-        label: "Entretien de jardins",
-        description: "Maintenance complète des jardins.",
-        details:
-          "Tonte de pelouse, entretien des massifs floraux et nettoyage général pour garder vos espaces extérieurs propres et accueillants."
-      },
-      {
-        label: "Taille de haies",
-        description: "Taille et structuration des haies.",
-        details:
-          "Nous assurons une coupe précise pour maintenir la santé des plantes et l'esthétique des espaces verts."
-      },
-      {
-        label: "Désherbage",
-        description: "Élimination des mauvaises herbes.",
-        details:
-          "Techniques manuelles et écologiques pour supprimer les mauvaises herbes sans abîmer vos plantations."
-      },
-      {
-        label: "Arrosage automatique",
-        description: "Installation et maintenance de systèmes d'arrosage.",
-        details:
-          "Optimisation de l'irrigation pour garder vos espaces verts en parfaite santé toute l'année."
-      }
-    ]
-  },
-  {
-    title: "Hygiène 4D",
-    paragraph: "Une hygiène rigoureuse pour un environnement de travail sain.",
-    description:
-      "Notre service d'hygiène 4D offre une solution complète pour maintenir un environnement de travail sain.",
-    image: "/images/services/hygiene.jpeg",
-    reverse: false,
-    
+        {
+            title: "Nettoyage & Propreté",
+            paragraph: "Un environnement de travail propre pour une productivité optimale.",
+            description:
+                "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
+            image: "/images/services/entretient.jpeg",
+            reverse: false,
+            options: [
+                {
+                    label: "Nettoyage Classique",
+                    description: "Nettoyage standard des bureaux et espaces professionnels.",
+                    details: `Actuellement, 98 % des employés estiment que la propreté et l'hygiène sont indispensables à leur bien-être professionnel, tandis que 85 % les considèrent comme des éléments contribuant à la performance.
 
-    options: [
-      {
-        label: "Desinsectisation",
-        description: "Lutte contre les insectes nuisibles.",
-        details:
-          "blattes, cafards, fourmis, termites, punaises de lit, puces, guêpes, frelons, abeilles, moustiques, mouches, perces-bois, charançons etc. "
-      },
-      {
-        label: "Dératisation",
-        description: "Lutte contre les rongeurs.",
-        details:
-          "Souris, rats, mulots, campagnols, musaraignes, loirs, chauves-souris etc."
-      },
-      {
-        label: "Desinfection",
-        description: "Désinfection des surfaces et équipements.",
-        details:
-          "Bactéries, micro-organismes, spores bactériennes, virus etc."
-      },
-      {
-        label: "Dereptilisation",
-        description: "Lutte contre les reptiles indésirables.",
-        details:
-          "Serpents, lézards, geckos, caméléons, iguanes, tortues etc."
-      }
-    ]
-  },
-  {
-    title: "Froid et Climatisation",
-    paragraph:
-      "Assurez un environnement de travail confortable toute l'année grâce à nos services de froid et climatisation.",
-    description:
-      "Installation, maintenance et dépannage de vos systèmes de climatisation.",
-    image: "/images/services/froid.jpeg",
-    reverse: true,
-    options: [
-      {
-        label: "Installation",
-        description: "Installation de systèmes de climatisation.",
-        details:
-          "Nous vous proposons une gamme diversifiée de climatiseurs de marques reconnues, choisis sur la base de leur performance, de leur respect des normes environnementales et de leur faible consommation d'énergie. Nos solutions, qui se conforment parfaitement à l'ampleur de vos espaces résidentiels ou professionnels, sauront idéalement satisfaire vos exigences.Uniquement un expert chevronné peut vous assurer une mise en place efficace et conforme à toutes les normes de sécurité."
-      },
-      {
-        label: "Maintenance",
-        description: "Entretien régulier des équipements.",
-        details:
-          "Chaque système de climatisation exige une maintenance régulière minutieuse incluant la vérification de l'étanchéité des circuits, la surveillance des pressions, l'identification de possibles fuites, le nettoyage ou changement des filtres, ainsi que l'inspection de l'état des connexions électriques, entre autres.Ces actions sont essentielles pour garantir une efficacité optimale, une faible consommation d'énergie et un fonctionnement sans défaillances."
-      },
-      {
-        label: "Dépannage",
-        description: "Réparation rapide des systèmes.",
-        details:
-          "Des performances dégradées des systèmes de climatisation peuvent survenir avec une installation incorrecte, une mise en service non experte ou un entretien négligé au fil du temps.De plus, leur utilisation peut entraîner une augmentation significative de la consommation d'énergie. Dans ce contexte, une panne pourrait survenir à tout moment, avec parfois un danger de court-circuit manifeste. Il est donc nécessaire de faire appel à un professionnel aguerri pour restaurer un fonctionnement satisfaisant et sûr du système."
-      }
-    ]
-  },
-  {
-    title: "Centrales d'achats",
-    paragraph: "Des services complémentaires pour répondre à tous vos besoins.",
-    description:
-      "Vous aspirez à rationaliser vos procédures d'achat et à vous décharger de certaines démarches administratives ? EUREKA & CO vous offre des solutions personnalisées pour satisfaire l'ensemble des exigences de votre entreprise. Que vous ayez besoin d'aide pour vos achats de tous les jours, ou saisonniers, EUREKA & CO est à votre service.",
-    image: "/images/services/centrale-achat.png",
-    reverse: true,
-    options: []
-  }
-];
+L'état de propreté de vos locaux professionnels va au-delà d'une simple question d'apparence : il témoigne également de votre rigueur et de votre sérieux vis-à-vis de vos employés et partenaires.
+
+Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous assurent une propreté irréprochable et pérenne. Nous garantissons la propreté des fenêtres et des sols de vos installations en employant des produits certifiés ECO LABEL, tout en respectant scrupuleusement diverses actions écologiques lors de nos prestations.`,
+                    image: "/images/services/entretient.jpeg"
+                },
+                {
+                    label: "Nettoyage des sols",
+                    description: "Entretien complet des différents types de sols.",
+                    details: `Nous assurons le lavage, le décapage et le traitement des sols selon leur nature : carrelage, parquet, marbre ou sols industriels.`,
+                    image: 'images/services/sol.jpg'
+                },
+                {
+                    label: "Nettoyage de vitres et panneaux solaires",
+                    description: "Nettoyage professionnel des surfaces vitrées.",
+                    details: `EUREKA & CO prend en charge l'entretien de toutes les surfaces vitrées, qu'elles soient à la portée des hommes ou non.
+
+Nos équipes sont en mesure de nettoyer toutes les surfaces vitrées grâce à nos équipements spécialisés, tels que les perches télescopiques à eau pure.`,
+                    image: "images/services/vitre.jpg"
+                },
+                {
+                    label: "Remise en état après travaux",
+                    description: "Nettoyage complet après chantier.",
+                    details: `Vous avez effectué des travaux d'aménagement afin d'améliorer les conditions de travail de vos employés et l'accueil de vos clients.
+
+Pour rendre vos locaux impeccablement propres, faites appel à EUREKA & CO !`,
+                    image: "images/services/remise.jpeg"
+                },
+                {
+                    label: "Shampooing de moquette",
+                    description: "Nettoyage en profondeur des moquettes.",
+                    details: `En raison de son contact avec les tâches, la moquette requiert un nettoyage en profondeur.
+
+Notre technique de nettoyage de moquette écologique, employant des produits qui protègent les fibres et l'environnement, supprime la saleté tout en préservant la longévité de votre moquette.
+
+En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engagement pour le bien-être au travail et la protection de l'environnement.`,
+                    image: 'images/services/moquette.jpeg'
+                }
+            ]
+        },
+        {
+            title: "Espaces Verts",
+            paragraph:
+                "Nous avons à cœur de vous fournir des services de paysagiste qui allient tradition et modernité. Que ce soit pour l'aménagement de jardins, la création de bassins ou l'entretien de vos espaces verts, notre équipe est à votre écoute pour réaliser vos projets.",
+            description:
+                "Nos services incluent :",
+            image: "/images/services/espaces-verts.jpeg",
+            reverse: true,
+            clickable : false,
+            options: [
+               
+                {
+                    label: "Le nettoyage des jardins",
+                },
+                {
+                    label: "L’entretien des plantations",
+                },
+                {
+                    label: "L’arrosage des plantes",
+                },
+                {
+                    label: "La taille des haies et des arbustes",
+                },
+                {
+                    label: "La tonte de pelouses",
+                },
+                 
+
+                 {
+                    label: "Le débroussaillage",
+                },
+
+                 {
+                    label: "L’élagage ",
+                },
+
+                 {
+                    label: "Le désherbage",
+                },
+
+                 {
+                    label: "Le ramassage des plantes mortes",
+                },
+
+                 {
+                    label: "L’entretien des massifs",
+                },
+            ]
+        },
+        {
+            title: "Hygiène 4D",
+            paragraph: "Une hygiène rigoureuse pour un environnement de travail sain.",
+            description:
+                "Notre service d'hygiène 4D offre une solution complète pour maintenir un environnement de travail sain.",
+            image: "/images/services/hygiene.jpeg",
+            reverse: false,
+            options: [
+                {
+                    label: "Desinsectisation",
+                    description: "Lutte contre les insectes nuisibles.",
+                    details: `blattes, cafards, fourmis, termites, punaises de lit, puces, guêpes, frelons, abeilles, moustiques, mouches, perces-bois, charançons etc.`
+                },
+                {
+                    label: "Dératisation",
+                    description: "Lutte contre les rongeurs.",
+                    details: `Souris, rats, mulots, campagnols, musaraignes, loirs, chauves-souris etc.`
+                },
+                {
+                    label: "Desinfection",
+                    description: "Désinfection des surfaces et équipements.",
+                    details: `Bactéries, micro-organismes, spores bactériennes, virus etc.`
+                },
+                {
+                    label: "Dereptilisation",
+                    description: "Lutte contre les reptiles indésirables.",
+                    details: `Serpents, lézards, geckos, caméléons, iguanes, tortues etc.`
+                }
+            ]
+        },
+        {
+            title: "Froid et Climatisation",
+            paragraph:
+                "Assurez un environnement de travail confortable toute l'année grâce à nos services de froid et climatisation.",
+            description:
+                "Installation, maintenance et dépannage de vos systèmes de climatisation.",
+            image: "/images/services/froid.jpeg",
+            reverse: true,
+            options: [
+                {
+                    label: "Installation",
+                    description: "Installation de systèmes de climatisation.",
+                    details: `Nous vous proposons une gamme diversifiée de climatiseurs de marques reconnues, choisis sur la base de leur performance, de leur respect des normes environnementales et de leur faible consommation d'énergie.
+
+Nos solutions, qui se conforment parfaitement à l'ampleur de vos espaces résidentiels ou professionnels, sauront idéalement satisfaire vos exigences.
+
+Uniquement un expert chevronné peut vous assurer une mise en place efficace et conforme à toutes les normes de sécurité.`
+                },
+                {
+                    label: "Maintenance",
+                    description: "Entretien régulier des équipements.",
+                    details: `Chaque système de climatisation exige une maintenance régulière minutieuse incluant la vérification de l'étanchéité des circuits, la surveillance des pressions, l'identification de possibles fuites, le nettoyage ou changement des filtres, ainsi que l'inspection de l'état des connexions électriques, entre autres.
+
+Ces actions sont essentielles pour garantir une efficacité optimale, une faible consommation d'énergie et un fonctionnement sans défaillances.`
+                },
+                {
+                    label: "Dépannage",
+                    description: "Réparation rapide des systèmes.",
+                    details: `Des performances dégradées des systèmes de climatisation peuvent survenir avec une installation incorrecte, une mise en service non experte ou un entretien négligé au fil du temps.
+
+De plus, leur utilisation peut entraîner une augmentation significative de la consommation d'énergie.
+
+Dans ce contexte, une panne pourrait survenir à tout moment, avec parfois un danger de court-circuit manifeste.
+
+Il est donc nécessaire de faire appel à un professionnel aguerri pour restaurer un fonctionnement satisfaisant et sûr du système.`
+                }
+            ]
+        },
+        {
+            title: "Centrales d'achats",
+            paragraph: "Des services complémentaires pour répondre à tous vos besoins.",
+            description:
+                "Vous aspirez à rationaliser vos procédures d'achat et à vous décharger de certaines démarches administratives ? EUREKA & CO vous offre des solutions personnalisées pour satisfaire l'ensemble des exigences de votre entreprise. Que vous ayez besoin d'aide pour vos achats de tous les jours, ou saisonniers, EUREKA & CO est à votre service.",
+            image: "/images/services/centrale-achat.png",
+            reverse: true,
+            options: []
+        }
+    ];
 
     return (
         <motion.section
@@ -308,6 +336,7 @@ const ServiceSection: React.FC = () => {
                             image={service.image}
                             reverse={service.reverse}
                             options={service.options}
+                            clickable= {service.clickable}
                         />
                     </motion.div>
                 ))}
@@ -369,7 +398,7 @@ const FaqSection: React.FC = () => {
                 <motion.div
                     variants={fadeInScale}
                 >
-                    <Title text={"Foire aux Questions"} variants={"large"} />
+                    <Title text={"Questions"} variants={"large"} />
                 </motion.div>
 
                 <motion.div
@@ -428,11 +457,6 @@ export const Services: React.FC = () => {
                 variants={fadeInScale}
             >
                 <SecondBanner
-                    sloganIcon={<ArrowUpRight className="w-4 h-4" />}
-                    slogan="Services de qualité"
-                    title="Le Nettoyage ? "
-                    description="Avec plus de 10 années d'expérience et une équipe formée aux dernières techniques, nous garantissons un résultat irréprochable sur l'ensemble de nos quatre services."
-                    subtitle={"On s'en charge."}
                     textBtn="Decouvrez Eureka & Co"
                     textBtn2="Nous contacter"
                     secondButton
@@ -442,7 +466,7 @@ export const Services: React.FC = () => {
                     underImage="images/services/banner.jpeg"
                     link="/apropos"
                     overlayColor="black"
-                    sloganVariant="secondary" titleColor="secondaryColor"               />
+                titleColor="secondaryColor" title={""} />
             </motion.div>
 
             <ServiceSection />

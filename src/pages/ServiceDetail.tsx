@@ -16,11 +16,11 @@ const ServiceDetail = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     {/* Image avec meilleur ratio et gestion responsive */}
-    <div className="relative w-full h-48 sm:h-64 md:h-80 rounded-xl overflow-hidden shadow-lg mb-6">
+    <div className="relative w-full h-56 sm:h-64 md:h-96 rounded-xl overflow-hidden shadow-lg mb-6 bgMainColorOpacity border border-blue-600">
         <img 
             src={option.image} 
             alt={option.label}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
         />
     </div>
 
@@ -37,7 +37,7 @@ const ServiceDetail = () => {
     </p>
 
     {/* Détails avec meilleure structure et espacement */}
-    <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
+    <div className="prose prose-lg max-w-none text-gray-700space-y-2 text-justify hyphens-auto">
         {typeof option.details === 'string' ? (
             <div className="whitespace-pre-line">
                 {option.details}

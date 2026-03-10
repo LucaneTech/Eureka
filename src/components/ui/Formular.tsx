@@ -52,7 +52,7 @@ const fadeInScale: Variants = {
 // Configuration WhatsApp
 const WHATSAPP_CONFIG = {
     // Numéro du propriétaire au format international (sans espaces ni +)
-    ownerNumber: "212781343642", // Remplacez par le vrai numéro
+    ownerNumber: " 242055648080", 
     // Message par défaut si jamais
     defaultMessage: "Bonjour, je vous contacte depuis votre site web."
 };
@@ -443,9 +443,9 @@ const ContactSection: React.FC = () => {
                             className="grid grid-cols-1 sm:grid-cols-3 gap-4"
                         >
                             {[
-                                { icon: Phone, text: "+212 781 34 36 42", label: "Appelez-nous", href: "tel:+212781343642" },
-                                { icon: Mail, text: "contact@eureka-co.ma", label: "Email", href: "mailto:contact@eureka-co.ma" },
-                                { icon: Clock, text: "Lun-Ven 9h-18h", label: "Horaires", href: "#" }
+                                { icon: Phone, text: "+242 05 564 80 80", label: "Appelez-nous", href: "tel:+21255648080" },
+                                { icon: Mail, text: "contact@eureka-co.net", label: "Email", href: "mailto:contact@eureka-co.net" },
+                                { icon: Clock, text: "24h/24, 7jours/7", label: "Intervention", href: "#" }
                             ].map((item, index) => (
                                 <motion.a
                                     key={index}

@@ -1,6 +1,4 @@
-import { DescriptionText } from "../font/DescriptionText";
 import { Button } from "../ui/Button";
-import { Slogan } from "../ui/Slogan";
 
 interface FirstBannerProps {
     title?: string;
@@ -38,13 +36,6 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
     rightImage,
     className = "",
     secondButton = false,
-    addTitle = "",
-    addTitleStyle = "mainColor",
-    overlayColor = "#000000",
-    overlayOpacity = 50,
-    slogan,
-    sloganIcon,
-    sloganVariant = "primary"
 }) => {
 
     
@@ -60,40 +51,19 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                 className="absolute inset-0 bg-cover bg-center"
                 style={underImage ? { backgroundImage: `url(${underImage})` } : undefined}
                 aria-hidden="true"
-            >
-                {/* Overlay */}
-                <div
-                    className="absolute inset-0"
-                    style={{ backgroundColor: overlayColor, opacity: overlayOpacity / 100 }}
-                ></div>
+            >            
             </div>
 
             {/* Contenu principal */}
-            <div className="relative z-10 container mx-auto px-4 py-8 md:py-20 min-h-[300px] md:min-h-[550px] flex items-center md:items-center">
+            <div className="relative z-10 container mx-auto px-4 py-8 md:py-20 min-h-[300px] md:min-h-[400px] flex items-center md:items-center">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-8">
 
                     {/* Partie texte - Centrée sur mobile */}
                     <div className="w-full md:w-1/2 space-y-3 md:space-y-4 text-white text-center md:text-left">
                        
-                        {slogan && sloganIcon && (
-                            <Slogan 
-                                text={slogan} 
-                                icon={sloganIcon} 
-                                variant={sloganVariant as 'primary' | 'secondary'} 
-                            />
-                        )}
-
-                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                            {title} 
-                            {addTitle && (
-                                <span className={addTitleStyle}>
-                                    {addTitle}
-                                </span> 
-                            )}
-                        </h1>
-
-
-                        <DescriptionText text={description} className="text-white"/>
+                        <div className="flex text-justify max-w-lg  hyphens-auto">
+                            <h3 className="text-xl md:text-2xl">{description}</h3>
+                        </div>
 
 
                         <div className="flex flex-col md:flex-row gap-3 items-center mt-4 md:mt-8">
@@ -102,7 +72,10 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                                 to={link}
                                 variant={variantBtn as 'primary' | 'secondary'}
 
+
                             />
+
+
 
                             {
                                 secondButton ? (
@@ -135,8 +108,7 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
                 </div>
             </div>
 
-            {/* Éléments de design optionnels */}
-            <div className="absolute bottom-0 left-0 w-full h-16 md:h-96 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+           
         </section>
     );
 };

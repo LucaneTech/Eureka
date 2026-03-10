@@ -1,16 +1,6 @@
-import { DescriptionText } from "../font/DescriptionText";
-import { Title } from "../font/Title";
-import { Button } from "../ui/Button";
-import { Slogan } from "../ui/Slogan";
 
-// type ImageProps = {
-//     image: string;
-// };
 
 interface SecondBannerProps {
-    sloganIcon?: React.ReactNode;
-    slogan?: string;
-    sloganVariant?: 'primary' | 'secondary'
     title: string;
     titleColor?: string;
     subtitle?: string;
@@ -31,23 +21,10 @@ interface SecondBannerProps {
 
 
 export const SecondBanner: React.FC<SecondBannerProps> = ({
-    sloganIcon,
-    slogan,
-    sloganVariant = "primary",
-    title = "",
-    titleColor = "",
-    subtitle = "",
-    description = "",
-    textBtn = " ",
-    link = '#',
-    variantBtn = 'primary',
-    textBtn2 = "",
-    link2 = "#",
-    variantBtn2,
+    
     underImage,
     className = "",
     // overlayColor = 'black',
-    secondButton = false,
     // images = []
 
 }) => {
@@ -60,7 +37,6 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
 
         <section
             className={`relative w-full  overflow-hidden md:px-12 ${className}`}
-            aria-label={title}
             role="region"
         >
             {/* Background avec overlay personnalisable */}
@@ -86,7 +62,7 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
                     <div className="w-full  space-y-3 md:space-y-4 text-white text-center">
 
 
-                        <div className="flex flex-col md:gap-3 justify-center items-center">
+                        {/* <div className="flex flex-col md:gap-3 justify-center items-center">
                             <Title text={title} variants={"extra"} className={`mb-2 ${titleColor}`} />
                             {
                                 subtitle && <Title text={subtitle} variants={"large"} className="mb-4 md:mb-5 text-white" />
@@ -113,8 +89,8 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
 
                                 </div>
                             )
-                        }
-                        <div className="flex flex-row gap-2 md:gap-10 justify-center items-center mt-4 md:mt-8">
+                        } */}
+                        {/* <div className="flex flex-row gap-2 md:gap-10 justify-center items-center mt-4 md:mt-8">
                             <Button
                                 text={textBtn}
                                 to={link}
@@ -133,7 +109,7 @@ export const SecondBanner: React.FC<SecondBannerProps> = ({
                                 ) : null
                             }
 
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>

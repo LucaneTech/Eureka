@@ -113,7 +113,7 @@ const StorySection: React.FC = () => {
                     <Title text="Notre Histoire" variants="large" className="text-center" />
                 </motion.div>
                 <motion.div variants={itemVariants}>
-                    <DescriptionText text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité." />
+                    <DescriptionText text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité."  className="max-w-xl"/>
                 </motion.div>
             </motion.div>
 
@@ -123,7 +123,7 @@ const StorySection: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="bgSecondaryColorOpacity overflow-hidden py-4 md:py-8 mx-auto px-8 relative z-10 mt-4 md:mt-8"
             >
-                <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div className=" grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ">
 
                     {/* Texte / Histoire */}
                     <motion.div
@@ -132,18 +132,18 @@ const StorySection: React.FC = () => {
                         animate={isInView ? "visible" : "hidden"}
                         className="space-y-6"
                     >
-                        <DescriptionText text="Acteur incontournable de l’hygiène, du nettoyage, de la propreté et du traitement anti nuisibles." />
+                        <DescriptionText text="Acteur incontournable de l’hygiène, du nettoyage, de la propreté et du traitement anti nuisibles."  className="max-w-xl"/>
 
 
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600  text-justify hyphens-auto">
                             Depuis plus de trois ans, EUREKA & CO se positionne comme un partenaire fiable dans la prévention des risques liés aux nuisibles et à la santé.
                             Fondée en 2024, notre société offre son soutien aux résidences, établissements d'éducation, commerces, centres de santé, secteurs de l'hôtellerie et de la restauration, loisirs, banques, compagnies d'assurance, ambassades, industries, espaces publics et autres. Notre mission est d'assurer la propreté et de combattre les nuisibles pour préserver le cadre de vie et la santé des personnes.
                         </p>
 
-                        <p className="text-gray-500 leading-relaxed">
+                        <p className="text-gray-500  text-justify hyphens-auto">
                             EUREKA & CO offre une solution intégrale, personnalisée et contractuellement engagée à des résultats.
                         </p>
-                        <p className="text-gray-500 leading-relaxed">
+                        <p className="text-gray-500  text-justify hyphens-auto">
                             Avec une équipe multidisciplinaire qualifiée, nous assurons des actions rapides, traçables et respectueuses de l'environnement, à Pointe-Noire ainsi que dans tous les départements du Congo.
                         </p>
 
@@ -161,9 +161,9 @@ const StorySection: React.FC = () => {
                         <motion.img
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.3 }}
-                            src="/images/services/story.png"
+                            src="/images/services/team.jpg"
                             alt="Notre équipe"
-                            className="w-[800px] lg:w-[900px] h-auto object-cover drop-shadow-2xl"
+                            className="w-[800px] lg:w-[900px] h-auto object-cover drop-shadow-2xl rounded-md"
                         />
                     </motion.div>
 
@@ -226,7 +226,7 @@ const MissonValorsSection: React.FC = () => {
                 <motion.div variants={itemVariants}>
                     <DescriptionText
                         text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité."
-                        className="max-w-2xl text-gray-600"
+                        className="max-w-xl text-gray-600"
                     />
                 </motion.div>
             </motion.div>
@@ -366,7 +366,7 @@ const State = () => {
                 <motion.div variants={itemVariants}>
                     <DescriptionText
                         text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité."
-                        className="max-w-2xl text-gray-600"
+                        className="max-w-xl text-gray-600"
                     />
                 </motion.div>
             </motion.div>

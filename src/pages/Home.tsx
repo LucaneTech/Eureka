@@ -500,16 +500,12 @@ export const Home: React.FC = () => {
     <>
       {/* Hero section - déjà animée via FirstBanner */}
       <FirstBanner
-        title="Eureka & Co, votre partenaire de confiance "
-        addTitle="pour un environnement impeccable."
         addTitleStyle="mainColor"
-        description="Experts en nettoyage et propreté, hygiène 4D (désinsectisation, désinfection, dératisation, déreptilisation), aménagement et gestion des espaces verts ainsi que la maintenance des systèmes de climatisation."
+        description="Experts en nettoyage et propreté,hygiène 4D(désinsectisation, désinfection,dératisation,déreptilisation),aménagement et gestion des espaces verts ainsi que la maintenance des systèmes de climatisation."
         textBtn="Contactez-nous !"
         variantBtn="primary"
         underImage="/images/home/banner.jpeg"
-        // rightImage="/images/home/hero.png"
         link="/contact"
-
         link2={"/solutions"}
         secondButton
         textBtn2="Découvrez nos solutions"
@@ -639,9 +635,9 @@ export const Home: React.FC = () => {
           </motion.div>
           <motion.p
             variants={fadeInUp}
-            className="mb-5 text-slate-700"
+            className="mb-5 text-slate-700 text-justify"
           >
-            EUREKA & CO est une entreprise de nettoyage et d'entretien dédiée à fournir des services de qualité supérieure pour les entreprises et les particuliers. Nous sommes spécialisés dans le nettoyage professionnel, l'hygiène 4D (désinsectisation, désinfection, dératisation, déreptilisation), l'aménagement et la gestion des espaces verts ainsi que la maintenance des systèmes de climatisation. Notre équipe expérimentée s'engage à offrir un service fiable, efficace et respectueux de l'environnement pour garantir la satisfaction de nos clients.
+            EUREKA & CO est une entreprise dédiée à fournir des services de qualité supérieure pour les entreprises et les particuliers. Nous sommes spécialisés dans le nettoyage professionnel, l'hygiène 4D (désinsectisation, désinfection, dératisation, déreptilisation), l'aménagement et la gestion des espaces verts ainsi que la maintenance des systèmes de climatisation. Notre équipe expérimentée s'engage à offrir un service fiable, efficace et respectueux de l'environnement pour garantir la satisfaction de nos partenaires.
           </motion.p>
 
           <motion.div

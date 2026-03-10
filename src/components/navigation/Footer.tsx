@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, ChevronRight, Globe } from "lucide-react";
 
 export const Footer = () => {
@@ -39,7 +39,7 @@ export const Footer = () => {
   };
 
   return (
-    <motion.footer 
+    <motion.footer
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
@@ -48,9 +48,9 @@ export const Footer = () => {
     >
       {/* GRID MAIN - Optimisé pour tous les écrans */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-10 lg:gap-12 px-6 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 max-w-7xl mx-auto">
-        
+
         {/* LOGO & DESCRIPTION - Colonne plus large sur mobile */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="lg:col-span-4 space-y-4 md:space-y-6"
         >
@@ -65,12 +65,12 @@ export const Footer = () => {
             />
           </Link>
 
-          <p className="text-sm leading-6 md:leading-7 text-slate-600 max-w-md">
-           Eureka & Co est une entreprise de droit congolais spécialisée dans les services de nettoyage et entretien professionnel, hygiène 4D (désinsectisation, désinfection, dératisation, déreptilisation), aménagement et entretien des espaces verts ainsi que la maintenance des systèmes de climatisation.
+          <p className="text-sm text-slate-600 max-w-2xl text-justify hyphens-auto">
+            Eureka & Co est une entreprise de droit congolais spécialisée dans les services de nettoyage et entretien professionnel, hygiène 4D (désinsectisation, désinfection, dératisation, déreptilisation), aménagement et entretien des espaces verts ainsi que la maintenance des systèmes de climatisation.
           </p>
 
           {/* Badge de localisation - Ajouté pour plus de crédibilité */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="flex items-center gap-2 text-slate-500"
           >
@@ -80,13 +80,13 @@ export const Footer = () => {
         </motion.div>
 
         {/* LIENS RAPIDES - Centré sur desktop */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="lg:col-span-2 flex flex-col"
         >
           <h2 className="font-bold text-mainColor text-base sm:text-lg mb-4 md:mb-6 relative inline-block">
             Liens rapides
-            <motion.span 
+            <motion.span
               className="absolute -bottom-1 left-0 w-12 h-0.5 bg-mainColor"
               initial={{ width: 0 }}
               whileInView={{ width: 48 }}
@@ -98,7 +98,7 @@ export const Footer = () => {
               { to: "/", label: "Accueil" },
               { to: "/solutions", label: "Nos solutions" },
               { to: "/apropos", label: "À propos" },
-               { to: "/blog", label: "Blog" },
+              { to: "/blog", label: "Blog" },
               { to: "/contact", label: "Contact" }
             ].map((link) => (
               <motion.div
@@ -108,7 +108,7 @@ export const Footer = () => {
                 className="flex items-center gap-1"
               >
                 <ChevronRight size={14} className="text-mainColor opacity-0 group-hover:opacity-100" />
-                <Link 
+                <Link
                   to={link.to}
                   className="hover:text-mainColor transition-colors duration-200 text-slate-600"
                 >
@@ -120,13 +120,13 @@ export const Footer = () => {
         </motion.div>
 
         {/* SERVICES - Centré sur desktop */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="lg:col-span-3 flex flex-col"
         >
           <h2 className="font-bold text-mainColor text-base sm:text-lg mb-4 md:mb-6 relative inline-block">
             Nos solutions
-            <motion.span 
+            <motion.span
               className="absolute -bottom-1 left-0 w-12 h-0.5 bg-mainColor"
               initial={{ width: 0 }}
               whileInView={{ width: 48 }}
@@ -145,7 +145,7 @@ export const Footer = () => {
                 key={service.hash}
                 variants={linkHoverVariants}
                 whileHover="hover"
-                href={`#`} 
+                href={`#`}
                 className="hover:text-mainColor transition-colors duration-200 text-slate-600 text-sm"
               >
                 {service.label}
@@ -155,13 +155,13 @@ export const Footer = () => {
         </motion.div>
 
         {/* CONTACTS */}
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="lg:col-span-3"
         >
           <h2 className="font-bold text-mainColor text-base sm:text-lg mb-4 md:mb-6 relative inline-block">
             Contacts
-            <motion.span 
+            <motion.span
               className="absolute -bottom-1 left-0 w-12 h-0.5 bg-mainColor"
               initial={{ width: 0 }}
               whileInView={{ width: 48 }}
@@ -172,8 +172,8 @@ export const Footer = () => {
             <p className="text-slate-600 text-sm leading-relaxed">
               Obtenez un devis gratuit ou planifiez votre intervention.
             </p>
-            
-            <motion.div 
+
+            <motion.div
               variants={itemVariants}
               className="space-y-3"
             >
@@ -185,9 +185,9 @@ export const Footer = () => {
                 <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
                   <Phone size={16} className="text-mainColor" />
                 </span>
-                <span>+242 05 564 80 80/06 755 40 40</span>
+                <span>+242 05 564 80 80</span>
               </motion.a>
-              
+
               <motion.a
                 whileHover={{ x: 5, color: "#05AFF2" }}
                 href="mailto:contact@eureka-co.net"
@@ -199,13 +199,13 @@ export const Footer = () => {
                 <span className="text-sm break-all">contact@eureka-co.net</span>
               </motion.a>
 
-               <motion.a
+              <motion.a
                 whileHover={{ x: 5, color: "#05AFF2" }}
                 href="mailto:contact@eureka-co.net"
                 className="flex items-center gap-2 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
               >
                 <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
-                  <Globe  size={16} className="text-mainColor"/>
+                  <Globe size={16} className="text-mainColor" />
                 </span>
                 <span className="text-sm break-all">https://www.eureka-co.net</span>
               </motion.a>
@@ -215,29 +215,29 @@ export const Footer = () => {
       </div>
 
       {/* COPYRIGHT - Amélioré avec animation */}
-      <motion.div 
+      <motion.div
         variants={itemVariants}
         className="mt-10 md:mt-12 border-t border-slate-200 bgMainColor text-white"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 md:py-5">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-xs sm:text-sm ">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               className="text-center sm:text-left"
             >
               Copyright © {currentYear}{" "}
-              <a 
-                href="/" 
+              <a
+                href="/"
                 className="font-semibold text-mainColor hover:underline transition-all"
               >
                 Eureka & Co
               </a>{" "}
               — Tous droits réservés.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}

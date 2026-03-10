@@ -37,7 +37,7 @@ const HeadCard: React.FC<HeadCardProps> = ({
             {/* Description */}
            <div className="max-w-[500px]">
              {description && (
-                <p className="text-white text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed">
+                <p className="text-white text-sm sm:text-base mb-3 sm:mb-4 leading-relaxed text-justify hyphens-auto">
                     {description}
                 </p>
             )}

@@ -37,7 +37,7 @@ const TrustCard: React.FC<TrustCardProps> = ({
                     </h3>
                     
                     {description && (
-                        <p className="text-white leading-relaxed">
+                        <p className="text-white leading-relaxed text-justify hyphens-auto">
                             {description}
                         </p>
                     )}
