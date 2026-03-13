@@ -1,4 +1,4 @@
-import { ArrowBigDown, BookOpenCheck, Megaphone, SparklesIcon } from "lucide-react";
+import { ArrowBigDown, Megaphone, SparklesIcon } from "lucide-react";
 import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import type { Variants } from "framer-motion";
