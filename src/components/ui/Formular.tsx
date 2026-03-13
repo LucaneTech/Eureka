@@ -52,7 +52,8 @@ const fadeInScale: Variants = {
 // Configuration WhatsApp
 const WHATSAPP_CONFIG = {
     // Numéro du propriétaire au format international (sans espaces ni +)
-    ownerNumber: " 242055648080", 
+    // ownerNumber: " 242055648080", 
+    ownerNumber: " 242067554040",
     // Message par défaut si jamais
     defaultMessage: "Bonjour, je vous contacte depuis votre site web."
 };
@@ -129,7 +130,7 @@ const ContactSection: React.FC = () => {
             `===Message===`,
             data.message || "Pas de message",
             "━━━━━━━━━━━━━━━━━━━",
-            "Envoyé via eureka-co.ma"
+            "Envoyé via www.eureka-co.net"
         ];
 
         return encodeURIComponent(messageParts.join('\n'));
@@ -213,8 +214,6 @@ const ContactSection: React.FC = () => {
                 setSubmitStatus({ type: null, message: '' });
             }, 3000);
 
-            // Optionnel: Envoyer aussi une copie par email ou sauvegarder en base
-            // await sendToBackupService(formData);
 
         } catch (error) {
             console.error("Erreur lors de l'envoi:", error);
@@ -227,20 +226,6 @@ const ContactSection: React.FC = () => {
         }
     };
 
-    // Fonction optionnelle pour backup (à implémenter si besoin)
-    // const sendToBackupService = async (data: FormData) => {
-    //     try {
-    //         // Exemple d'envoi vers une API
-    //         await fetch('/api/contact-backup', {
-    //             method: 'POST',
-    //             headers: { 'Content-Type': 'application/json' },
-    //             body: JSON.stringify(data)
-    //         });
-    //     } catch (error) {
-    //         console.error('Backup error:', error);
-    //         // Ne pas bloquer l'utilisateur
-    //     }
-    // };
 
     return (
         <motion.section
@@ -443,7 +428,7 @@ const ContactSection: React.FC = () => {
                             className="grid grid-cols-1 sm:grid-cols-3 gap-4"
                         >
                             {[
-                                { icon: Phone, text: "+242 05 564 80 80", label: "Appelez-nous", href: "tel:+21255648080" },
+                                { icon: Phone, text: "+242 05 564 80 80", label: "Appelez-nous", href: "tel:+242055648080" },
                                 { icon: Mail, text: "contact@eureka-co.net", label: "Email", href: "mailto:contact@eureka-co.net" },
                                 { icon: Clock, text: "24h/24, 7jours/7", label: "Intervention", href: "#" }
                             ].map((item, index) => (

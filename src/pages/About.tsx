@@ -136,7 +136,7 @@ const StorySection: React.FC = () => {
 
 
                         <p className="text-gray-600  text-justify hyphens-auto">
-                            Depuis plus de trois ans, EUREKA & CO se positionne comme un partenaire fiable dans la prévention des risques liés aux nuisibles et à la santé.
+                            EUREKA & CO se positionne comme un partenaire fiable dans la prévention des risques liés aux nuisibles et à la santé.
                             Fondée en 2024, notre société offre son soutien aux résidences, établissements d'éducation, commerces, centres de santé, secteurs de l'hôtellerie et de la restauration, loisirs, banques, compagnies d'assurance, ambassades, industries, espaces publics et autres. Notre mission est d'assurer la propreté et de combattre les nuisibles pour préserver le cadre de vie et la santé des personnes.
                         </p>
 
@@ -152,20 +152,21 @@ const StorySection: React.FC = () => {
 
 
                     {/* Image */}
-                    <motion.div
-                        variants={slideInRight}
-                        initial="hidden"
-                        animate={isInView ? "visible" : "hidden"}
-                        className="w-full flex justify-center lg:justify-end"
-                    >
-                        <motion.img
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.3 }}
-                            src="/images/services/team.jpg"
-                            alt="Notre équipe"
-                            className="w-[800px] lg:w-[900px] h-auto object-cover drop-shadow-2xl rounded-md"
-                        />
-                    </motion.div>
+                   <motion.div
+    variants={slideInRight}
+    initial="hidden"
+    animate={isInView ? "visible" : "hidden"}
+    className="w-full flex justify-center lg:justify-end"
+>
+    <motion.img
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.3 }}
+        src="/images/about/story.PNG"
+        alt="Notre équipe"
+        className="max-w-[300px] lg:max-w-[500px] w-full max-h-[600px] object-cover drop-shadow-2xl rounded-md"
+    />
+</motion.div>
+
 
                 </div>
             </motion.div>
@@ -175,30 +176,26 @@ const StorySection: React.FC = () => {
 
 const missionValuesData = [
     {
-        value: "Intégrité",
-        description: "Nous agissons avec honnêteté et transparence dans toutes nos interactions."
-    },
-    {
-        value: "Excellence",
-        description: "Nous nous engageons à fournir des services de nettoyage de la plus haute qualité."
-    },
-    {
-        value: "Responsabilité",
-        description: "Nous assumons la responsabilité de nos actions et de l'impact environnemental de nos services."
-    },
-    {
         value: "Innovation",
-        description: "Nous cherchons constamment à améliorer nos méthodes et à adopter de nouvelles technologies pour mieux servir nos clients."
+        description: "Recherche et développement en continu des solutions innovantes."
     },
     {
-        value: "Respect",
-        description: "Nous traitons nos clients, nos employés et notre environnement avec respect et dignité."
+        value: "Dynamisme et flexibilité",
+        description: "Réponse rapide et efficace aux besoins de nos parténaires."
     },
     {
-        value: "Collaboration",
-        description: "Nous croyons en la force du travail d'équipe et de la collaboration pour atteindre nos objectifs communs."
+        value: "Ecoute et proximité",
+        description: "Prise en compte des attentes et des besoins de nos partenaires."
     },
+    {
+        value: "Engagement écologique",
+        description: "Recours à des produits respecteux de l'environnement et des méthodes durables pour minimiser notre empreinte écologique."
+    },
+
 ];
+
+
+ 
 
 const MissonValorsSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -299,10 +296,10 @@ const MissonValorsSection: React.FC = () => {
 };
 
 const statsData = [
-    { label: "Clients satisfaits", value: "1 250+" },
-    { label: "Années d’expérience", value: "8+" },
+    { label: "Clients satisfaits", value: "20+" },
+    { label: "Années d’expérience", value: "3+" },
     { label: "Projets réalisés", value: "3 400+" },
-    { label: "Agents qualifiés", value: "120+" },
+    { label: "Agents qualifiés", value: "7+" },
 ];
 
 const State = () => {
@@ -464,7 +461,7 @@ const About = () => {
                     link2={"/contact"}
                     variantBtn2="secondary"
                     titleColor="text-white"
-                    underImage="/images/services/team.jpg"
+                    underImage="/images/about/about.jpg"
                     overlayColor="primary"
                 />
             </motion.div>
@@ -481,7 +478,7 @@ const About = () => {
                 className="text-center space-y-5 p-8 md:p-12 md:mt-8"
             >
                 <motion.div variants={itemVariants}>
-                    <Title text={"Notre Devis Nettoyage Gratuit en 24h"} variants={"large"} />
+                    <Title text={"Notre Devis Gratuit en 24h"} variants={"large"} />
                 </motion.div>
 
                 <motion.div
@@ -489,7 +486,7 @@ const About = () => {
                     className="text-slate-600 text-center max-w-xl mx-auto"
                 >
                     <DescriptionText
-                        text={"Contactez nos experts et offrez à vos espaces une propreté professionnelle irréprochable."}
+                        text={"Contactez nos experts et offrez vous un service professionnel irréprochable."}
                         className="max-w-xl mx-auto"
                     />
                 </motion.div>

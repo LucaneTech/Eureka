@@ -133,7 +133,7 @@ Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous as
                     details: `EUREKA & CO prend en charge l'entretien de toutes les surfaces vitrées, qu'elles soient à la portée des hommes ou non.
 
 Nos équipes sont en mesure de nettoyer toutes les surfaces vitrées grâce à nos équipements spécialisés, tels que les perches télescopiques à eau pure.`,
-                    image: "images/services/vitre.jpg"
+                    image: "images/services/vitre.PNG"
                 },
                 {
                     label: "Remise en état après travaux",
@@ -141,7 +141,7 @@ Nos équipes sont en mesure de nettoyer toutes les surfaces vitrées grâce à n
                     details: `Vous avez effectué des travaux d'aménagement afin d'améliorer les conditions de travail de vos employés et l'accueil de vos clients.
 
 Pour rendre vos locaux impeccablement propres, faites appel à EUREKA & CO !`,
-                    image: "images/services/remise.jpeg"
+                    image: "images/services/remise.PNG"
                 },
                 {
                     label: "Shampooing de moquette",
@@ -215,12 +215,14 @@ En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engageme
                 {
                     label: "Desinsectisation",
                     description: "Lutte contre les insectes nuisibles.",
-                    details: `blattes, cafards, fourmis, termites, punaises de lit, puces, guêpes, frelons, abeilles, moustiques, mouches, perces-bois, charançons etc.`
+                    details: `blattes, cafards, fourmis, termites, punaises de lit, puces, guêpes, frelons, abeilles, moustiques, mouches, perces-bois, charançons etc.`,
+                    image: "images/services/desinsectisation.jpg"
                 },
                 {
                     label: "Dératisation",
                     description: "Lutte contre les rongeurs.",
-                    details: `Souris, rats, mulots, campagnols, musaraignes, loirs, chauves-souris etc.`
+                    details: `Souris, rats, mulots, campagnols, musaraignes, loirs, chauves-souris etc.`,
+                    image: "images/services/deratisation.jpg"
                 },
                 {
                     label: "Desinfection",

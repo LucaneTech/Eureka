@@ -216,6 +216,7 @@ const logos = [
      { src: "/images/home/partenaires/olivier.png", alt: "logo-olivier" },
      { src: "/images/home/partenaires/super.png", alt: "logo-super" },
      { src: "/images/home/partenaires/prevent.jpeg", alt: "logo-prevent" },
+      { src: "/images/home/partenaires/congo.png", alt: "logo-congo" },
   
 ];
 
@@ -499,7 +500,8 @@ export const Home: React.FC = () => {
       {/* Hero section - déjà animée via FirstBanner */}
       <FirstBanner
     
-        underImage="/images/home/banner.jpeg"       
+        underImage="/images/home/banner.jpeg" 
+        title="La référence du nettoyage en hauteur et de la lutte anti nuisibles."      
       />
 
       {/* services presentation */}

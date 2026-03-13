@@ -1,7 +1,7 @@
 // import { Button } from "../ui/Button";
 
 interface FirstBannerProps {
-    // title?: string;
+    title?: string;
     // addTitle?: string;
     // addTitleStyle?: string;
     // description?: string;
@@ -24,7 +24,7 @@ interface FirstBannerProps {
 
 export const FirstBanner: React.FC<FirstBannerProps> = ({
 
-    // title = "",
+    title = "",
     // description = "",
     // textBtn = " ",
     // link = '#',
@@ -58,38 +58,15 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
             <div className="relative z-10 container mx-auto px-4 py-8 md:py-20 min-h-[300px] md:min-h-[600px] flex items-center md:items-center">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-8">
 
-                    {/* Partie texte - Centrée sur mobile */}
-                    {/* <div className="w-full md:w-1/2 space-y-3 md:space-y-4 text-white text-center md:text-left">
+                   <div className="w-full md:w-1/2 space-y-3 md:space-y-4 text-white text-center md:text-left">
                        
                         <div className="flex text-justify max-w-lg  hyphens-auto">
-                            <h3 className="text-xl md:text-2xl">{description}</h3>
+                            <h3 className="text-xl md:text-2xl">{title}</h3>
                         </div>
 
 
-                        {/* <div className="flex flex-col md:flex-row gap-3 items-center mt-4 md:mt-8">
-                            <Button
-                                text={textBtn}
-                                to={link}
-                                variant={variantBtn as 'primary' | 'secondary'}
-
-
-                            />
-
-
-
-                            {
-                                secondButton ? (
-                                    <Button
-                                        text={textBtn2}
-                                        to={link2}
-                                        variant={variantBtn2 as 'primary' | 'secondary'}
-
-                                    />
-                                ) : null
-                            }
-
-                        </div> 
-                    </div> */}
+                        
+                    </div> 
 
                     {/* Image droite - Collée en bas sur mobile, centrée verticalement sur desktop */}
                     {rightImage && (
