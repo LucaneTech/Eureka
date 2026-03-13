@@ -250,19 +250,7 @@ const Blog = () => {
             {/* Bannière avec animation */}
             <motion.div variants={fadeInScale}>
                 <FirstBanner 
-                    title={"Secrets d'une Propreté Parfaite,"} 
-                    addTitle="Impeccable & Intelligente" 
-                    addTitleStyle="secondaryColor" 
-                    description={"Découvrez nos astuces expertes de nettoyage pour des espaces impeccables, sans effort et durables au quotidien."} 
-                    textBtn={"Devis Gratuit 24h"} 
-                    link={"/contact"} 
-                    variantBtn="secondary" 
-                    overlayColor="#000000" 
-                    overlayOpacity={100} 
                     underImage="/images/blog/banner.jpg"
-                    slogan="Nettoyage de Qualité Supérieure" 
-                    sloganIcon={<BookOpenCheck />} 
-                    sloganVariant="secondary"
                 />
             </motion.div>
 
