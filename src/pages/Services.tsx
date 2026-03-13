@@ -119,7 +119,7 @@ const ServiceSection: React.FC = () => {
 L'état de propreté de vos locaux professionnels va au-delà d'une simple question d'apparence : il témoigne également de votre rigueur et de votre sérieux vis-à-vis de vos employés et partenaires.
 
 Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous assurent une propreté irréprochable et pérenne. Nous garantissons la propreté des fenêtres et des sols de vos installations en employant des produits certifiés ECO LABEL, tout en respectant scrupuleusement diverses actions écologiques lors de nos prestations.`,
-                    image: "/images/services/entretient.jpeg"
+                    image: "/images/services/classique.png"
                 },
                 {
                     label: "Nettoyage des sols",
@@ -225,12 +225,14 @@ En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engageme
                 {
                     label: "Desinfection",
                     description: "Désinfection des surfaces et équipements.",
-                    details: `Bactéries, micro-organismes, spores bactériennes, virus etc.`
+                    details: `Bactéries, micro-organismes, spores bactériennes, virus etc.`,
+                    image: "images/services/desin.jpg"
                 },
                 {
                     label: "Dereptilisation",
                     description: "Lutte contre les reptiles indésirables.",
-                    details: `Serpents, lézards, geckos, caméléons, iguanes, tortues etc.`
+                    details: `Serpents, lézards, geckos, caméléons, iguanes, tortues etc.`,
+                    image: "images/services/derept.PNG"
                 }
             ]
         },

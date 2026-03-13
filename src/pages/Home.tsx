@@ -203,18 +203,16 @@ const styles = `
 const logos = [
   
   { src: "/images/home/partenaires/casino.png", alt: "logo-casino" },
-  { src: "/images/home/partenaires/regal.png", alt: "logo-regal" },
   { src: "/images/home/partenaires/ifd.png", alt: "logo-ifd" },
   { src: "/images/home/partenaires/ead.png", alt: "logo-ead" },
   { src: "/images/home/partenaires/isd.png", alt: "logo-isd" },
-   { src: "/images/home/partenaires/guenin.png", alt: "logo-guenin" },
-   { src: "/images/home/partenaires/green-service.png", alt: "logo-green-service" },
-    { src: "/images/home/partenaires/sci-ndt.png", alt: "logo-sci-ndt" },
-
-     { src: "/images/home/partenaires/cubana.png", alt: "logo-cubana" },
-     { src: "/images/home/partenaires/ex.png", alt: "logo-ex" },
-     { src: "/images/home/partenaires/btp.png", alt: "logo-btp" },
-     { src: "/images/home/partenaires/guot.png", alt: "logo-guot" },
+  { src: "/images/home/partenaires/guenin.png", alt: "logo-guenin" },
+  { src: "/images/home/partenaires/green-service.png", alt: "logo-green-service" },
+  { src: "/images/home/partenaires/sci-ndt.png", alt: "logo-sci-ndt" },
+  { src: "/images/home/partenaires/cubana.png", alt: "logo-cubana" },
+  { src: "/images/home/partenaires/ex.png", alt: "logo-ex" },
+  { src: "/images/home/partenaires/btp.png", alt: "logo-btp" },
+  { src: "/images/home/partenaires/guot.png", alt: "logo-guot"},
      { src: "/images/home/partenaires/olivier.png", alt: "logo-olivier" },
      { src: "/images/home/partenaires/super.png", alt: "logo-super" },
      { src: "/images/home/partenaires/prevent.jpeg", alt: "logo-prevent" },
@@ -500,16 +498,8 @@ export const Home: React.FC = () => {
     <>
       {/* Hero section - déjà animée via FirstBanner */}
       <FirstBanner
-        addTitleStyle="mainColor"
-        description="Experts en nettoyage et propreté,hygiène 4D(désinsectisation, désinfection,dératisation,déreptilisation),aménagement et gestion des espaces verts ainsi que la maintenance des systèmes de climatisation."
-        textBtn="Contactez-nous !"
-        variantBtn="primary"
-        underImage="/images/home/banner.jpeg"
-        link="/contact"
-        link2={"/solutions"}
-        secondButton
-        textBtn2="Découvrez nos solutions"
-        variantBtn2="secondary"
+    
+        underImage="/images/home/banner.jpeg"       
       />
 
       {/* services presentation */}
