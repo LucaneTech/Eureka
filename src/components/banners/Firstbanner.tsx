@@ -33,7 +33,6 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
     // link2 = "#",
     // variantBtn2,
     underImage,
-    rightImage,
     className = "",
     // secondButton = false,
 }) => {
