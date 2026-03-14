@@ -7,13 +7,13 @@ interface FirstBannerProps {
     // addTitle?: string;
     // addTitleStyle?: string;
     // description?: string;
-    textBtn: string;
+    textBtn?: string;
     // variantBtn?: 'primary' | 'secondary' | 'outline';
     textBtn2?: string;
     // variantBtn2?: 'primary' | 'secondary' | 'outline';
     underImage?: string;
     rightImage?: string;
-    link: string;
+    link?: string;
     link2?: string;
     className?: string;
     secondButton?: boolean;
