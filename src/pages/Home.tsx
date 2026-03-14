@@ -500,9 +500,8 @@ export const Home: React.FC = () => {
       {/* Hero section - déjà animée via FirstBanner */}
       <FirstBanner
     
-        underImage="/images/home/banner.jpeg" 
-        title="La référence du nettoyage en hauteur et de la lutte anti nuisibles."      
-      />
+        underImage="/images/home/banner.jpeg"
+        title="La référence du nettoyage en hauteur et de la lutte anti nuisibles." textBtn={"Découvrez nos solutions"} link={"/solutions"}  textBtn2="Demander un devis"  link2="/contact"   />
 
       {/* services presentation */}
       <motion.section

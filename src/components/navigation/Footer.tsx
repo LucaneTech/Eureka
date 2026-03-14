@@ -179,7 +179,7 @@ export const Footer = () => {
             >
               <motion.a
                 whileHover={{ x: 5, color: "#05AFF2" }}
-                href="tel:+212781343642"
+                href="tel:+242055648080"
                 className="flex items-center gap-2 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
               >
                 <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
@@ -201,7 +201,7 @@ export const Footer = () => {
 
               <motion.a
                 whileHover={{ x: 5, color: "#05AFF2" }}
-                href="mailto:contact@eureka-co.net"
+                href="https://www.eureka-co.net"
                 className="flex items-center gap-2 text-slate-600 hover:text-mainColor transition-colors duration-200 group"
               >
                 <span className="p-2 bg-mainColor/10 rounded-full group-hover:bg-mainColor/20 transition-colors">
