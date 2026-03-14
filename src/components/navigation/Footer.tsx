@@ -98,7 +98,7 @@ export const Footer = () => {
               { to: "/", label: "Accueil" },
               { to: "/solutions", label: "Nos solutions" },
               { to: "/apropos", label: "À propos" },
-              { to: "/blog", label: "Blog" },
+              // { to: "/blog", label: "Blog" },
               { to: "/contact", label: "Contact" }
             ].map((link) => (
               <motion.div

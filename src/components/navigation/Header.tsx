@@ -91,7 +91,7 @@ const Header: React.FC = () => {
           <Link to={'/'} className='textMainColorHover'>Acceuil</Link>
           <Link to={'/solutions'}  className='textMainColorHover cursor-pointer'>Nos solutions</Link>
           <Link to={'/apropos'} className='textMainColorHover cursor-pointer'>A propos</Link>
-          <Link to={'/blog'} className='textMainColorHover cursor-pointer'>Blog</Link>
+          {/* <Link to={'/blog'} className='textMainColorHover cursor-pointer'>Blog</Link> */}
           <Link to={'/contact'} className='textMainColorHover cursor-pointer'>Contact</Link>
         </ul>
 
@@ -182,7 +182,7 @@ const Header: React.FC = () => {
                 A propos
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link 
                 to="/blog" 
                 className="text-gray-900 hover:text-primary transition-colors text-base"
@@ -190,7 +190,7 @@ const Header: React.FC = () => {
               >
                 Blog
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link 
                 to="/contact" 

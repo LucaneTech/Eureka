@@ -52,8 +52,8 @@ const fadeInScale: Variants = {
 // Configuration WhatsApp
 const WHATSAPP_CONFIG = {
     // Numéro du propriétaire au format international (sans espaces ni +)
-    // ownerNumber: " 242055648080", 
-    ownerNumber: " 242067554040",
+    ownerNumber: "242055648080", // Enlevé l'espace au début
+    // ownerNumber: "242067554040",
     // Message par défaut si jamais
     defaultMessage: "Bonjour, je vous contacte depuis votre site web."
 };
@@ -63,7 +63,7 @@ const GoogleMap: React.FC = () => {
     return (
         <div className="w-full h-full min-h-[400px] lg:min-h-[600px] rounded-2xl overflow-hidden shadow-2xl">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.56016868557!2d-7.66944985!3d33.5731104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd4778aa113b%3A0xb06c1d84f310fd3!2sCasablanca!5e0!3m2!1sfr!2sma!4v1700000000000!5m2!1sfr!2sma"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3975.7812740009667!2d11.860915174979993!3d-4.807578095167855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDgnMjcuMyJTIDExwrA1MSc0OC42IkU!5e0!3m2!1sfr!2sma!4v1773445065288!5m2!1sfr!2sma"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -118,41 +118,50 @@ const ContactSection: React.FC = () => {
             minute: '2-digit'
         });
 
-        // Construction du message formaté
+        // Log pour vérifier les données avant envoi
+        console.log("Données du formulaire à envoyer:", {
+            nom: data.name,
+            email: data.email,
+            telephone: data.phone,
+            message: data.message
+        });
+
+        // Construction du message formaté avec des vérifications
         const messageParts = [
             "*NOUVEAU CONTACT DEPUIS LE SITE WEB*",
-            `${currentDate}`,
+            `📅 ${currentDate}`,
             "━━━━━━━━━━━━━━━━━━━",
-            `Nom: ${data.name || "Non spécifié"}`,
-            `Email: ${data.email || "Non spécifié"}`,
-            `Téléphone: ${data.phone || "Non spécifié"}`,
+            `👤 *Nom:* ${data.name?.trim() || "Non spécifié"}`,
+            `📧 *Email:* ${data.email?.trim() || "Non spécifié"}`,
+            `📞 *Téléphone:* ${data.phone?.trim() || "Non spécifié"}`,
             "━━━━━━━━━━━━━━━━━━━",
-            `===Message===`,
-            data.message || "Pas de message",
+            `💬 *Message:*`,
+            data.message?.trim() || "Pas de message",
             "━━━━━━━━━━━━━━━━━━━",
-            "Envoyé via www.eureka-co.net"
+            "🌐 Envoyé via www.eureka-co.net"
         ];
 
+        // Encodage correct pour WhatsApp
         return encodeURIComponent(messageParts.join('\n'));
     };
 
     // Validation du formulaire
     const validateForm = (): boolean => {
-        if (!formData.name.trim()) {
+        if (!formData.name?.trim()) {
             setSubmitStatus({
                 type: 'error',
                 message: 'Veuillez entrer votre nom'
             });
             return false;
         }
-        if (!formData.email.trim()) {
+        if (!formData.email?.trim()) {
             setSubmitStatus({
                 type: 'error',
                 message: 'Veuillez entrer votre email'
             });
             return false;
         }
-        if (!formData.message.trim()) {
+        if (!formData.message?.trim()) {
             setSubmitStatus({
                 type: 'error',
                 message: 'Veuillez entrer votre message'
@@ -185,8 +194,19 @@ const ContactSection: React.FC = () => {
         setSubmitStatus({ type: null, message: '' });
 
         try {
+            // Créer une copie des données pour éviter les références
+            const submissionData = {
+                name: formData.name.trim(),
+                email: formData.email.trim(),
+                phone: formData.phone?.trim() || "",
+                message: formData.message.trim()
+            };
+
+            // Log avant envoi
+            console.log("Envoi des données:", submissionData);
+            
             // Formater le message pour WhatsApp
-            const encodedMessage = formatWhatsAppMessage(formData);
+            const encodedMessage = formatWhatsAppMessage(submissionData);
             
             // Nettoyer le numéro (garder seulement les chiffres)
             const cleanNumber = WHATSAPP_CONFIG.ownerNumber.replace(/\D/g, '');
@@ -200,7 +220,7 @@ const ContactSection: React.FC = () => {
             // Succès
             setSubmitStatus({
                 type: 'success',
-                message: 'Message préparé ! WhatsApp va s\'ouvrir.'
+                message: 'Message préparé ! WhatsApp va s\'ouvrir avec vos informations.'
             });
 
             // Réinitialiser le formulaire après 3 secondes
@@ -214,7 +234,6 @@ const ContactSection: React.FC = () => {
                 setSubmitStatus({ type: null, message: '' });
             }, 3000);
 
-
         } catch (error) {
             console.error("Erreur lors de l'envoi:", error);
             setSubmitStatus({
@@ -226,7 +245,6 @@ const ContactSection: React.FC = () => {
         }
     };
 
-
     return (
         <motion.section
             ref={sectionRef}
@@ -235,7 +253,6 @@ const ContactSection: React.FC = () => {
             variants={containerVariants}
             className="relative py-16 md:py-24 overflow-hidden"
         >
-          
             <motion.div
                 className="absolute -top-40 -right-40 w-80 h-80 bg-mainColor/5 rounded-full blur-3xl"
                 animate={{
@@ -417,7 +434,7 @@ const ContactSection: React.FC = () => {
                                 </motion.button>
 
                                 <p className="text-xs text-gray-500 text-center mt-2">
-                                    En cliquant sur envoyer, WhatsApp s'ouvrira avec votre message pré-rempli.
+                                    En cliquant sur envoyer, WhatsApp s'ouvrira avec votre message pré-rempli contenant vos informations.
                                 </p>
                             </form>
                         </motion.div>
@@ -439,7 +456,7 @@ const ContactSection: React.FC = () => {
                                     className="bg-white rounded-xl p-4 shadow-md border borderMainColor text-center group cursor-pointer block"
                                 >
                                     <div className="flex justify-center mb-2">
-                                        <div className="p-2 bgMainColorOpacity rounded-full  transition-colors borderMainColor">
+                                        <div className="p-2 bgMainColorOpacity rounded-full transition-colors borderMainColor">
                                             <item.icon className="mainColor" size={20} />
                                         </div>
                                     </div>

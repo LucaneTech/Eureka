@@ -56,33 +56,9 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
 
             {/* Contenu principal */}
             <div className="relative z-10 container mx-auto px-4 py-8 md:py-20 min-h-[300px] md:min-h-[600px] flex items-center md:items-center">
-                <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6 md:gap-8">
-
-                   <div className="w-full md:w-1/2 space-y-3 md:space-y-4 text-white text-center md:text-left">
-                       
-                        <div className="flex text-justify max-w-lg  hyphens-auto">
-                            <h3 className="text-xl md:text-2xl">{title}</h3>
-                        </div>
-
-
-                        
-                    </div> 
-
-                    {/* Image droite - Collée en bas sur mobile, centrée verticalement sur desktop */}
-                    {rightImage && (
-
-                        <div className="hidden md:block md:absolute bottom-0 right-0 w-full max-w-sm md:max-w-md lg:max-w-lg">
-                            <img
-                                src={rightImage}
-                                alt={``}
-                                className="w-full h-[400px] object-cover drop-shadow-2xl"
-                                loading="lazy"
-
-                            />
-                        </div>
-
-                    )}
-                </div>
+                 <div className="flex flex-1 max-w-2xl">
+                    <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold  text-white tracking-tight md:tracking-wide">{title}</h1>
+                 </div>
             </div>
 
            
