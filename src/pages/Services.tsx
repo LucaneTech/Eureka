@@ -254,14 +254,16 @@ En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engageme
 
 Nos solutions, qui se conforment parfaitement à l'ampleur de vos espaces résidentiels ou professionnels, sauront idéalement satisfaire vos exigences.
 
-Uniquement un expert chevronné peut vous assurer une mise en place efficace et conforme à toutes les normes de sécurité.`
+Uniquement un expert chevronné peut vous assurer une mise en place efficace et conforme à toutes les normes de sécurité.`,
+                    image : "images/services/installation.png"
                 },
                 {
                     label: "Maintenance",
                     description: "Entretien régulier des équipements.",
                     details: `Chaque système de climatisation exige une maintenance régulière minutieuse incluant la vérification de l'étanchéité des circuits, la surveillance des pressions, l'identification de possibles fuites, le nettoyage ou changement des filtres, ainsi que l'inspection de l'état des connexions électriques, entre autres.
 
-Ces actions sont essentielles pour garantir une efficacité optimale, une faible consommation d'énergie et un fonctionnement sans défaillances.`
+Ces actions sont essentielles pour garantir une efficacité optimale, une faible consommation d'énergie et un fonctionnement sans défaillances.`,
+                    image : "images/services/maintenance.jpg"
                 },
                 {
                     label: "Dépannage",
@@ -272,7 +274,8 @@ De plus, leur utilisation peut entraîner une augmentation significative de la c
 
 Dans ce contexte, une panne pourrait survenir à tout moment, avec parfois un danger de court-circuit manifeste.
 
-Il est donc nécessaire de faire appel à un professionnel aguerri pour restaurer un fonctionnement satisfaisant et sûr du système.`
+Il est donc nécessaire de faire appel à un professionnel aguerri pour restaurer un fonctionnement satisfaisant et sûr du système.`,
+                    image : "images/services/depannage.png"
                 }
             ]
         },

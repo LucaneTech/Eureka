@@ -8,7 +8,6 @@ import { Slogan } from "../components/ui/Slogan";
 import { ChartPie, GalleryVerticalEnd } from "lucide-react";
 import { Button } from "../components/ui/Button";
 
-// Animation variants sophistiqués
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -113,7 +112,7 @@ const StorySection: React.FC = () => {
                     <Title text="Notre Histoire" variants="large" className="text-center" />
                 </motion.div>
                 <motion.div variants={itemVariants}>
-                    <DescriptionText text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité."  className="max-w-xl"/>
+                    <DescriptionText text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité." className="max-w-xl" />
                 </motion.div>
             </motion.div>
 
@@ -132,19 +131,19 @@ const StorySection: React.FC = () => {
                         animate={isInView ? "visible" : "hidden"}
                         className="space-y-6"
                     >
-                        <DescriptionText text="Acteur incontournable de l’hygiène, du nettoyage, de la propreté et du traitement anti nuisibles."  className="max-w-xl"/>
+                        <DescriptionText text="Acteur incontournable de l’hygiène, du nettoyage, de la propreté et du traitement anti nuisibles." className="max-w-xl" />
 
 
                         <p className="text-gray-600  text-justify hyphens-auto">
-                            EUREKA & CO se positionne comme un partenaire fiable dans la prévention des risques liés aux nuisibles et à la santé.
-                            Fondée en 2024, notre société offre son soutien aux résidences, établissements d'éducation, commerces, centres de santé, secteurs de l'hôtellerie et de la restauration, loisirs, banques, compagnies d'assurance, ambassades, industries, espaces publics et autres. Notre mission est d'assurer la propreté et de combattre les nuisibles pour préserver le cadre de vie et la santé des personnes.
+                            L'histoire débute en 2024, quand un jeune passionné et exigeant fonde la société EUREKA & CO à Pointe-Noire. Il a une vision claire : la tonte de pelouses et la minimisation des dangers associés au nettoyage des vitres en hauteur impliquant les plateformes élévatrices (nacelles, échafaudages, échelles et autres), ainsi que la lutte contre les nuisibles.
                         </p>
 
                         <p className="text-gray-500  text-justify hyphens-auto">
-                            EUREKA & CO offre une solution intégrale, personnalisée et contractuellement engagée à des résultats.
+                            En 2025, EUREKA & CO a lancé une stratégie de croissance audacieuse qui s'est avérée être un point de basculement crucial pour l’entreprise. Au cours de la même année, nous avons notablement étendu nos opérations en obtenant notre première autorisation pour mener des activités d'assainissement en hygiène 4D (désinsectisation, désinfection, dératisation et déreptilisation).
                         </p>
                         <p className="text-gray-500  text-justify hyphens-auto">
-                            Avec une équipe multidisciplinaire qualifiée, nous assurons des actions rapides, traçables et respectueuses de l'environnement, à Pointe-Noire ainsi que dans tous les départements du Congo.
+                            La même année, EUREKA & Co fait l'acquisition de ses premiers appareils de marque QLEEN et AQUASCOPIC, d'origine allemande et belge, destinés au nettoyage en hauteur par eau pure des façades vitrées, bardages et panneaux solaires. Ces opérations sont exécutées à l'aide de perches télescopiques.
+                            Cette croissance rapide a renforcé notre position et notre dévouement à offrir des services de qualité supérieure par le biais d'un large éventail de partenaires, améliorant ainsi notre réseau pour répondre aux besoins de nos partenaires à l'échelle nationale.
                         </p>
 
 
@@ -152,20 +151,20 @@ const StorySection: React.FC = () => {
 
 
                     {/* Image */}
-                   <motion.div
-    variants={slideInRight}
-    initial="hidden"
-    animate={isInView ? "visible" : "hidden"}
-    className="w-full flex justify-center lg:justify-end"
->
-    <motion.img
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
-        src="/images/about/story.PNG"
-        alt="Notre équipe"
-        className="max-w-[300px] lg:max-w-[500px] w-full max-h-[600px] object-cover drop-shadow-2xl rounded-md"
-    />
-</motion.div>
+                    <motion.div
+                        variants={slideInRight}
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        className="w-full flex justify-center lg:justify-end"
+                    >
+                        <motion.img
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.3 }}
+                            src="/images/about/story.PNG"
+                            alt="Notre équipe"
+                            className="max-w-[300px] lg:max-w-[500px] w-full max-h-[600px] object-cover drop-shadow-2xl rounded-md"
+                        />
+                    </motion.div>
 
 
                 </div>
@@ -195,7 +194,7 @@ const missionValuesData = [
 ];
 
 
- 
+
 
 const MissonValorsSection: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);

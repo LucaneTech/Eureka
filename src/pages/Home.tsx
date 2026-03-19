@@ -501,7 +501,7 @@ export const Home: React.FC = () => {
       <FirstBanner
     
         underImage="/images/home/banner.jpeg"
-        title="La référence du nettoyage en hauteur et de la lutte anti nuisibles." textBtn={"Découvrez nos solutions"} link={"/solutions"}  textBtn2="Demander un devis"  link2="/contact"   />
+        title="La référence en matière de nettoyage professionnel des sols, des vitres en hauteur à l’eau pure et de la lutte anti nuisibles." textBtn={"Découvrez nos solutions"} link={"/solutions"}  textBtn2="Demander un devis"  link2="/contact"   />
 
       {/* services presentation */}
       <motion.section
