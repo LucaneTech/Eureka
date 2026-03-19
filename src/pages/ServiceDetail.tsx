@@ -16,7 +16,7 @@ const ServiceDetail = () => {
     return (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     {/* Image avec ratio ajusté pour remplir totalement la carte */}
-    <div className="relative w-full h-full md:max-h-[45rem] md:h-full rounded-xl overflow-hidden shadow-lg mb-6 bgMainColorOpacity border border-blue-600">
+    <div className="relative w-full h-full md:max-h-[50rem] md:h-full rounded-xl overflow-hidden shadow-lg mb-6 bgMainColorOpacity border border-blue-600">
         <img
             src={option.image}
             alt={option.label}
