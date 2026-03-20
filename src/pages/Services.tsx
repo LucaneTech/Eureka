@@ -358,28 +358,56 @@ const FaqSection: React.FC = () => {
 
     const faqData: FAQCardProps[] = [
         {
-            question: "Quels types de services de nettoyage proposez-vous ?",
-            answer: "Nous proposons une gamme complète de services de nettoyage, y compris le nettoyage de bureaux, le nettoyage de chantiers, l'entretien des espaces verts et la désinfection. Chaque service est adapté à vos besoins spécifiques pour garantir un environnement propre et sain."
+            question: "A QUI S’ADRESSENT VOS SERVICES ?",
+            answer: "Nos services s’adressent aux entreprises et aux particuliers : Résidences, Établissements scolaire, Commerces, Centres de santé, Hôtelleries, Catering, Loisirs, Banques & assurances, Ambassades, Industries, Espaces publics et autres."
         },
         {
-            question: "Comment puis-je obtenir un devis pour vos services ?",
-            answer: "Vous pouvez obtenir un devis gratuit en nous contactant via notre formulaire en ligne, par téléphone ou par email. Nous évaluerons vos besoins et vous fournirons une estimation détaillée et personnalisée."
-        },
-        {
-            question: "Quels produits de nettoyage utilisez-vous ?",
-            answer: "Nous utilisons des produits de nettoyage écologiques et respectueux de l'environnement pour garantir la sécurité de vos employés et la durabilité de notre planète. Nos produits sont efficaces pour éliminer les germes et les bactéries tout en étant doux pour les surfaces."
-        },
-        {
-            question: "Offrez-vous des services de nettoyage en dehors des heures de bureau ?",
-            answer: "Oui, nous proposons des services de nettoyage flexibles, y compris en dehors des heures de bureau, pour minimiser les interruptions de votre activité. Nous pouvons planifier nos interventions selon vos besoins pour garantir un environnement propre à tout moment."
+            question: "COMMENT PUIS-JE CONTACTER LE SERVICE CLIENT ?",
+            answer: "Pour répondre à vos questions, notre service client est joignable par téléphone 05 564 80 80, par mail contact@eureka-co.net ou via notre site web www@eureka-co.net"
         },
         {
             question: "Quels produits de nettoyage utilisez-vous ?",
             answer: "Nous utilisons des produits de nettoyage écologiques et respectueux de l'environnement pour garantir la sécurité de vos employés et la durabilité de notre planète. Nos produits sont efficaces pour éliminer les germes et les bactéries tout en étant doux pour les surfaces."
         },
         {
-            question: "Comment puis-je obtenir un devis pour vos services ?",
-            answer: "Vous pouvez obtenir un devis gratuit en nous contactant via notre formulaire en ligne, par téléphone ou par email. Nous évaluerons vos besoins et vous fournirons une estimation détaillée et personnalisée."
+            question: "QUELS SONT VOS TARIFS ?",
+            answer: "Nos tarifs varient en fonction du type de prestation et de la surface des locaux à traiter. Nous proposons des forfaits adaptés aux besoins des particuliers et des professionnels."
+        },
+        {
+            question: "QUELS TYPES DE NUISIBLES TRAITEZ-VOUS ?",
+            answer: "Nous traitons une large gamme de nuisibles : Blattes, cafards, puces, punaises de lit, mouches, moustiques, fourmis, araignée, bactéries, micro-organismes, spores bactériennes, virus, rats, souris, reptiles et bien d’autres."
+        },
+        {
+            question: "UTILISEZ-VOUS DES PRODUITS CHIMIQUES SÛRS ?",
+            answer: "Oui, nous utilisons des produits chimiques agréés par le ministère de la Santé, garantissant efficacité, sécurité et respect de l’environnement."
+        },
+          {
+            question: "AVEZ-VOUS DES AUTORISATIONS NÉCESSAIRES POUR PRATIQUER LE MÉTIER D’HYGIÈNE 4D ?",
+            answer: "Oui, nous avons les autorisations des Ministères de la Santé et de la Population ainsi que de l'Environnement, du Développement Durable et du Bassin du Congo."
+        },
+        {
+            question: "QUELS TYPES DE SERVICES DE NETTOYAGE PROPOSEZ-VOUS ?",
+            answer: "Nous proposons une gamme complète de services de nettoyage : nettoyage classique, sols, tapis, moquettes, remise en état après travaux. Chaque service est adapté à vos besoins spécifiques pour garantir un environnement propre et sain."
+        },
+        {
+            question: "COMMENT CREER UN JARDIN ?",
+            answer: "Créer un jardin demande de la réflexion, du temps et un espace extérieur."
+        },
+
+        {
+            question: "COMMENT ENTRETENIR UN JARDIN ?",
+            answer: "L’entretien du jardin s’effectue tout au long de l’année, il sera différent à chaque saison. Il prend peu de temps quand il est fait régulièrement."
+        },
+
+         {
+            question: "EST-CE QUE VOUS ASSUREZ LE NETTOYAGE DES VITRES EN HAUTEUR OU DIFFICILES D'ACCES ?",
+            answer: "Oui, nous avons les équipements et l'expérience nécessaires pour nettoyer les vitres en hauteur ou difficiles d'accès. Nous vous assurons un nettoyage sécurisé et de qualité, même dans les zones les plus délicates à l’aide de nos perches télescopiques."
+        },
+
+
+         {
+            question: "QUEL TYPE DE PRODUITS UTILISEZ-VOUS POUR LE LAVAGE DES VITRES ?",
+            answer: "Nous n’utilisons aucun produit pour le nettoyage des vitres.  Notre système est basé sur le nettoyage à l'eau pure, réalisé à l’aide des perches télescopiques, efficace sans laisser de traces ou de résidus, tout en préservant l'intégrité des vitres."
         },
     ];
 

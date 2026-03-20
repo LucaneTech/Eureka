@@ -18,7 +18,7 @@ const FAQCard: React.FC<FAQCardProps> = ({ question, answer }) => {
     return (
         <div className="bg-white rounded-xl shadow-md p-4 transition-all duration-300 borderMainColor">
             <div className="flex justify-between items-center cursor-pointer">
-                <Title text={question} variants={"medium"} />
+                <Title text={question} variants={"small"} className="capitalize"/>
 
                 <button
                     onClick={toggleCard}
@@ -37,7 +37,7 @@ const FAQCard: React.FC<FAQCardProps> = ({ question, answer }) => {
                 className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 mt-3 opacity-100" : "max-h-0 opacity-0"
                     }`}
             >
-                <DescriptionText text={answer}  className="text-justify hyphens-auto"/>
+                <DescriptionText text={answer}  className="text-justify hyphens-auto text-sm"/>
             </div>
         </div>
     );

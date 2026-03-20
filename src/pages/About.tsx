@@ -120,7 +120,7 @@ const StorySection: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="bgSecondaryColorOpacity overflow-hidden py-4 md:py-8 mx-auto px-8 relative z-10 mt-4 md:mt-8"
+                className="bgMainColor text-white overflow-hidden py-4 md:py-8 mx-auto px-8 relative z-10 mt-4 md:mt-8"
             >
                 <div className=" grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center ">
 
@@ -131,17 +131,17 @@ const StorySection: React.FC = () => {
                         animate={isInView ? "visible" : "hidden"}
                         className="space-y-6"
                     >
-                        <DescriptionText text="Acteur incontournable de l’hygiène, du nettoyage, de la propreté et du traitement anti nuisibles." className="max-w-xl" />
+                        <DescriptionText text="Acteur incontournable de l’hygiène, du nettoyage, de la propreté et du traitement anti nuisibles." className="max-w-xl text-white font-bold" />
 
 
-                        <p className="text-gray-600  text-justify hyphens-auto">
+                        <p className=" text-justify hyphens-auto">
                             L'histoire débute en 2024, quand un jeune passionné et exigeant fonde la société EUREKA & CO à Pointe-Noire. Il a une vision claire : la tonte de pelouses et la minimisation des dangers associés au nettoyage des vitres en hauteur impliquant les plateformes élévatrices (nacelles, échafaudages, échelles et autres), ainsi que la lutte contre les nuisibles.
                         </p>
 
-                        <p className="text-gray-500  text-justify hyphens-auto">
+                        <p className=" text-justify hyphens-auto">
                             En 2025, EUREKA & CO a lancé une stratégie de croissance audacieuse qui s'est avérée être un point de basculement crucial pour l’entreprise. Au cours de la même année, nous avons notablement étendu nos opérations en obtenant notre première autorisation pour mener des activités d'assainissement en hygiène 4D (désinsectisation, désinfection, dératisation et déreptilisation).
                         </p>
-                        <p className="text-gray-500  text-justify hyphens-auto">
+                        <p className=" text-justify hyphens-auto">
                             La même année, EUREKA & Co fait l'acquisition de ses premiers appareils de marque QLEEN et AQUASCOPIC, d'origine allemande et belge, destinés au nettoyage en hauteur par eau pure des façades vitrées, bardages et panneaux solaires. Ces opérations sont exécutées à l'aide de perches télescopiques.
                             Cette croissance rapide a renforcé notre position et notre dévouement à offrir des services de qualité supérieure par le biais d'un large éventail de partenaires, améliorant ainsi notre réseau pour répondre aux besoins de nos partenaires à l'échelle nationale.
                         </p>
@@ -214,17 +214,17 @@ const MissonValorsSection: React.FC = () => {
             >
                 <motion.div variants={itemVariants}>
                     <Title
-                        text="Notre Mission & Nos Valeurs"
+                        text="Nos Valeurs"
                         variants="large"
                         className="text-center"
                     />
                 </motion.div>
-                <motion.div variants={itemVariants}>
+                {/* <motion.div variants={itemVariants}>
                     <DescriptionText
                         text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité."
                         className="max-w-xl text-gray-600"
                     />
-                </motion.div>
+                </motion.div> */}
             </motion.div>
 
             {/* Wrapper scroll horizontal */}
@@ -297,7 +297,7 @@ const MissonValorsSection: React.FC = () => {
 const statsData = [
     { label: "Clients satisfaits", value: "20+" },
     { label: "Années d’expérience", value: "3+" },
-    { label: "Projets réalisés", value: "3 400+" },
+    { label: "Projets réalisés", value: "101+" },
     { label: "Agents qualifiés", value: "7+" },
 ];
 
@@ -359,12 +359,12 @@ const State = () => {
                         className="text-center"
                     />
                 </motion.div>
-                <motion.div variants={itemVariants}>
+                {/* <motion.div variants={itemVariants}>
                     <DescriptionText
                         text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité."
                         className="max-w-xl text-gray-600"
                     />
-                </motion.div>
+                </motion.div> */}
             </motion.div>
 
             {/* Stats Grid */}

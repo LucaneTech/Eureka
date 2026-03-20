@@ -128,17 +128,17 @@ const ContactSection: React.FC = () => {
 
         // Construction du message formaté avec des vérifications
         const messageParts = [
-            "*NOUVEAU CONTACT DEPUIS LE SITE WEB*",
-            `📅 ${currentDate}`,
+            "*NOUVEAU CONTACT DEPUIS LE SITE WEB EUREKA & Co*",
+            `${currentDate}`,
             "━━━━━━━━━━━━━━━━━━━",
-            `👤 *Nom:* ${data.name?.trim() || "Non spécifié"}`,
-            `📧 *Email:* ${data.email?.trim() || "Non spécifié"}`,
-            `📞 *Téléphone:* ${data.phone?.trim() || "Non spécifié"}`,
+            `Nom: ${data.name?.trim() || "Non spécifié"}`,
+            `Email: ${data.email?.trim() || "Non spécifié"}`,
+            `Téléphone: ${data.phone?.trim() || "Non spécifié"}`,
             "━━━━━━━━━━━━━━━━━━━",
-            `💬 *Message:*`,
+            `Message:`,
             data.message?.trim() || "Pas de message",
             "━━━━━━━━━━━━━━━━━━━",
-            "🌐 Envoyé via www.eureka-co.net"
+            "Envoyé via www.eureka-co.net"
         ];
 
         // Encodage correct pour WhatsApp
