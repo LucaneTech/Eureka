@@ -501,7 +501,7 @@ export const Home: React.FC = () => {
       <FirstBanner
     
         underImage="/images/home/banner.jpeg"
-        title="La référence en matière de nettoyage professionnel des sols, des vitres en hauteur à l’eau pure et de la lutte anti nuisibles." textBtn={"Découvrez nos solutions"} link={"/solutions"}  textBtn2="Demander un devis"  link2="/contact"   />
+        title="La référence en matière de nettoyage professionnel des sols, des vitres en hauteur à l’eau pure et de la lutte anti nuisibles."  />
 
       {/* services presentation */}
       <motion.section
@@ -516,7 +516,7 @@ export const Home: React.FC = () => {
         </motion.div>
 
         <motion.div variants={fadeInUp}>
-          <Title text={"Découvrez nos solutions"} variants={"large"} className="mb-4 md:mb-8 py-2 text-center" />
+          <Title text={"Nos solutions"} variants={"large"} className="mb-4 md:mb-8 py-2 text-center" />
         </motion.div>
 
         {/* Conteneur principal flex avec gestion responsive */}
@@ -608,7 +608,7 @@ export const Home: React.FC = () => {
           <motion.img
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            src="/images/home/about.jpeg"
+            src="/images/about/us.jpeg"
             alt=""
             className="rounded-lg object-cover w-full max-w-sm md:max-w-md lg:max-w-lg shadow-lg border border-slate-300"
           />
