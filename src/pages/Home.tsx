@@ -662,7 +662,7 @@ export const Home: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Button text={"Votre Devis Gratuit en un clic"} to={"/contact"} variant="primary" />
+          <Button text={"Votre devis gratuit en un clic"} to={"/contact"} variant="primary" />
         </motion.div>
       </motion.section>
     </>

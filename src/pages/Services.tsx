@@ -354,14 +354,14 @@ const FaqSection: React.FC = () => {
     const faqData: FAQCardProps[] = [
         {
             question: "A QUI S’ADRESSENT VOS SERVICES ?",
-            answer: "Nos services s’adressent aux entreprises et aux particuliers : Résidences, Établissements scolaire, Commerces, Centres de santé, Hôtelleries, Catering, Loisirs, Banques & assurances, Ambassades, Industries, Espaces publics et autres."
+            answer: "Nos services s’adressent aux entreprises et aux particuliers : Résidences, Établissements scolaires, Commerces, Centres de santé, Hôtelleries, Catering, Loisirs, Banques & assurances, Ambassades, Industries, Espaces publics et autres."
         },
         {
             question: "COMMENT PUIS-JE CONTACTER LE SERVICE CLIENT ?",
-            answer: "Pour répondre à vos questions, notre service client est joignable par téléphone 05 564 80 80, par mail contact@eureka-co.net ou via notre site web www@eureka-co.net"
+            answer: "Pour répondre à vos questions, notre service client est joignable par téléphone 05 564 80 80, par mail contact@eureka-co.net ou via notre site web www.eureka-co.net"
         },
         {
-            question: "Quels produits de nettoyage utilisez-vous ?",
+            question: "QUELS PRODUITS DE NETTOYAGE UTILISEZ-VOUS ?",
             answer: "Nous utilisons des produits de nettoyage écologiques et respectueux de l'environnement pour garantir la sécurité de vos employés et la durabilité de notre planète. Nos produits sont efficaces pour éliminer les germes et les bactéries tout en étant doux pour les surfaces."
         },
         {
@@ -504,35 +504,7 @@ export const Services: React.FC = () => {
                 variants={containerVariants}
                 className="text-center space-y-5 p-8 md:p-12 md:mt-8 "
             >
-                <motion.div
-                    variants={{
-                        hidden: { y: 30, opacity: 0 },
-                        visible: {
-                            y: 0,
-                            opacity: 1,
-                            transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
-                        }
-                    }}
-                >
-                    <Title text={"Prêt pour un espace impeccable ?"} variants={"large"} />
-                </motion.div>
-
-                <motion.div
-                    variants={{
-                        hidden: { scale: 0.9, opacity: 0 },
-                        visible: {
-                            scale: 1,
-                            opacity: 1,
-                            transition: { duration: 0.5, delay: 0.2 }
-                        }
-                    }}
-                    className="text-slate-600 text-center max-w-xl mx-auto"
-                >
-                    <DescriptionText
-                        text={"Contactez nos experts dès aujourd'hui pour un nettoyage sur mesure – bureaux, vitres, industriel ou fin de chantier."}
-                        className="max-w-xl mx-auto"
-                    />
-                </motion.div>
+                
 
                 <motion.div
                     variants={{
@@ -547,7 +519,7 @@ export const Services: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                 >
                     <Button
-                        text={"Demander un devis gratuit"}
+                        text={"Votre devis en un clic"}
                         to={"/contact"}
                         variant="secondary"
                     />
