@@ -106,14 +106,14 @@ const StorySection: React.FC = () => {
                 className="flex flex-col items-center justify-center text-center space-y-3 py-6 px-8 md:py-12 "
             >
                 <motion.div variants={fadeInScale}>
-                    <Slogan icon={<GalleryVerticalEnd />} text={"Eureka & Co"} variant={"secondary"} className="secondaryColor" />
+                    <Slogan icon={<GalleryVerticalEnd />} text={"Notre histoire"} variant={"secondary"} className="secondaryColor" />
                 </motion.div>
-                <motion.div variants={itemVariants}>
+                {/* <motion.div variants={itemVariants}>
                     <Title text="Notre Histoire" variants="large" className="text-center" />
                 </motion.div>
                 <motion.div variants={itemVariants}>
                     <DescriptionText text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité." className="max-w-xl" />
-                </motion.div>
+                </motion.div> */}
             </motion.div>
 
             <motion.div
