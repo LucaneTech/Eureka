@@ -68,17 +68,17 @@ const slideInRight: Variants = {
     }
 };
 
-const rotateIn: Variants = {
-    hidden: { rotate: -10, scale: 0.8, opacity: 0 },
-    visible: {
-        rotate: 0,
-        scale: 1,
-        opacity: 1,
-        transition: {
-            duration: 0.5
-        }
-    }
-};
+// const rotateIn: Variants = {
+//     hidden: { rotate: -10, scale: 0.8, opacity: 0 },
+//     visible: {
+//         rotate: 0,
+//         scale: 1,
+//         opacity: 1,
+//         transition: {
+//             duration: 0.5
+//         }
+//     }
+// };
 
 const staggerList: Variants = {
     hidden: { opacity: 0 },
@@ -310,11 +310,6 @@ Il est donc nécessaire de faire appel à un professionnel aguerri pour restaure
                     <Slogan icon={<Wrench />} text={"Solutions"} variant={"primary"} className="mainColor" />
                 </motion.div>
 
-                <motion.div
-                    variants={rotateIn}
-                >
-                    <Title text={"Nos Solutions"} variants={"large"} />
-                </motion.div>
 
                 <motion.div
                     variants={fadeInScale}

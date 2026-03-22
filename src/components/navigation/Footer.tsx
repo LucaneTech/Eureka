@@ -75,7 +75,7 @@ export const Footer = () => {
             className="flex items-center gap-2 text-slate-500"
           >
             <MapPin size={16} className="text-mainColor" />
-            <span className="text-xs sm:text-sm">Pointe-Noir / Congo</span>
+            <span className="text-xs sm:text-sm">Pointe-Noire / Congo</span>
           </motion.div>
         </motion.div>
 
@@ -169,9 +169,7 @@ export const Footer = () => {
             />
           </h2>
           <div className="space-y-4">
-            <p className="text-slate-600 text-sm leading-relaxed">
-              Obtenez un devis gratuit ou planifiez votre intervention.
-            </p>
+          
 
             <motion.div
               variants={itemVariants}

@@ -1,7 +1,10 @@
-import { Facebook, Instagram, MapPin, MessageCircle, Send , X } from 'lucide-react';
+import { MapPin, Send , X } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
+import { FaYoutube, FaTiktok , FaFacebook, 
+  FaInstagram, 
+  FaWhatsapp } from "react-icons/fa";
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,16 +37,24 @@ const Header: React.FC = () => {
 
   const socialIcons = [
     {
-      Icon: <MessageCircle className='w-5 h-5'/>,
-      link: "#"
+      Icon: <FaWhatsapp className='w-5 h-5'/>,
+      link: "https://wa.me/242055648080"
     },
     {
-      Icon: <Facebook className='w-5 h-5'/>,
-      link: "#"
+      Icon: <FaFacebook className='w-5 h-5'/>,
+      link: "https://www.facebook.com/profile.php?id=61588493446554"
     },
     {
-      Icon: <Instagram className='w-5 h-5'/>,
-      link: "#"
+      Icon: <FaInstagram className='w-5 h-5'/>,
+      link: "https://www.instagram.com/tech.eurekaetco?igsh=MW10Z2FsbjVuZDBtdQ=="
+    },
+    {
+      Icon: <FaYoutube className='w-5 h-5'/>,
+      link: "https://youtube.com/@eurekaco-b4e?si=aCjz6CK_1dNKB5QU"
+    },
+     {
+      Icon: <FaTiktok className='w-5 h-5'/>,
+      link: "https://www.tiktok.com/@eureka.co3?_r=1&_t=ZS-94AgJcJHSSn"
     },
   ];
 

@@ -58,7 +58,7 @@ export const FirstBanner: React.FC<FirstBannerProps> = ({
             {/* Contenu principal */}
             <div className="relative z-10 container mx-auto px-4 py-8 md:py-20 min-h-[300px] md:min-h-[600px] flex items-center md:items-center">
                 <div className="flex flex-col max-w-2xl">
-                    <h1 className="text-center mainColor text-2xl md:text-4xl lg:text-5xl font-bold md:text-justify">{title}</h1>
+                    <h1 className="text-center md:mt-48 text-white text-2xl md:text-4xl lg:text-5xl font-bold md:text-justify">{title}</h1>
                     {/* <div className="flex flex-col md:flex-row items-center justify-items-start mt-4 md:mt-8 gap-6 md:gap-12">
                         <Button text={textBtn} to={link} className="bgMainColor" />
                         <Button text={textBtn2} to={link2} className="bgSecondaryColor" />

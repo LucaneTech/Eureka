@@ -503,9 +503,7 @@ export const Home: React.FC = () => {
           <Slogan icon={<BriefcaseBusiness />} text={"Nos solutions"} variant={"primary"} />
         </motion.div>
 
-        <motion.div variants={fadeInUp}>
-          <Title text={"Nos solutions"} variants={"large"} className="mb-4 md:mb-8 py-2 text-center" />
-        </motion.div>
+      
 
         {/* Conteneur principal flex avec gestion responsive */}
         <motion.div
@@ -664,7 +662,7 @@ export const Home: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <Button text={"Demander un devis gratuit"} to={"/contact"} variant="primary" />
+          <Button text={"Votre Devis Gratuit en un clic"} to={"/contact"} variant="primary" />
         </motion.div>
       </motion.section>
     </>
