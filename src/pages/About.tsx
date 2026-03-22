@@ -477,7 +477,7 @@ const About = () => {
                 className="text-center space-y-5 p-8 md:p-12 md:mt-8"
             >
                 <motion.div variants={itemVariants}>
-                    <Title text={"Notre Devis Gratuit en un clic"} variants={"large"} />
+                    <Title text={"Votre devis gratuit en un clic"} variants={"large"} />
                 </motion.div>
 
                 <motion.div
