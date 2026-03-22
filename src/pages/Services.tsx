@@ -6,7 +6,7 @@ import type { Variants } from "framer-motion";
 import { SecondBanner } from "../components/banners/Secondbanner";
 import { ServiceCard, type ServicesCardProps } from "../components/ui/ServiceCard";
 import { Slogan } from "../components/ui/Slogan";
-import { Title } from "../components/font/Title";
+
 import { DescriptionText } from "../components/font/DescriptionText";
 import type { FAQCardProps } from "../components/ui/FAQCard";
 import FAQCard from "../components/ui/FAQCard";

@@ -108,12 +108,7 @@ const StorySection: React.FC = () => {
                 <motion.div variants={fadeInScale}>
                     <Slogan icon={<GalleryVerticalEnd />} text={"Notre histoire"} variant={"secondary"} className="secondaryColor" />
                 </motion.div>
-                {/* <motion.div variants={itemVariants}>
-                    <Title text="Notre Histoire" variants="large" className="text-center" />
-                </motion.div>
-                <motion.div variants={itemVariants}>
-                    <DescriptionText text="Découvrez l'histoire inspirante de notre entreprise de nettoyage professionnel, née de la passion d'un jeune congolais pour la propreté et le service de qualité." className="max-w-xl" />
-                </motion.div> */}
+               
             </motion.div>
 
             <motion.div
