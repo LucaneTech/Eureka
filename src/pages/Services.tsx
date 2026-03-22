@@ -108,7 +108,7 @@ const ServiceSection: React.FC = () => {
             paragraph: "Un environnement de travail propre pour une productivité optimale.",
             description:
                 "Nous offrons un service de nettoyage de bureaux complet, adapté à vos besoins spécifiques. Notre équipe utilise des produits écologiques pour garantir un espace de travail sain et agréable.",
-            image: "/images/services/entretient.jpeg",
+            image: "/images/services/entretient.webp",
             reverse: false,
             options: [
                 {
@@ -119,13 +119,13 @@ const ServiceSection: React.FC = () => {
 L'état de propreté de vos locaux professionnels va au-delà d'une simple question d'apparence : il témoigne également de votre rigueur et de votre sérieux vis-à-vis de vos employés et partenaires.
 
 Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous assurent une propreté irréprochable et pérenne. Nous garantissons la propreté des fenêtres et des sols de vos installations en employant des produits certifiés ECO LABEL, tout en respectant scrupuleusement diverses actions écologiques lors de nos prestations.`,
-                    image: "/images/services/classique.png"
+                    image: "/images/services/classique.webp"
                 },
                 {
                     label: "Nettoyage des sols",
                     description: "Entretien complet des différents types de sols.",
                     details: `Nous assurons le lavage, le décapage et le traitement des sols selon leur nature : carrelage, parquet, marbre ou sols industriels.`,
-                    image: 'images/services/sol.jpg'
+                    image: 'images/services/sol.webp'
                 },
                 {
                     label: "Nettoyage de vitres et panneaux solaires",
@@ -133,7 +133,7 @@ Grâce à une étude détaillée de vos besoins, nos agents de nettoyage vous as
                     details: `EUREKA & CO prend en charge l'entretien de toutes les surfaces vitrées, qu'elles soient à la portée des hommes ou non.
 
 Nos équipes sont en mesure de nettoyer toutes les surfaces vitrées grâce à nos équipements spécialisés, tels que les perches télescopiques à eau pure.`,
-                    image: "images/services/vitre.PNG"
+                    image: "images/services/vitre.webp"
                 },
                 {
                     label: "Remise en état après travaux",
@@ -141,7 +141,7 @@ Nos équipes sont en mesure de nettoyer toutes les surfaces vitrées grâce à n
                     details: `Vous avez effectué des travaux d'aménagement afin d'améliorer les conditions de travail de vos employés et l'accueil de vos clients.
 
 Pour rendre vos locaux impeccablement propres, faites appel à EUREKA & CO !`,
-                    image: "images/services/remise.PNG"
+                    image: "images/services/remise.webp"
                 },
                 {
                     label: "Shampooing de moquette",
@@ -151,7 +151,7 @@ Pour rendre vos locaux impeccablement propres, faites appel à EUREKA & CO !`,
 Notre technique de nettoyage de moquette écologique, employant des produits qui protègent les fibres et l'environnement, supprime la saleté tout en préservant la longévité de votre moquette.
 
 En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engagement pour le bien-être au travail et la protection de l'environnement.`,
-                    image: 'images/services/moquette.jpeg'
+                    image: 'images/services/moquette.webp'
                 }
             ]
         },
@@ -161,7 +161,7 @@ En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engageme
                 "Nous avons à cœur de vous fournir des services de paysagiste qui allient tradition et modernité. Que ce soit pour l'aménagement de jardins, la création de bassins ou l'entretien de vos espaces verts, notre équipe est à votre écoute pour réaliser vos projets.",
             description:
                 "Nos services incluent :",
-            image: "/images/services/espaces-verts.jpeg",
+            image: "/images/services/espaces-verts.webp",
             reverse: true,
             clickable : false,
             options: [
@@ -209,32 +209,32 @@ En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engageme
             paragraph: "Une hygiène rigoureuse pour un environnement de travail sain.",
             description:
                 "Notre service d'hygiène 4D offre une solution complète pour maintenir un environnement de travail sain.",
-            image: "/images/services/hygiene.jpeg",
+            image: "/images/services/hygiene.webp",
             reverse: false,
             options: [
                 {
                     label: "Desinsectisation",
                     description: "Lutte contre les insectes nuisibles.",
                     details: `blattes, cafards, fourmis, termites, punaises de lit, puces, guêpes, frelons, abeilles, moustiques, mouches, perces-bois, charançons etc.`,
-                    image: "images/services/desinsectisation.jpg"
+                    image: "images/services/desinsectisation.webp"
                 },
                 {
                     label: "Dératisation",
                     description: "Lutte contre les rongeurs.",
                     details: `Souris, rats, mulots, campagnols, musaraignes, loirs, chauves-souris etc.`,
-                    image: "images/services/deratisation.jpg"
+                    image: "images/services/deratisation.webp"
                 },
                 {
                     label: "Desinfection",
                     description: "Désinfection des surfaces et équipements.",
                     details: `Bactéries, micro-organismes, spores bactériennes, virus etc.`,
-                    image: "images/services/desin.jpg"
+                    image: "images/services/desin.webp"
                 },
                 {
                     label: "Dereptilisation",
                     description: "Lutte contre les reptiles indésirables.",
                     details: `Serpents, lézards, geckos, caméléons, iguanes, tortues etc.`,
-                    image: "images/services/derept.PNG"
+                    image: "images/services/derept.webp"
                 }
             ]
         },
@@ -244,7 +244,7 @@ En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engageme
                 "Assurez un environnement de travail confortable toute l'année grâce à nos services de froid et climatisation.",
             description:
                 "Installation, maintenance et dépannage de vos systèmes de climatisation.",
-            image: "/images/services/froid.jpeg",
+            image: "/images/services/froid.webp",
             reverse: true,
             options: [
                 {
@@ -255,7 +255,7 @@ En outre, votre moquette reçoit un nouveau souffle sans nuire à votre engageme
 Nos solutions, qui se conforment parfaitement à l'ampleur de vos espaces résidentiels ou professionnels, sauront idéalement satisfaire vos exigences.
 
 Uniquement un expert chevronné peut vous assurer une mise en place efficace et conforme à toutes les normes de sécurité.`,
-                    image : "images/services/installation.png"
+                    image : "images/services/installation.webp"
                 },
                 {
                     label: "Maintenance",
@@ -263,7 +263,7 @@ Uniquement un expert chevronné peut vous assurer une mise en place efficace et 
                     details: `Chaque système de climatisation exige une maintenance régulière minutieuse incluant la vérification de l'étanchéité des circuits, la surveillance des pressions, l'identification de possibles fuites, le nettoyage ou changement des filtres, ainsi que l'inspection de l'état des connexions électriques, entre autres.
 
 Ces actions sont essentielles pour garantir une efficacité optimale, une faible consommation d'énergie et un fonctionnement sans défaillances.`,
-                    image : "images/services/maintenance.jpg"
+                    image : "images/services/maintenance.webp"
                 },
                 {
                     label: "Dépannage",
@@ -275,7 +275,7 @@ De plus, leur utilisation peut entraîner une augmentation significative de la c
 Dans ce contexte, une panne pourrait survenir à tout moment, avec parfois un danger de court-circuit manifeste.
 
 Il est donc nécessaire de faire appel à un professionnel aguerri pour restaurer un fonctionnement satisfaisant et sûr du système.`,
-                    image : "images/services/depannage.png"
+                    image : "images/services/depannage.webp"
                 }
             ]
         },
@@ -284,7 +284,7 @@ Il est donc nécessaire de faire appel à un professionnel aguerri pour restaure
             paragraph: "Des services complémentaires pour répondre à tous vos besoins.",
             description:
                 "Vous aspirez à rationaliser vos procédures d'achat et à vous décharger de certaines démarches administratives ? EUREKA & CO vous offre des solutions personnalisées pour satisfaire l'ensemble des exigences de votre entreprise. Que vous ayez besoin d'aide pour vos achats de tous les jours, ou saisonniers, EUREKA & CO est à votre service.",
-            image: "/images/services/centrale-achat.png",
+            image: "/images/services/centrale-achat.webp",
             reverse: true,
             options: []
         }
@@ -498,7 +498,7 @@ export const Services: React.FC = () => {
                     variantBtn2="secondary"
                     link2="/contact"
                     variantBtn="primary"
-                    underImage="images/services/banner.jpeg"
+                    underImage="images/services/banner.webp"
                     link="/apropos"
                     overlayColor="black"
                 titleColor="secondaryColor" title={""} />

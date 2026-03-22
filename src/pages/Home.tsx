@@ -153,7 +153,7 @@ const ClientChoice = () => {
 export interface Testimonial {
   id: number;
   description: string;
-  image: string;
+  image?: string;
   name: string;
   company: string;
 }
@@ -224,63 +224,57 @@ const defaultTestimonials: Testimonial[] = [
   {
     id: 1,
     description: "Nous faisons appel à Eureka pour l’entretien régulier de nos bureaux. L’équipe est ponctuelle, efficace et les locaux sont toujours impeccables.",
-    image: "https://images.pexels.com/photos/30065817/pexels-photo-30065817.jpeg",
     name: "Patrick M.",
     company: "Cabinet de conseil"
   },
   {
     id: 2,
     description: "J’ai demandé un grand nettoyage après un déménagement. Intervention rapide et très professionnelle. Appartement impeccable.",
-    image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg",
     name: "Sandrine K.",
     company: "Cliente particulière"
   },
   {
     id: 3,
     description: "Nous utilisons leurs services pour le nettoyage des parties communes de notre immeuble. Travail sérieux et suivi régulier.",
-    image: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg",
     name: "Jean-Claude L.",
     company: "Syndic de copropriété"
   },
   {
     id: 4,
     description: "Service très pratique pour le ménage hebdomadaire à domicile. L’équipe s’adapte parfaitement à nos besoins.",
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
     name: "Nadine B.",
     company: "Particulier"
   },
   {
     id: 5,
     description: "Nous avions besoin d’un nettoyage complet avant l’ouverture de notre boutique. Résultat impeccable et délais respectés.",
-    image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
     name: "Michel T.",
     company: "Commerce local"
   },
   {
     id: 6,
     description: "Très bonne expérience pour un nettoyage après travaux. L’équipe a laissé les lieux parfaitement propres.",
-    image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg",
+    
     name: "Arlette S.",
     company: "Entreprise de rénovation"
   },
   {
     id: 7,
     description: "Nous avons fait appel à Eureka lors de notre déménagement d’entreprise. Organisation fluide et équipe professionnelle.",
-    image: "https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg",
+   
     name: "Didier K.",
     company: "PME locale"
   },
   {
     id: 8,
     description: "Très bon rapport qualité-prix pour l’entretien régulier de notre appartement. Service fiable et sérieux.",
-    image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg",
+   
     name: "Brigitte N.",
     company: "Cliente résidentielle"
   },
   {
     id: 9,
     description: "Entreprise très réactive. Ils ont pu intervenir rapidement pour un nettoyage de bureaux avant une réunion importante.",
-    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg",
     name: "Samuel D.",
     company: "Startup locale"
   }
@@ -318,13 +312,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
         transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
         className="flex items-center gap-3"
       >
-        <motion.img
-          whileHover={{ scale: 1.1 }}
-          src={testimonial.image}
-          alt={testimonial.name}
-          className="size-9 rounded-full border border-slate-800 object-cover"
-          loading="lazy"
-        />
+    
         <div>
           <p className="text-sm mainColor">{testimonial.name}</p>
           <p className="text-sm text-slate-500">{testimonial.company}</p>
@@ -500,7 +488,7 @@ export const Home: React.FC = () => {
       {/* Hero section - déjà animée via FirstBanner */}
       <FirstBanner
     
-        underImage="/images/home/banner.jpeg"
+        underImage="/images/home/banner.webp"
         title="La référence en matière de nettoyage professionnel des sols, des vitres en hauteur à l’eau pure et de la lutte anti nuisibles."  />
 
       {/* services presentation */}
@@ -608,7 +596,7 @@ export const Home: React.FC = () => {
           <motion.img
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            src="/images/about/us.jpeg"
+            src="/images/about/us.webp"
             alt=""
             className="rounded-lg object-cover w-full max-w-sm md:max-w-md lg:max-w-lg shadow-lg border border-slate-300"
           />

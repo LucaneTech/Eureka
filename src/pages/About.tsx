@@ -160,7 +160,7 @@ const StorySection: React.FC = () => {
                         <motion.img
                             whileHover={{ scale: 1.05 }}
                             transition={{ duration: 0.3 }}
-                            src="/images/about/story.PNG"
+                            src="/images/about/story.webp"
                             alt="Notre équipe"
                             className="max-w-[300px] lg:max-w-[500px] w-full max-h-[600px] object-cover drop-shadow-2xl rounded-md"
                         />
@@ -460,7 +460,7 @@ const About = () => {
                     link2={"/contact"}
                     variantBtn2="secondary"
                     titleColor="text-white"
-                    underImage="/images/about/about.jpg"
+                    underImage="/images/about/about.webp"
                     overlayColor="primary"
                 />
             </motion.div>
