@@ -425,16 +425,11 @@ const FaqSection: React.FC = () => {
                     <Slogan icon={<CircleQuestionMark />} text={"FAQ"} variant={"primary"} className="mainColor" />
                 </motion.div>
 
-                <motion.div
-                    variants={fadeInScale}
-                >
-                    <Title text={"Questions"} variants={"large"} />
-                </motion.div>
 
                 <motion.div
                     variants={itemVariants}
                 >
-                    <DescriptionText text={"Vous avez des questions sur nos services de nettoyage ? Consultez notre FAQ pour trouver des réponses à vos interrogations les plus courantes."} />
+                    <DescriptionText text={"Vous avez des questions sur nos solutions ? Consultez notre FAQ pour trouver des réponses à vos interrogations les plus courantes."} />
                 </motion.div>
             </motion.div>
 
