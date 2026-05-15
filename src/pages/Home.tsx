@@ -204,6 +204,10 @@ const logos = [
   
   { src: "/images/home/partenaires/casino.png", alt: "logo-casino" },
   { src: "/images/home/partenaires/ifd.png", alt: "logo-ifd" },
+
+  { src: "/images/home/partenaires/active.png", alt: "logo-active_rise" },
+  { src: "/images/home/partenaires/safmac.jpg", alt: "logo_safmac" },
+  
   { src: "/images/home/partenaires/ead.png", alt: "logo-ead" },
   { src: "/images/home/partenaires/isd.png", alt: "logo-isd" },
   { src: "/images/home/partenaires/guenin.png", alt: "logo-guenin" },
@@ -215,6 +219,7 @@ const logos = [
   { src: "/images/home/partenaires/guot.png", alt: "logo-guot"},
      { src: "/images/home/partenaires/olivier.png", alt: "logo-olivier" },
      { src: "/images/home/partenaires/super.png", alt: "logo-super" },
+
      { src: "/images/home/partenaires/prevent.jpeg", alt: "logo-prevent" },
       { src: "/images/home/partenaires/congo.png", alt: "logo-congo" },
   
