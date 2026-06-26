@@ -222,6 +222,7 @@ const logos = [
 
      { src: "/images/home/partenaires/prevent.jpeg", alt: "logo-prevent" },
       { src: "/images/home/partenaires/congo.png", alt: "logo-congo" },
+      { src: "/images/home/partenaires/logo-spi.png", alt: "logo-spi" },
   
 ];
 
