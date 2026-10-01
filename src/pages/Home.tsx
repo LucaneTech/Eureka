@@ -217,13 +217,14 @@ const logos = [
   { src: "/images/home/partenaires/ex.png", alt: "logo-ex" },
   { src: "/images/home/partenaires/btp.png", alt: "logo-btp" },
   { src: "/images/home/partenaires/guot.png", alt: "logo-guot"},
-     { src: "/images/home/partenaires/olivier.png", alt: "logo-olivier" },
-     { src: "/images/home/partenaires/super.png", alt: "logo-super" },
+   { src: "/images/home/partenaires/olivier.png", alt: "logo-olivier" },
+   { src: "/images/home/partenaires/super.png", alt: "logo-super" },
 
-     { src: "/images/home/partenaires/prevent.jpeg", alt: "logo-prevent" },
+  { src: "/images/home/partenaires/prevent.jpeg", alt: "logo-prevent" },
       { src: "/images/home/partenaires/congo.png", alt: "logo-congo" },
       { src: "/images/home/partenaires/logo-spi.png", alt: "logo-spi" },
-     { src: "/images/home/partenaires/levare_international_limited_logo.jpg", alt: "logo-levare" }
+       { src: "/images/home/partenaires/WingWah.jpeg", alt: "logo-WingWah" },
+       { src: "/images/home/partenaires/levare_international_limited_logo.jpg", alt: "logo-levare_international" }
 
   
 ];
