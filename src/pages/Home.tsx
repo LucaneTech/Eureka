@@ -223,6 +223,8 @@ const logos = [
      { src: "/images/home/partenaires/prevent.jpeg", alt: "logo-prevent" },
       { src: "/images/home/partenaires/congo.png", alt: "logo-congo" },
       { src: "/images/home/partenaires/logo-spi.png", alt: "logo-spi" },
+     { src: "/images/home/partenaires/levare_international_limited_logo.jpg", alt: "logo-levare" }
+
   
 ];
 
